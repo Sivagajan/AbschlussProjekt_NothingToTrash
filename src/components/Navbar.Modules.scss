@@ -1,0 +1,26 @@
+nav {
+    display: flex;
+    max-width: 100vw;
+    align-items: baseline;
+    margin-top: 20px;
+
+    p {
+        margin-left: 3%;
+        margin-right: 10%;
+    }
+
+    .dflex {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        margin-right: 5%;
+
+        a {
+            text-decoration: none;
+            color: black;
+            width: 30%;
+            padding-right: 50px;
+
+        }
+    }
+}
