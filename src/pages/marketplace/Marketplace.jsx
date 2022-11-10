@@ -1,4 +1,5 @@
 import ArticelList from "../../components/article/ArticleList"
+import Sidebar from "../../components/sidebar/Sidebar"
 
 const Marketplace = () => {
 
@@ -6,7 +7,12 @@ const Marketplace = () => {
 
     return(
         <main className="marketplace">
-            < ArticelList />
+            <div>
+                < ArticelList />
+            </div>
+            <div>
+                <Sidebar />
+            </div>
         </main>
     )
 }
