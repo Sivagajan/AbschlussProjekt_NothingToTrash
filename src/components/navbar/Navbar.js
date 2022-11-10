@@ -1,4 +1,6 @@
+import RegisterButton from '../buttons/RegisterButton'
 import './Navbar.Modules.scss'
+
 
 const Navbar = () => {
     return (
@@ -10,8 +12,8 @@ const Navbar = () => {
                     <a href="">Über uns</a>
                 </div>
                 <div className='div2'>
-                    <button>Login</button>
-                    <button>Registrier dich </button>
+                    <a href="#">Log In</a>
+                    <RegisterButton />
                 </div>
             </div>
         </nav>
