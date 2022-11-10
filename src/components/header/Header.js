@@ -1,3 +1,4 @@
+import StartButton from '../buttons/StartButton'
 import './Header.Modules.scss'
 
 const Header = () => {
@@ -11,10 +12,10 @@ const Header = () => {
                     Sie kosten Abertausende Meerestiere das Leben Seevögel verwechseln Plastik mit natürlicher Nahrung,</p>
                 <p>Delfine verfangen sich in alten Fischernetzen. Hilf mit Müll zu reduzieren und trashnothing.
                 </p>
-                <button>Starte JETZT</button>
+                <StartButton />
 
             </section>
-            <h2>Lebe eCommerce mal anders</h2>
+            <h2>Lebe eCommerce mal anders </h2>
 
         </header>
     )
