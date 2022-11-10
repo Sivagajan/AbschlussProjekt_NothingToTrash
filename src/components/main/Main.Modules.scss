@@ -1,6 +1,6 @@
 main {
 
-    section {
+    .section1main {
         margin-left: 150px;
         margin-right: 150px;
         display: flex;
@@ -99,4 +99,179 @@ h3 {
 
 p {
     line-height: 25px;
+}
+
+/*---------- SECTION 2 FROM MAIN ---------*/
+
+.section2main {
+    margin-top: 150px;
+    background-image: url(../../../public/img/purplebg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 850px;
+
+    .section2article1 {
+
+        margin: 0 auto;
+        padding-top: 75px;
+
+        .section2a1d1 {
+            position: relative;
+
+            img {
+                position: absolute;
+            }
+
+            .section2a1pic1 {
+                width: 380px;
+                left: 200px;
+                top: -100px;
+                z-index: 50;
+
+            }
+
+            .section2a1pic1shadow {
+                width: 370px;
+                left: 220px;
+                top: -80px;
+                z-index: 40;
+            }
+
+            .section2a1pic2 {
+                width: 300px;
+                left: 175px;
+                top: 75px;
+            }
+
+            .section2a1pic3 {
+                width: 50px;
+                left: 150px;
+                top: 35px;
+            }
+
+            .section2a1pic4 {
+                width: 150px;
+                left: 180px;
+                top: 215px;
+            }
+
+        }
+
+        .section2a1d2 {
+
+            max-width: 370px;
+            margin-left: 45%;
+
+            h3 {
+                color: white;
+                line-height: 16px;
+            }
+
+            p {
+                color: white;
+                padding-top: 10px;
+                padding-bottom: 20px;
+            }
+        }
+
+    }
+
+    .section2article2 {
+
+        margin: 0 auto;
+        padding-top: 75px;
+
+        .section2a2d1 {
+            position: relative;
+
+            img {
+                position: absolute;
+            }
+
+            .section2a2pic1 {
+                width: 380px;
+                right: 200px;
+                top: 50px;
+                z-index: 50;
+            }
+
+            .section2a1pic2shadow {
+                width: 370px;
+                right: 200px;
+                top: 110px;
+                z-index: 40;
+            }
+
+
+            .section2a2pic2 {
+                width: 200px;
+                right: 115px;
+                top: 50px;
+            }
+
+            .section2a2pic3 {
+                width: 350px;
+                right: 75px;
+                top: 225px;
+            }
+
+            .section2a2pic4 {
+                width: 50px;
+                right: 400px;
+                top: 50px;
+                z-index: 99;
+            }
+        }
+
+        .section2a2d2 {
+
+            max-width: 370px;
+            margin-left: 30%;
+            margin-top: 60px;
+
+            h3 {
+                color: white;
+                line-height: 16px;
+            }
+
+            p {
+                color: white;
+                padding-top: 10px;
+                padding-bottom: 20px;
+            }
+        }
+
+    }
+}
+
+/*--------- SECTION3 ----------*/
+
+.section3 {
+    margin-top: 100px;
+    text-align: center;
+
+    h2 {
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        width: 500px;
+        margin: 0 auto;
+        color: #7854F7;
+    }
+
+    div {
+        position: relative;
+        width: 100vw;
+
+        img {
+            position: absolute;
+        }
+
+        .gruppenfoto {
+            width: 70%;
+            left: 15%;
+        }
+    }
 }
