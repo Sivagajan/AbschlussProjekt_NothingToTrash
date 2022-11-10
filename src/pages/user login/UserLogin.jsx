@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import LoginForm from '../../components/login&Register From/'
 
 SERVER = process.env.BACKEND_ADRESS
 
@@ -20,9 +21,8 @@ const Userlogin = () => {
             const data = await fetchData.json()
 
             localStorage.setItem('token', data.token)
-            nav()
+            nav('/login/marktplatz')
         }
-
     }
     
     return(
@@ -33,3 +33,5 @@ const Userlogin = () => {
         </div>
     )
 }
+
+export default Userlogin
