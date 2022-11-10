@@ -1,13 +1,12 @@
 const LoginForm = (props) => {
     return(
         <section className="form">
-            <label htmlFor="username">Username</label>
+            <h1>Mit Email Anmelden</h1>
             <input onChange={(e) => {props.setusername(e.target.value)}} type="text" />
 
-            <label htmlFor="password">Password</label>
             <input onChange={(e) => {props.setpassword(e.target.value)}} type="password"/>
 
-            <button className="RegBtn" onClick={props.login}>Registrieren</button>
+            <button className="loginBtn" onClick={props.login}>Registrieren</button>
 
         </section>
     )
