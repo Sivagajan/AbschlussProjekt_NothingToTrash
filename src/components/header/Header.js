@@ -14,7 +14,7 @@ const Header = () => {
                 <button>Starte JETZT</button>
 
             </section>
-            <h2>Lebe eCommerce mal anders</h2>
+            <h2>Lebe eCommerce mal anders </h2>
 
         </header>
     )
