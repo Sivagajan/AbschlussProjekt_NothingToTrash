@@ -31,7 +31,7 @@ const Main = () => {
 
                     </div>
                     <h3>Verkaufen statt wegwerfen</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget. </p>
                 </article>
 
             </section>
