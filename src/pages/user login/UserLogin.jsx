@@ -28,7 +28,7 @@ const Userlogin = () => {
     return(
         <div className="container">
             <div>
-
+                <LoginForm login={login} setusername={setUsername} setpassword={setPassword}/>
             </div>
         </div>
     )
