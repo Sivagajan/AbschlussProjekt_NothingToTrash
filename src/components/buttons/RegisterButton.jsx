@@ -1,7 +1,8 @@
+import './RegisterButton.Modules.scss'
 
 const RegisterButton = () => {
     return(
-        <button> Registriere Dich </button>
+        <button className='registerBtn'> Registriere Dich </button>
     )
 }
 export default RegisterButton

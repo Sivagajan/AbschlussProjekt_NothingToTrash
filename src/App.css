@@ -1,3 +1,12 @@
+@font-face{
+  font-family: Robot400;
+  src:url('../public/fonts/Roboto-Regular.ttf')
+}
+@font-face{
+  font-family: Robot700;
+  src:url('../public/fonts/Roboto-Bold.ttf')
+}
+
 * {
   margin: 0;
   padding: 0;
