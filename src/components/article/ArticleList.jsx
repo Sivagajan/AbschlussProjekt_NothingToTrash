@@ -1,7 +1,8 @@
+import { useEffect, useState } from 'react';
 import { v4 as uuidV4} from 'uuid';
 import ArticleItem from './ArticleItem';
 
-SERVER = process.env.BACKEND_ADRESS
+const SERVER = process.env.BACKEND_ADRESS
 
 uuidV4();
 
@@ -9,7 +10,7 @@ const ArticelList = () => {
 
     const [article, setArticle] = useState([])
 
-    useEffect(()=> {
+    /* useEffect(()=> {
 
         const fetchData = async () => {
 
@@ -26,11 +27,13 @@ const ArticelList = () => {
         }
 
         fetchData()
-    },[])
+    },[]) */
 
     return(
         <section className="articleList">
             {article.map(( article, uuidV4) => <ArticleItem key={uuidV4()} article={article}/>)}
+
+            <h1>hallo</h1>
         </section>
     )
 }
