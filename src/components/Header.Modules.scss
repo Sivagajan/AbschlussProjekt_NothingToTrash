@@ -1,11 +1,32 @@
 header {
     position: relative;
     margin-top: 10%;
+    margin-left: 100px;
 
     img {
         position: absolute;
         right: 0px;
         top: -200px;
         height: 800px;
+    }
+
+    h1 {
+        width: 600px;
+        font-size: 65px;
+        margin-bottom: 15px;
+
+    }
+
+    p {
+        width: 750px;
+        line-height: 25px;
+
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 45px;
+        width: 400px;
+        margin: 250px auto;
     }
 }
