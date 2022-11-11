@@ -1,7 +1,8 @@
 import "./App.css"
-import Navbar from './components/navbar/Navbar.jsx'
-import Header from './components/header/Header.jsx'
-import Main from './components/main/Main.jsx'
+import Navbar from './components/navbar/Navbar'
+import Header from './components/header/Header'
+import Main from './components/main/Main'
+import PurpleBar from './components/purplebar/PurpleBar'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Header />
       <Main />
+      <PurpleBar />
     </div>
   );
 }

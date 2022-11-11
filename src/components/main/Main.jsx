@@ -75,9 +75,16 @@ const Main = () => {
             <section className="section3">
                 <h2>Von echten Menschen unterstützt</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget.</p>
+
+                <img className="gruppenfoto" src="./img/gruppenfoto.png" alt="" />
                 <div>
-                    <img className="gruppenfoto" src="./img/gruppenfoto.png" alt="" />
+                    <img className="grpdecoration1" src="./img/Ellipse32.png" alt="" />
+                    <img className="grpdecoration2" src="./img/Ellipse34.png" alt="" />
+                    <img className="grpdecoration3" src="./img/Ellipse36.png" alt="" />
+                    <img className="grpdecoration4" src="./img/Group5.png" alt="" />
+                    <img className="grpdecoration5" src="./img/Group13.png" alt="" />
                 </div>
+
             </section>
         </main>
     )

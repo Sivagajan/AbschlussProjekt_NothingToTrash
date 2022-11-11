@@ -8,16 +8,19 @@ main .section1main {
 .articleleft {
   width: 340px;
 }
+
 .articleleft div {
   position: relative;
   padding-bottom: 50px;
 }
+
 .articleleft div img {
   max-width: 410px;
   position: absolute;
   left: -40px;
   top: -220px;
 }
+
 .articleleft div .picturez50 {
   position: absolute;
   z-index: 50;
@@ -30,10 +33,12 @@ main .section1main {
   width: 340px;
   padding-top: 70px;
 }
+
 .articlemiddle div {
   position: relative;
   padding-bottom: 50px;
 }
+
 .articlemiddle div img {
   max-width: 410px;
   position: absolute;
@@ -45,16 +50,19 @@ main .section1main {
   width: 340px;
   padding-top: 140px;
 }
+
 .articleright div {
   position: relative;
   padding-bottom: 50px;
 }
+
 .articleright div img {
   max-width: 410px;
   position: absolute;
   left: -40px;
   top: -220px;
 }
+
 .articleright div .rightrightpic {
   position: absolute;
   z-index: 50;
@@ -62,6 +70,7 @@ main .section1main {
   left: 220px;
   top: -100px;
 }
+
 .articleright div .topleftpic {
   position: absolute;
   z-index: 50;
@@ -69,6 +78,7 @@ main .section1main {
   left: 0px;
   top: -270px;
 }
+
 .articleright div .toprightpic {
   position: absolute;
   z-index: 50;
@@ -95,103 +105,125 @@ p {
   background-repeat: no-repeat;
   height: 850px;
 }
+
 .section2main .section2article1 {
   margin: 0 auto;
   padding-top: 75px;
 }
+
 .section2main .section2article1 .section2a1d1 {
   position: relative;
 }
+
 .section2main .section2article1 .section2a1d1 img {
   position: absolute;
 }
+
 .section2main .section2article1 .section2a1d1 .section2a1pic1 {
   width: 380px;
   left: 200px;
   top: -100px;
   z-index: 50;
 }
+
 .section2main .section2article1 .section2a1d1 .section2a1pic1shadow {
   width: 370px;
   left: 220px;
   top: -80px;
   z-index: 40;
 }
+
 .section2main .section2article1 .section2a1d1 .section2a1pic2 {
   width: 300px;
   left: 175px;
   top: 75px;
 }
+
 .section2main .section2article1 .section2a1d1 .section2a1pic3 {
   width: 50px;
   left: 150px;
   top: 35px;
 }
+
 .section2main .section2article1 .section2a1d1 .section2a1pic4 {
   width: 150px;
   left: 180px;
   top: 215px;
 }
+
 .section2main .section2article1 .section2a1d2 {
   max-width: 370px;
   margin-left: 45%;
 }
+
 .section2main .section2article1 .section2a1d2 h3 {
   color: white;
   line-height: 16px;
 }
+
 .section2main .section2article1 .section2a1d2 p {
   color: white;
   padding-top: 10px;
   padding-bottom: 20px;
 }
+
 .section2main .section2article2 {
   margin: 0 auto;
   padding-top: 75px;
 }
+
 .section2main .section2article2 .section2a2d1 {
   position: relative;
 }
+
 .section2main .section2article2 .section2a2d1 img {
   position: absolute;
 }
+
 .section2main .section2article2 .section2a2d1 .section2a2pic1 {
   width: 380px;
   right: 200px;
   top: 50px;
   z-index: 50;
 }
+
 .section2main .section2article2 .section2a2d1 .section2a1pic2shadow {
   width: 370px;
   right: 200px;
   top: 110px;
   z-index: 40;
 }
+
 .section2main .section2article2 .section2a2d1 .section2a2pic2 {
   width: 200px;
   right: 115px;
   top: 50px;
 }
+
 .section2main .section2article2 .section2a2d1 .section2a2pic3 {
   width: 350px;
   right: 75px;
   top: 225px;
 }
+
 .section2main .section2article2 .section2a2d1 .section2a2pic4 {
   width: 50px;
   right: 400px;
   top: 50px;
   z-index: 99;
 }
+
 .section2main .section2article2 .section2a2d2 {
   max-width: 370px;
   margin-left: 30%;
   margin-top: 60px;
 }
+
 .section2main .section2article2 .section2a2d2 h3 {
   color: white;
   line-height: 16px;
 }
+
 .section2main .section2article2 .section2a2d2 p {
   color: white;
   padding-top: 10px;
@@ -203,23 +235,30 @@ p {
   margin-top: 100px;
   text-align: center;
 }
+
 .section3 h2 {
   font-size: 45px;
   margin-bottom: 20px;
 }
+
 .section3 p {
   width: 500px;
   margin: 0 auto;
   color: #7854F7;
 }
+
 .section3 div {
   position: relative;
   width: 100vw;
 }
+
 .section3 div img {
   position: absolute;
 }
+
 .section3 div .gruppenfoto {
   width: 70%;
   left: 15%;
-}/*# sourceMappingURL=Main.Modules.css.map */
+}
+
+/*# sourceMappingURL=Main.Modules.css.map */
