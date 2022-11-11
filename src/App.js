@@ -1,7 +1,7 @@
 import "./App.css"
-import Navbar from './components/navbar/Navbar.js'
-import Header from './components/header/Header.js'
-import Main from './components/main/Main.js'
+import Navbar from './components/navbar/Navbar.jsx'
+import Header from './components/header/Header.jsx'
+import Main from './components/main/Main.jsx'
 
 function App() {
   return (
