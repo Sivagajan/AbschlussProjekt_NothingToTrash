@@ -1,0 +1,26 @@
+footer {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+
+    .footerdiv1 {
+        margin-left: 200px;
+
+        a {
+            color: #272D4E;
+            padding-right: 20px;
+        }
+    }
+
+    .footerdiv2 {
+        display: flex;
+
+        p {
+            span {
+                text-decoration: underline;
+                padding-right: 5px;
+            }
+        }
+    }
+}

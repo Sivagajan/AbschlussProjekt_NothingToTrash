@@ -2,7 +2,8 @@ import "./App.css"
 import Navbar from './components/navbar/Navbar'
 import Header from './components/header/Header'
 import Main from './components/main/Main'
-import PurpleBar from './components/purplebar/purpleBar'
+import PurpleBar from './components/purplebar/PurpleBar'
+import Footer from './components/footer/Footer'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Main />
       <PurpleBar />
+      <Footer />
     </div>
   );
 }
