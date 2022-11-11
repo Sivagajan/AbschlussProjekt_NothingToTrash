@@ -10,6 +10,7 @@ const Sidebar = () => {
     const [min, setMin] = useState(0)
     const [max, setMax] = useState(200)
 
+
     
 
 
@@ -57,7 +58,7 @@ const Sidebar = () => {
             <article>
                 <h3>Preis</h3>
                 <div>
-                <Slider setmin={setMin} setmax={setMax}/>
+                <Slider min={0} max={200} onChange={(setMin,setMax) => console.log(`min = ${min}, max = ${max}`)}/>
                 </div>
                 <div>
                     <input type="number" name="" id="" value={min} />

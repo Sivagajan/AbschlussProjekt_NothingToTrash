@@ -1,0 +1,26 @@
+header section {
+  position: relative;
+  margin-top: 10%;
+  margin-left: 150px;
+}
+header section img {
+  position: absolute;
+  right: 0px;
+  top: -200px;
+  height: 800px;
+}
+header section h1 {
+  width: 600px;
+  font-size: 65px;
+  margin-bottom: 15px;
+}
+header section p {
+  width: 750px;
+  line-height: 25px;
+}
+header h2 {
+  text-align: center;
+  font-size: 45px;
+  width: 400px;
+  margin: 250px auto;
+}/*# sourceMappingURL=Header.Modules.css.map */
