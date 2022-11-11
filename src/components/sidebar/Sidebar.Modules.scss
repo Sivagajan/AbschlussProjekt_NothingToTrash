@@ -9,17 +9,17 @@
     }
 
     .brands{
-        width: 70px;
+        width: 150px;
         align-items:center;
         display: grid;
-            grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 
     .div_ratings{
-        width: 60px;
+        width: 150px;
         align-items:center;
         display: grid;
-            grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 
     .slider{
@@ -33,5 +33,11 @@
 
     .articleSlider{
         height: 200px;
+    }
+
+    .labelStar{
+        display: flex;
+        justify-content: start;
+        height: 20px;
     }
 }

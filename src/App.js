@@ -2,7 +2,7 @@ import "./App.css"
 import Navbar from './components/navbar/Navbar'
 import Header from './components/header/Header'
 import Main from './components/main/Main'
-import PurpleBar from './components/purplebar/PurpleBar'
+import PurpleBar from './components/purplebar/purpleBar'
 
 function App() {
   return (

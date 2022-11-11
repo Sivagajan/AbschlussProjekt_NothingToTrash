@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react"
 import Slider from "../slider/Slider"
 import './Sidebar.Modules.scss'
+import { faStar } from "@fortawesome/free-solid-svg-icons"
 
 const Sidebar = () => {
 
@@ -38,22 +40,47 @@ const Sidebar = () => {
                 <h3>Marken</h3>
                 <div className="brands">
                     
-                    <input type="checkbox" name="brand1" id="" /> <label>Marke1</label>
-                    <input type="checkbox" name="brand2" id="" /> <label>Marke2</label>
-                    <input type="checkbox" name="brand3" id="" /> <label>Marke3</label>
-                    <input type="checkbox" name="brand4" id="" /> <label>Marke4</label>
-                    <input type="checkbox" name="brand5" id="" /> <label>Marke5</label>
+                    <input type="checkbox" name="brand1" id="" /> <label className="labelBrand">Marke1</label>
+                    <input type="checkbox" name="brand2" id="" /> <label className="labelBrand">Marke2</label>
+                    <input type="checkbox" name="brand3" id="" /> <label className="labelBrand">Marke3</label>
+                    <input type="checkbox" name="brand4" id="" /> <label className="labelBrand">Marke4</label>
+                    <input type="checkbox" name="brand5" id="" /> <label className="labelBrand">Marke5</label>
                         
                 </div>
             </article>
             <article>
                 <h3>Bewertung</h3>
                 <div className="div_ratings">
-                    <input type="checkbox" name="star5" id="" /><label>XXXXX</label>
-                    <input type="checkbox" name="star4" id="" /><label>XXXX</label>
-                    <input type="checkbox" name="star3" id="" /><label>XXX</label>
-                    <input type="checkbox" name="star2" id="" /><label>XX</label>
-                    <input type="checkbox" name="star1" id="" /><label>X</label>
+                    <input type="checkbox" name="star5" id="" />
+                        <label className="labelStar">
+                            <FontAwesomeIcon icon={faStar} /> 
+                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} />
+                        </label>
+                    <input type="checkbox" name="star4" id="" />
+                        <label className="labelStar">
+                            <FontAwesomeIcon icon={faStar} /> 
+                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} />
+                        </label>
+                    <input type="checkbox" name="star3" id="" />
+                        <label className="labelStar">
+                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} />
+                        </label>
+                    <input type="checkbox" name="star2" id="" />
+                        <label className="labelStar">
+                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} />
+                        </label>
+                    <input type="checkbox" name="star1" id="" />
+                        <label className="labelStar">
+                            <FontAwesomeIcon icon={faStar} />
+                        </label>
                 </div>
             </article>
             <article className="articleSlider">

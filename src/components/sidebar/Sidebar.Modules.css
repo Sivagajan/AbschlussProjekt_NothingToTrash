@@ -6,13 +6,13 @@
   grid-template-columns: repeat(2, 1fr);
 }
 .sidebar .brands {
-  width: 70px;
+  width: 150px;
   align-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 .sidebar .div_ratings {
-  width: 60px;
+  width: 150px;
   align-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -26,4 +26,9 @@
 }
 .sidebar .articleSlider {
   height: 200px;
+}
+.sidebar .labelStar {
+  display: flex;
+  justify-content: start;
+  height: 20px;
 }/*# sourceMappingURL=Sidebar.Modules.css.map */
