@@ -52,7 +52,7 @@ const Slider = ({min, max, onChange}) => {
         max={max}
         value={minVal}
         onChange={(event) => {
-            const value = Math.min(Number(event.target.value), maxVal - 1);
+            const value = Number((event.target.value), maxVal - 1);
             setMinVal(value);
             minValRef.current = value;
         }}
@@ -65,7 +65,7 @@ const Slider = ({min, max, onChange}) => {
         max={max}
         value={maxVal}
         onChange={(event) => {
-            const value = Math.max(Number(event.target.value), minVal + 1);
+            const value = Number((event.target.value), minVal + 1);
             setMaxVal(value);
             maxValRef.current = value;
         }}
@@ -75,8 +75,15 @@ const Slider = ({min, max, onChange}) => {
         <div className="slider">
         <div className="slider__track" />
         <div ref={range} className="slider__range" />
-        <div className="slider__left-value">{minVal}</div>
-        <div className="slider__right-value">{maxVal}</div>
+            <div className="divValue">
+                <div className="slider__left-value">
+                    <input className="valInput" type="text" id="minVal" value={minVal}/>
+                </div>
+                
+                <div className="slider__right-value">
+                    <input className="valInput" type="text" id="maxVal" value={maxVal}/>
+                </div>
+            </div>
         </div>
     </div>
     );

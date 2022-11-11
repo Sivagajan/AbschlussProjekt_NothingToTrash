@@ -1,12 +1,13 @@
 import { useState } from "react"
 import Slider from "../slider/Slider"
+import './Sidebar.Modules.scss'
 
 const Sidebar = () => {
 
-    const [countFurniture, setCountFurniture] = useState('')
-    const [countBooks, setCountBooks] = useState('')
-    const [countElectronics, setCountElectronics] = useState('')
-    const [countClothes, setCountClothes] = useState('')
+    const [countFurniture, setCountFurniture] = useState(50)
+    const [countBooks, setCountBooks] = useState(40)
+    const [countElectronics, setCountElectronics] = useState(30)
+    const [countClothes, setCountClothes] = useState(20)
     const [min, setMin] = useState(0)
     const [max, setMax] = useState(200)
 
@@ -15,10 +16,10 @@ const Sidebar = () => {
 
 
     return(
-        <section>
-            <article>
+        <section className="sidebar">
+            <article className="categories">
                 <h3>Kategorien</h3>
-                <div className="categories">
+                <div className="category">
                     <div>
                         <p>Möbel</p>
                         <p>Bücher</p>
@@ -55,15 +56,16 @@ const Sidebar = () => {
                     <input type="checkbox" name="star1" id="" /><label>X</label>
                 </div>
             </article>
-            <article>
+            <article className="articleSlider">
                 <h3>Preis</h3>
-                <div>
+                <div className="slider">
                 <Slider min={0} max={200} onChange={(setMin,setMax) => console.log(`min = ${min}, max = ${max}`)}/>
                 </div>
+            </article>
+            <article>
                 <div>
-                    <input type="number" name="" id="" value={min} />
-                    <p> - </p>
-                    <input type="number" name="" id="" value={max}/>
+                    <button>Filtern</button>
+                    <button>Reset</button>
                 </div>
             </article>
 

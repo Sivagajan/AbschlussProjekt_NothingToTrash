@@ -1,0 +1,29 @@
+.sidebar {
+  width: 200px;
+}
+.sidebar .categories .category {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.sidebar .brands {
+  width: 70px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.sidebar .div_ratings {
+  width: 60px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.sidebar .slider {
+  margin-top: 30px;
+}
+.sidebar .priceInput {
+  margin-top: 60px;
+  display: flex;
+}
+.sidebar .articleSlider {
+  height: 200px;
+}/*# sourceMappingURL=Sidebar.Modules.css.map */
