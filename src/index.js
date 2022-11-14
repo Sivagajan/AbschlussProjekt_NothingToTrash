@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Marketplace from './pages/marketplace/Marketplace'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Userlogin from './pages/user login/UserLogin';
+import UserRegister from './pages/userRegister/UserRegister';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,7 +14,7 @@ root.render(
       <Routes>  
         <Route path='/' element={< App/>}/>
         <Route path='/market' element={< Marketplace/>}/>
-        <Route path='/login' element={< Userlogin/>}/>
+        <Route path='/register' element={< UserRegister/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
