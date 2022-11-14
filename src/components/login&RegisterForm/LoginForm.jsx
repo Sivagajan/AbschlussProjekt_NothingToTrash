@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 
 
 const LoginForm = (props) => {
-    return (props.open) ? (
+    return (props.open) ? 
+    (
         <div className='bgOpacity'>
             <motion.section className='container' 
             initial={{ scale: 0 }} animate={{ rotate: 360, scale: 1 }}
