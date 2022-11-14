@@ -5,16 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Marketplace from './pages/marketplace/Marketplace'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import UserRegister from './pages/userRegister/UserRegister';
+import UserRegister from './pages/userRegister/UserRegister'
+import ProductPlacement from './pages/produktplacement/ProductPlacement';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>  
-        <Route path='/' element={< App/>}/>
-        <Route path='/market' element={< Marketplace/>}/>
+      <Routes>
+        <Route path='/' element={< App />} />
+        <Route path='/market' element={< Marketplace />} />
         <Route path='/register' element={< UserRegister/>}/>
+        <Route path='/productplacement' element={< ProductPlacement />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
