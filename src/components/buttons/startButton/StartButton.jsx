@@ -6,6 +6,7 @@ import { useState } from 'react'
 const StartButton = () => {
 
     const [open, setOpen] = useState(false)
+    console.log('start Button', props.setbg)
 
     return(
         <>
@@ -16,5 +17,6 @@ const StartButton = () => {
         
         </>
     )
+    
 }
 export default StartButton
