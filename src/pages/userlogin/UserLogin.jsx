@@ -10,13 +10,19 @@ const Userlogin = (props) => {
 
 
     const login = async () => {
+
+        console.log(username, password)
+
         const result = await fetch('http://localhost:9090/user/login',{
             method: 'POST',
             headers: {
-                'content-ype': 'application/json'
+                'content-type': 'application/json'
             },
             body: JSON.stringify({username, password})
         })
+
+        
+
         if(result.status === 200) {
 
             const data = await result.json()
