@@ -1,4 +1,4 @@
-import RegisterButton from '../buttons/RegisterButton'
+import RegisterButton from '../buttons/registerButton/RegisterButton'
 import './Navbar.Modules.scss'
 
 

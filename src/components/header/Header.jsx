@@ -1,4 +1,4 @@
-import StartButton from '../buttons/StartButton'
+import StartButton from '../buttons/startButton/StartButton'
 import './Header.Modules.scss'
 
 
