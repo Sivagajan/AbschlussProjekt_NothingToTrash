@@ -3,7 +3,7 @@ import './Header.Modules.scss'
 
 
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header>
             <section>
@@ -14,7 +14,7 @@ const Header = () => {
                     Sie kosten Abertausende Meerestiere das Leben Seevögel verwechseln Plastik mit natürlicher Nahrung,</p>
                 <p>Delfine verfangen sich in alten Fischernetzen. Hilf mit Müll zu reduzieren und trashnothing.
                 </p>
-                <StartButton />
+                <StartButton setbg={props.setbg}/>
 
             </section>
             <h2>Lebe eCommerce mal anders </h2>

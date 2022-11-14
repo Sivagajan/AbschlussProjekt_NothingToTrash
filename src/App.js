@@ -6,10 +6,12 @@ import PurpleBar from './components/purplebar/PurpleBar'
 import Footer from './components/footer/Footer'
 
 function App() {
+  const [bg, setBg] = useState(false)
+
   return (
     <div className="App">
       <Navbar />
-      <Header />
+      <Header setbg={setBg}/>
       <Main />
       <PurpleBar />
       <Footer />
