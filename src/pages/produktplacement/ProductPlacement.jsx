@@ -13,37 +13,44 @@ const ProductPlacement = () => {
 
                 <div className="inputbietesuche dflex">
                     <p>Anzeigetyp:</p>
-                    <input type="radio" value="Ich biete" name="anzeigetyp" /> Ich biete
-                    <input type="radio" value="Ich suche" name="anzeigetyp" /> Ich suche
+                    <input type="radio" value="Ich biete" name="anzeigetyp" id="radiobtn" />
+                    <p className="radiodescript">Ich biete</p>
+                    <input type="radio" value="Ich suche" name="anzeigetyp" id="radiobtn" />
+                    <p className="radiodescript">Ich suche</p>
                 </div>
 
                 <div className="inputjanein dflex">
                     <p>Lieferung:</p>
-                    <input type="radio" value="Ja" name="anzeigetyp" /> Ja
-                    <input type="radio" value="Nein" name="anzeigetyp" /> Nein
+                    <input type="radio" value="Ja" name="neinja" id="radiobtn" />
+                    <p className="radiodescript">Ja</p>
+                    <input type="radio" value="Nein" name="neinja" id="radiobtn" />
+                    <p className="radiodescript">Nein</p>
                 </div>
 
                 <div className="inputtitel dflex">
                     <p>Titel der Anzeige:</p>
-                    <input type="text" />
+                    <input type="text" id="inputtextfield" />
                 </div>
 
                 <div className="inputbeschreibung dflex">
                     <p>Beschreibung:</p>
-                    <input type="text" />
+                    <input type="text" id="inputtextbeschreibung" />
                 </div>
 
                 <div className="inputanzahl dflex">
                     <p>Anzahl:</p>
-                    <input type="text" />
+                    <input type="text" id="inputtextsmall" />
                 </div>
 
                 <div className="inputpreis dflex">
                     <p>Preis:</p>
-                    <input type="text" /> Euro
-                    <input type="radio" value="Festpreis" name="anzeigetyp" /> Festpreis
-                    <input type="radio" value="VB" name="anzeigetyp" /> VB
-                    <input type="radio" value="Zu Verschenken" name="anzeigetyp" /> Zu Verschenken
+                    <input type="number" id="inputtextsmall" />
+                    <p className="radiodescript">EUR</p>
+                    <input type="radio" value="Festpreis" name="preis" id="radiobtn" />
+                    <p className="radiodescript">Festpreis</p>
+                    <input type="radio" value="VB" name="preis" id="radiobtn" />
+                    <p className="radiodescript">VB</p>
+                    <input type="radio" value="Zu Verschenken" name="preis" id="radiobtn" /> <p className="radiodescript">Zu Verschenken</p>
                 </div>
 
                 <div className="inputpicture dflex">
@@ -64,8 +71,8 @@ const ProductPlacement = () => {
 
                 {/* Hier müssen wir noch props einfügen für die kategorien */}
                 <div className="kategorie dflex">
-                    <p>Anzahl:</p>
-                    <select id="cars" name="cars">
+                    <p>Kategorie:</p>
+                    <select id="categorys" name="categorys">
                         <option value="volvo">Volvo</option>
                         <option value="saab">Saab</option>
                         <option value="fiat">Fiat</option>
@@ -75,19 +82,20 @@ const ProductPlacement = () => {
 
                 <div className="inputplzort dflex">
                     <p>Adresse:</p>
-                    <input type="text" />
+                    <input type="text" id="inputtextsmall" className="marginrightsmall" placeholder="  PLZ" />
+                    <input type="text" id="inputtextfieldort" placeholder="  Ort" />
                 </div>
                 <div className="inputstraße dflex">
                     <p>Strasse:</p>
-                    <input type="text" />
+                    <input type="text" id="inputtextfield" />
                 </div>
                 <div className="inputname dflex">
                     <p>Name:</p>
-                    <input type="text" />
+                    <input type="text" id="inputtextfield" />
                 </div>
                 <div className="inputtelefonnummer dflex">
                     <p>Telefonnumer:</p>
-                    <input type="text" />
+                    <input type="text" id="inputtextfield" />
                 </div>
             </section>
         </>
