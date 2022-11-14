@@ -7,9 +7,10 @@ const LoginForm = (props) => {
 
     return(
         <div className='bgOpacity'>
+
             <motion.section className='container' 
             initial={{ scale: 0 }} animate={{ rotate: 360, scale: 1 }}
-            transition={{type: "spring", stiffness: 260, damping: 20}}>
+            transition={{type: "spring", stiffness: 260, damping: 30}}>
                 <article className="form">
                     <h1>Mit Email Anmelden</h1>
 
@@ -22,6 +23,7 @@ const LoginForm = (props) => {
                     <p>Noch kein Mitglied? Dann registriere dich <Link to='/register'>hier</Link> </p>
                 </article>
             </motion.section>
+            
         </div>
     )
 }
