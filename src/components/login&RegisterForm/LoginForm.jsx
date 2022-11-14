@@ -5,7 +5,7 @@ const LoginForm = (props) => {
     return (
         <>
             <Navbar />
-            <section>
+            <section className='container'>
                 <article className="form">
                     <h1>Mit Email Anmelden</h1>
                     <input onChange={(e) => { props.setusername(e.target.value) }} type="text" />

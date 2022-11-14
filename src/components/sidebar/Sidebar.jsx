@@ -4,6 +4,7 @@ import Slider from "../slider/Slider"
 import './Sidebar.Modules.scss'
 import { faStar } from "@fortawesome/free-solid-svg-icons"
 
+
 const Sidebar = () => {
 
     const [countFurniture, setCountFurniture] = useState(50)
@@ -53,33 +54,33 @@ const Sidebar = () => {
                 <div className="div_ratings">
                     <input type="checkbox" name="star5" id="" />
                         <label className="labelStar">
-                            <FontAwesomeIcon icon={faStar} /> 
-                            <FontAwesomeIcon icon={faStar} />
-                            <FontAwesomeIcon icon={faStar} />
-                            <FontAwesomeIcon icon={faStar} />
-                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} color={'gold'} /> 
+                            <FontAwesomeIcon icon={faStar} color={'gold'} />
+                            <FontAwesomeIcon icon={faStar} color={'gold'}/>
+                            <FontAwesomeIcon icon={faStar} color={'gold'}/>
+                            <FontAwesomeIcon icon={faStar} color={'gold'}/>
                         </label>
                     <input type="checkbox" name="star4" id="" />
                         <label className="labelStar">
-                            <FontAwesomeIcon icon={faStar} /> 
-                            <FontAwesomeIcon icon={faStar} />
-                            <FontAwesomeIcon icon={faStar} />
-                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} color={'gold'}/> 
+                            <FontAwesomeIcon icon={faStar} color={'gold'}/>
+                            <FontAwesomeIcon icon={faStar} color={'gold'}/>
+                            <FontAwesomeIcon icon={faStar} color={'gold'}/>
                         </label>
                     <input type="checkbox" name="star3" id="" />
                         <label className="labelStar">
-                            <FontAwesomeIcon icon={faStar} />
-                            <FontAwesomeIcon icon={faStar} />
-                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} color={'gold'}/>
+                            <FontAwesomeIcon icon={faStar} color={'gold'} />
+                            <FontAwesomeIcon icon={faStar} color={'gold'}/>
                         </label>
                     <input type="checkbox" name="star2" id="" />
                         <label className="labelStar">
-                            <FontAwesomeIcon icon={faStar} />
-                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} color={'gold'}/>
+                            <FontAwesomeIcon icon={faStar} color={'gold'}/>
                         </label>
                     <input type="checkbox" name="star1" id="" />
                         <label className="labelStar">
-                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} color={'gold'}/>
                         </label>
                 </div>
             </article>
