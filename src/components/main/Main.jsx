@@ -1,3 +1,4 @@
+import DokumentationsButton from "../buttons/dokumentationsButton/DokumentationsButton"
 import "./Main.Modules.scss"
 
 const Main = () => {
@@ -49,7 +50,7 @@ const Main = () => {
                         <h3>Ohne</h3>
                         <h3>Limits</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget.</p>
-                        <button>Zur Dokumentation</button>
+                        <DokumentationsButton />
                     </div>
                 </article>
 
@@ -66,7 +67,7 @@ const Main = () => {
                         <h3>Kenne deine</h3>
                         <h3>Community</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget.</p>
-                        <button>Zur Dokumentation</button>
+                        <DokumentationsButton />
                     </div>
                 </article>
 
