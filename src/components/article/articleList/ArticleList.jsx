@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import { v4 as uuidV4} from 'uuid';
-import ArticleItem from './ArticleItem';
-
-const SERVER = process.env.BACKEND_ADRESS
+import ArticleItem from '../articleItem/ArticleItem';
 
 uuidV4();
 
@@ -10,28 +8,25 @@ const ArticelList = () => {
 
     const [article, setArticle] = useState([])
 
-    /* useEffect(()=> {
+    useEffect(()=> {
 
         const fetchData = async () => {
 
-            const response = await fetch(`${SERVER}article`,
-            {   headers: {
-                    Authentication : 'Bearer ' + localStorage.getItem('token')
-            }})
+            const response = await fetch(`http://localhost:9090/article/`)
 
             if(response.status === 200){
                 const data = await response.json()
-
+                console.log(data)
                 setArticle(data)
             }
         }
 
         fetchData()
-    },[]) */
+    },[])
 
     return(
         <section className="articleList">
-            {article.map(( article, uuidV4) => <ArticleItem key={uuidV4()} article={article}/>)}
+            {article.map(( article, key) => <ArticleItem key={key} article={article}/>)}
 
             <h1>hallo</h1>
         </section>

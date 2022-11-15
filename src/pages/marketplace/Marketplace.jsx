@@ -1,4 +1,4 @@
-import ArticelList from "../../components/article/ArticleList"
+import ArticelList from "../../components/article/articleList/ArticleList"
 import Sidebar from "../../components/sidebar/Sidebar"
 
 const Marketplace = () => {
