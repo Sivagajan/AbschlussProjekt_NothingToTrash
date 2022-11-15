@@ -1,7 +1,7 @@
 import RegisterButton from '../buttons/registerButton/RegisterButton'
 import './Navbar.Modules.scss'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Userlogin from '../../pages/userlogin/UserLogin'
 
 
@@ -9,15 +9,27 @@ import Userlogin from '../../pages/userlogin/UserLogin'
 const Navbar = () => {
     
     const [open, setOpen] = useState(false)
+    const [key, setKey] = useState(false)
+    
 
     const openForm = () => {
         setOpen(!open)
     }
 
-    const logout = () =>{
+    useEffect(() => {
+        const loginKey = localStorage.getItem('token')
 
+        console.log(loginKey)
+        if(loginKey){
+            setOpen(true)
+        }
+    },[])
+
+    const logout = () =>{
         const result = localStorage.removeItem('token')
         console.log(result)
+
+        setOpen(false)
     }
 
     return (
@@ -31,7 +43,7 @@ const Navbar = () => {
                 <div className='div2'>
 
                     <Userlogin open={open} setOpen={setOpen}/>
-                    {open === true ? <motion.a className='underline-animation link textdeconone' 
+                    {key === true ? <motion.a className='underline-animation link textdeconone' 
                     whileTap={{scale: 0.8,}}
                     onClick={logout}
                     >Log Out</motion.a>:<motion.a className='underline-animation link textdeconone' 
