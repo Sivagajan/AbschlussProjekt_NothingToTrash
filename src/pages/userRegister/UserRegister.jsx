@@ -19,15 +19,14 @@ const UserResgister = (props) => {
             body: JSON.stringify({username, password})
         })
 
+        const data = await result.json()
         
-
-       /*  if(result.status === 200) {
-
-            const data = await result.json()
-
-            localStorage.setItem('token', data.token)
+        if(data.state){
+            setUsername('')
+            setPassword('')
             nav('/market')
-        } */
+        }
+        
     }
 
     

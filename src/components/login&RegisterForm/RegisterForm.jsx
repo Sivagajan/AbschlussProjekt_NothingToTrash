@@ -24,12 +24,6 @@ const RegisterForm = (props) => {
                     <input onChange={(e) => { props.setpassword(e.target.value) }} type="password"  placeholder='Passwort' />
                     {/* <span>icon here</span> */}
 
-                    <p className='datenschutz'>Wir senden Ihnen regelmäßig E-Mails mit Angeboten zu unseren Dienstleistungen. Sie können dieser Nutzung zu Werbezwecken jederzeit in Mein Account oder über den Link in den E-Mails oder über <a href="#">diesen Link</a> kostenlos widersprechen.</p>
-                    
-                    <p className='datenschutz'>Es gelten die <a href="#">nothingtotrash AGB.</a><span>Informationen zur Verarbeitung Ihrer Daten finden Sie in unserer <a href="#">Datenschutzerklärung</a>
-                    </span> </p>
-                    
-
                     <motion.button className="loginBtn" onClick={props.login}
                     whileTap={{scale: 0.85}}>Account erstellen</motion.button>
 
