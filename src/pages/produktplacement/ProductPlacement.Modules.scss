@@ -1,3 +1,8 @@
+.backgroundblue {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(29, 128, 212, 0.2) 100%);
+    height: 100%;
+}
+
 .dflex {
     display: flex;
     margin-bottom: 10px;
@@ -6,7 +11,8 @@
 .productplacementsec1 {
     margin-top: 50px;
     margin-left: 150px;
-    margin: 50px 0px 75px 150px;
+    margin: 50px 0px 25px 150px;
+
 }
 
 .radiodescript {
@@ -21,9 +27,10 @@
     border: 1px solid black;
     background-position: center;
     background-size: cover;
-        .image{
-            max-height: 200px;
-        }
+
+    .image {
+        max-height: 200px;
+    }
 }
 
 #inputtextfield {
@@ -70,12 +77,19 @@
 
 }
 
+.kategorie {
+    margin-bottom: 100px;
+}
+
 .marginrightsmall {
     margin-right: 5px;
 }
 
-.inputbietesuche {
-    p {
-        width: 200px;
-    }
+.width200 {
+    width: 200px;
+}
+
+.artikelhinzufuegenbtn {
+    text-align: center;
+    padding-bottom: 5px;
 }
