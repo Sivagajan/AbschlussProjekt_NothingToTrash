@@ -1,8 +1,10 @@
 nav {
     display: flex;
+    position: sticky;
     max-width: 100vw;
     align-items: baseline;
     padding-top: 20px;
+    z-index: 1000;
 
     p {
         margin-left: 3%;
@@ -15,16 +17,16 @@ nav {
         width: 100vw;
         margin-right: 5%;
 
-        a{
+        a {
             text-decoration: none;
             color: #000;
             margin: 2rem 2rem 0 2rem;
         }
 
-        .underline-animation{
+        .underline-animation {
             position: relative;
-            
-            &::after{
+
+            &::after {
                 content: "";
                 position: absolute;
                 display: block;
@@ -37,7 +39,8 @@ nav {
                 transform-origin: bottom right;
                 transition: transform 0.3s ease;
             }
-            &:hover::after{
+
+            &:hover::after {
                 transform: scale(1);
                 transform-origin: bottom left;
             }

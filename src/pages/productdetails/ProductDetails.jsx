@@ -5,7 +5,8 @@ import './ProductDetails.Modules.scss'
 const ProductDetails = () => {
 
     return (
-        <div className="completepage">
+
+        < div className="completepage" >
             <Navbar />
             <section className="detailssec1 dflex">
                 <img className="imgdetails" src="./img/tablet.jpg" alt="" />
@@ -35,7 +36,7 @@ const ProductDetails = () => {
                 <button>Verkauft</button>
             </div>
             <div className="footerbottom"><Footer /></div>
-        </div>
+        </div >
     )
 }
 
