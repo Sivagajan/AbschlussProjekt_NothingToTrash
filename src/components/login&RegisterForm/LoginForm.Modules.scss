@@ -41,7 +41,9 @@
 
     .form {
         height: 520px;
-        width: 35vw;
+        width: 350px;
+        max-width: 350px;
+        min-width: 350px;
         background-color: rgb(255, 255, 255);
         transform: translate(-50%, -50%);
         border-radius: 10px;
