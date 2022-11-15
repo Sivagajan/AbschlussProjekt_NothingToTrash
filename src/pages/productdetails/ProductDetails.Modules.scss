@@ -1,0 +1,53 @@
+.completepage {
+    height: 100%;
+}
+
+.detailssec1 {
+    position: relative;
+    margin-left: 150px;
+    margin-top: 100px;
+    height: 100%;
+
+
+    .imgdetails {
+        max-width: 600px;
+        margin-right: 25px;
+
+    }
+
+    article {
+        .price {
+            padding-top: 5px;
+            font-size: 20px;
+        }
+
+        .productdescription {
+            width: 500px;
+        }
+    }
+}
+
+.btnbottom {
+    margin-left: 200px;
+    margin-bottom: 120px;
+}
+
+.footerbottom {
+    position: relative;
+}
+
+.footerabsolut {
+    position: absolute;
+    bottom: 0;
+}
+
+.zustandmarke {
+    padding-right: 50px;
+}
+
+.paddingbottom {
+    p {
+        padding-bottom: 20px;
+    }
+
+}
