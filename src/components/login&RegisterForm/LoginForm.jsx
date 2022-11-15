@@ -6,24 +6,24 @@ import { Link } from 'react-router-dom'
 const LoginForm = (props) => {
 
     return(
-        <div className='bgOpacity'>
-
+        <div>
             <motion.section className='container' 
-            initial={{ scale: 0 }} animate={{ rotate: 360, scale: 1 }}
-            transition={{type: "spring", stiffness: 260, damping: 30}}>
+            initial={{ scale: 0 }} 
+            animate={{ scale: 1 , x: 100}}
+            transition={{type: "spring", stiffness: 260, damping: 20}}>
                 <article className="form">
-                    <h1>Mit Email Anmelden</h1>
+                    <h1 className='text-align'>Mit Email anmelden</h1>
+                    <p className='text-align'>Du hast bereits ein Konto? <Link to='/register'>Registrieren</Link> </p>
 
                     <input onChange={(e) => { props.setusername(e.target.value) }} type="text" placeholder='Username' />
 
                     <input onChange={(e) => { props.setpassword(e.target.value) }} type="password" placeholder='Password' />
 
-                    <button className="loginBtn" onClick={props.login}>Login</button>
+                    <motion.button className="loginBtn" onClick={props.login}
+                    whileTap={{scale: 0.85}}>Login</motion.button>
 
-                    <p>Noch kein Mitglied? Dann registriere dich <Link to='/register'>hier</Link> </p>
                 </article>
             </motion.section>
-            
         </div>
     )
 }
