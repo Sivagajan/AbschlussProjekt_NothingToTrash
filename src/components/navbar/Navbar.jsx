@@ -16,14 +16,14 @@ const Navbar = () => {
         setOpen(!open)
     }
 
-    useEffect(() => {
+    /* useEffect(() => {
         const loginKey = localStorage.getItem('token')
 
         console.log(loginKey)
         if(loginKey){
             setKey(true)
         }
-    },[])
+    },[]) */
 
     const logout = () =>{
         const result = localStorage.removeItem('token')
