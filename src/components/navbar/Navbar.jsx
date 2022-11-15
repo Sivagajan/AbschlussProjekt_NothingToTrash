@@ -21,7 +21,7 @@ const Navbar = () => {
 
         console.log(loginKey)
         if(loginKey){
-            setOpen(true)
+            setKey(true)
         }
     },[])
 
@@ -29,6 +29,7 @@ const Navbar = () => {
         const result = localStorage.removeItem('token')
         console.log(result)
 
+        setKey(false)
         setOpen(false)
     }
 
@@ -42,7 +43,7 @@ const Navbar = () => {
                 </div>
                 <div className='div2'>
 
-                    <Userlogin open={open} setOpen={setOpen}/>
+                    <Userlogin open={open} setOpen={setOpen} setKey={setKey}/>
                     {key === true ? <motion.a className='underline-animation link textdeconone' 
                     whileTap={{scale: 0.8,}}
                     onClick={logout}
