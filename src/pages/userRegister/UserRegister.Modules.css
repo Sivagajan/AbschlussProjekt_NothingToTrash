@@ -1,30 +1,23 @@
-.container {
-  height: 100vh;
-  width: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: fixed;
-  top: 0;
-  left: 0;
+.registerSection {
+  margin-top: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
 }
-.container input[type=text],
-.container input[type=password] {
+.registerSection input[type=text],
+.registerSection input[type=password] {
   display: block;
+  margin-bottom: 10px;
   height: 7vh;
   width: 100%;
   border-radius: 3px;
   padding: 0 15px;
-  margin-top: 2vh;
   font-size: 16px;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.238);
 }
-.container .loginBtn {
-  margin-top: 50px;
+.registerSection .registerBtn {
+  margin-top: 5px;
   width: 100%;
   background-color: #7854F7;
   color: white;
@@ -34,31 +27,27 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.container .form {
-  height: 520px;
-  width: 35vw;
+.registerSection .registerForm {
+  width: 520px;
+  max-width: 520px;
+  min-width: 520px;
   background-color: rgb(255, 255, 255);
-  transform: translate(-50%, -50%);
   border-radius: 10px;
   border: 2px solid rgb(255, 255, 255);
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
   padding: 60px 35px;
 }
-.container .form * {
+.registerSection .registerForm * {
   letter-spacing: 0.5px;
   outline: none;
   border: none;
 }
-.container .text-align {
+.registerSection .registerForm h1 {
+  margin-bottom: 5vh;
   text-align: center;
   width: 100%;
   color: black;
-}
-.container .form h1 {
   font-family: Robot700;
-  font-size: 40px;
+  font-size: 2rem;
   line-height: 42px;
-}
-.container .form p {
-  font-size: 15px;
-}/*# sourceMappingURL=LoginForm.Modules.css.map */
+}/*# sourceMappingURL=UserRegister.Modules.css.map */
