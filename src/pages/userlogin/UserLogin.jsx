@@ -13,17 +13,17 @@ const Userlogin = (props) => {
 
         console.log(username, password)
 
-        const result = await fetch('http://localhost:9090/user/login',{
+        const result = await fetch('http://localhost:9090/user/login', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify({username, password})
+            body: JSON.stringify({ username, password })
         })
 
-        
 
-        if(result.status === 200) {
+
+        if (result.status === 200) {
 
             const data = await result.json()
 
@@ -33,14 +33,10 @@ const Userlogin = (props) => {
     }
 
     console.log(username, password)
-    
-    return (props.open)?(
-        <div >
-            <div>
-                <LoginForm login={login} setusername={setUsername} setpassword={setPassword}/>
-            </div>
-        </div>
-    ):""
+
+    return (props.open) ? (
+        <LoginForm login={login} setusername={setUsername} setpassword={setPassword} />
+    ) : ""
 }
 
 export default Userlogin

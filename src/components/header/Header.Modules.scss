@@ -1,7 +1,7 @@
 header {
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(29, 128, 212, 0.2) 100%);
 
-    section {
+    .headersection {
         position: relative;
         margin-top: 150px;
         margin-left: 150px;
@@ -37,4 +37,8 @@ header {
         width: 400px;
         margin: 250px auto;
     }
+}
+
+.paddingbottom {
+    padding-bottom: 75px;
 }

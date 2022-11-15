@@ -6,7 +6,7 @@ const ProductDetails = () => {
 
     return (
 
-        < div className="completepage" >
+        < div >
             <Navbar />
             <section className="detailssec1 dflex">
                 <img className="imgdetails" src="./img/tablet.jpg" alt="" />

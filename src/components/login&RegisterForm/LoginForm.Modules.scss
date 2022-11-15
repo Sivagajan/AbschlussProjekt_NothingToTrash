@@ -1,17 +1,14 @@
-
-
-    .container {
-        height: 100vh;
-        width: 100%;
-        background-size: contain;
-        background-repeat: no-repeat;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
+.container1 {
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    display: flex;
+    top: 250px;
+    left: 622px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
 
 
     input[type=text],
@@ -37,13 +34,14 @@
         font-weight: 600;
         border-radius: 5px;
         cursor: pointer;
-}
+    }
 
     .form {
+        margin: 0 auto;
         height: 520px;
         width: 450px;
-        max-width: 450px;
-        min-width: 450px;
+        /*   max-width: 450px;
+        min-width: 450px; */
         background-color: rgb(255, 255, 255);
         transform: translate(-50%, -50%);
         border-radius: 10px;
@@ -69,8 +67,9 @@
         font-size: 40px;
         line-height: 42px;
     }
+
     .form p {
-        
+
         font-size: 15px;
     }
 }

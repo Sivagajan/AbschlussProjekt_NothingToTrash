@@ -13,18 +13,18 @@ const Navbar = () => {
     return (
         <nav>
             <p>nothingtotrash</p>
-            <div className="dflex">
+            <div className="aligneitems1 dflex">
                 <div className='div1'>
-                    <a className='underline-animation link' href="/market">Marktplatz</a>
-                    <a className='underline-animation link' href="/">Über uns</a>
+                    <a className='underline-animation link textdeconone' href="/market">Marktplatz</a>
+                    <a className='underline-animation link textdeconone' href="/">Über uns</a>
                 </div>
                 <div className='div2'>
-                    <Userlogin open={open} setOpen={setOpen}/>
-                    <motion.a className='link' 
-                    whileTap={{scale: 0.8,}}
-                    onClick={() => setOpen(true)}
+                    <Userlogin open={open} setOpen={setOpen} />
+                    <motion.a className='link textdeconone'
+                        whileTap={{ scale: 0.8, }}
+                        onClick={() => setOpen(true)}
                     >Log In</motion.a>
-                    <RegisterButton/>
+                    <RegisterButton />
                 </div>
             </div>
         </nav>

@@ -17,7 +17,7 @@ nav {
         width: 100vw;
         margin-right: 5%;
 
-        a {
+        .textdeconone {
             text-decoration: none;
             color: #000;
             margin: 2rem 2rem 0 2rem;
@@ -46,4 +46,8 @@ nav {
             }
         }
     }
+}
+
+.aligneitems1 {
+    align-items: baseline;
 }

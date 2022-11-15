@@ -11,12 +11,12 @@ const UserResgister = () => {
     const [password, setPassword] = useState('')
     const nav = useNavigate()
 
-        /* const [passwordShown, setPasswordShown] = useState(false)
+    /* const [passwordShown, setPasswordShown] = useState(false)
 
-    const togglePassword = () => {
-        setPasswordShown(!passwordShown);
-    };
- */
+const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+};
+*/
 
     // type={passwordShown ? "text" : "password"}
 
@@ -25,50 +25,50 @@ const UserResgister = () => {
             username: username,
             password: password
         }
-        
-        const result = await fetch('http://localhost:9090/user/register',{
+
+        const result = await fetch('http://localhost:9090/user/register', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(user)
         })
-        
+
         const data = await result.json()
-        
-        if(data.state){
+
+        if (data.state) {
             setUsername('')
             setPassword('')
         }
         nav('/market')
     }
 
-    return(
-        <>
-            <Navbar/>
+    return (
+        <div className="height1">
+            <Navbar />
             <section className='registerSection'>
-                    <article className="registerForm">
-                        <h1>Registriere dich mit deinem Namen</h1>
+                <article className="registerForm">
+                    <h1>Registriere dich mit deinem Namen</h1>
 
-                        <input value={username} onChange={(e) => {setUsername(e.target.value) }} type="text" placeholder='Username'/>
+                    <input value={username} onChange={(e) => { setUsername(e.target.value) }} type="text" placeholder='Username' />
 
-                        <input value={password} onChange={(e) => {setPassword(e.target.value) }} type="password"  placeholder='Passwort' />
-                        {/* <span>icon here</span> */}
+                    <input value={password} onChange={(e) => { setPassword(e.target.value) }} type="password" placeholder='Passwort' />
+                    {/* <span>icon here</span> */}
 
-                        <motion.button className="registerBtn" onClick={register}
-                        whileTap={{scale: 0.95}}>Account erstellen</motion.button>
+                    <motion.button className="registerBtn" onClick={register}
+                        whileTap={{ scale: 0.95 }}>Account erstellen</motion.button>
 
-                    </article>
-                </section>
-        </>
-    )
-   /*  return (
-        <div className="container">
-            <div>
-                <RegisterForm register={register} setusername={setUsername} setpassword={setPassword}/>
-            </div>
+                </article>
+            </section>
         </div>
-    ) */
+    )
+    /*  return (
+         <div className="container">
+             <div>
+                 <RegisterForm register={register} setusername={setUsername} setpassword={setPassword}/>
+             </div>
+         </div>
+     ) */
 }
 
 export default UserResgister
