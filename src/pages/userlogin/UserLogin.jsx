@@ -28,6 +28,8 @@ const Userlogin = (props) => {
 
             localStorage.setItem('token', data.token)
             nav('/market')
+            props.setOpen(false)
+            props.setKey(true)
         }
     }
 
