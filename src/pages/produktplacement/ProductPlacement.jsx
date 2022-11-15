@@ -17,9 +17,9 @@ const ProductPlacement = () => {
     const [file, setFile] = useState(null)
     const [base64, setBase64] = useState('')
     const [postCode, setPostCode] = useState('')
-    const [city,setCity] = useState('')
+    const [city, setCity] = useState('')
     const [street, setStreet] = useState('')
-    const [name,setName] = useState('')
+    const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
     const [rating, setRating] = useState('')
 
@@ -56,7 +56,7 @@ const ProductPlacement = () => {
                         reader.readAsDataURL(this.files[0]);}); */
 
     useEffect(() => {
-        if(file){
+        if (file) {
             console.log(file.size)
             const reader = new FileReader()
             reader.onload = handleReaderLoaded
@@ -65,9 +65,9 @@ const ProductPlacement = () => {
 
             randomRating()
         }
-    },[file])
+    }, [file])
 
-    const handleReaderLoaded = (event) =>{
+    const handleReaderLoaded = (event) => {
 
         setBase64(event.target.result)
     }
@@ -84,7 +84,6 @@ const ProductPlacement = () => {
         setPriceTyp(e.target.value)
     } 
 
-    
 
     return (
         <>
@@ -92,18 +91,19 @@ const ProductPlacement = () => {
             <section className="productplacementsec1">
 
                 <div className="inputbietesuche dflex">
+
                     <form>
                         <p>Anzeigetyp:</p>
-                        <input 
-                            type="radio" value="offer" 
-                            name="anzeigetyp" id="radiobtn" 
-                            onChange={handleClassifieds}/>
+                        <input
+                            type="radio" value="offer"
+                            name="anzeigetyp" id="radiobtn"
+                            onChange={handleClassifieds} />
                         <p className="radiodescript">Ich biete</p>
-                        <input 
-                            type="radio" value="search" 
+                        <input
+                            type="radio" value="search"
                             name="anzeigetyp" id="radiobtn"
                             onChange={handleClassifieds}
-                            />
+                        />
                         <p className="radiodescript">Ich suche</p>
                     </form>
                 </div>
@@ -111,8 +111,8 @@ const ProductPlacement = () => {
                 <div className="inputjanein dflex">
                     <p>Lieferung:</p>
 
-                    <input 
-                        type="radio" value={true} 
+                    <input
+                        type="radio" value={true}
                         name="neinja" id="radiobtn"
                         onClick={() => handleDelivery}/>
                     <p className="radiodescript">Ja</p>
@@ -125,27 +125,30 @@ const ProductPlacement = () => {
 
                 <div className="inputtitel dflex">
                     <p>Titel der Anzeige:</p>
+
                     <input 
                         type="text" id="inputtextfield" 
                         onChange={(e) => setTitle(e.target.value)}/>
+                        
                 </div>
 
                 <div className="inputbeschreibung dflex">
                     <p>Beschreibung:</p>
-                    <input type="text" id="inputtextbeschreibung" 
-                        onChange={(e) => setDescription(e.target.value)}/>
+                    <input type="text" id="inputtextbeschreibung"
+                        onChange={(e) => setDescription(e.target.value)} />
                 </div>
 
                 <div className="inputanzahl dflex">
                     <p>Anzahl:</p>
-                    <input type="text" id="inputtextsmall"  onChange={(e) => setAmount(e.target.value)}/>
+                    <input type="text" id="inputtextsmall" onChange={(e) => setAmount(e.target.value)} />
                 </div>
 
                 <div className="inputpreis dflex">
                     <p>Preis:</p>
-                    <input type="number" id="inputtextsmall" onChange={(e) => setPrice(e.target.value) } />
+                    <input type="number" id="inputtextsmall" onChange={(e) => setPrice(e.target.value)} />
 
                     <p className="radiodescript">EUR</p>
+
                     <form>
 
                         <input 
@@ -167,6 +170,7 @@ const ProductPlacement = () => {
                             onChange={(e) => handlePriceType} /> 
                         <p className="radiodescript">Zu Verschenken</p>
                     </form>
+
                 </div>
 
                 <div className="inputpicture dflex">
@@ -178,6 +182,7 @@ const ProductPlacement = () => {
                             type="file" id="image-input" 
                             accept="image/jpeg, image/png, image/jpg" 
                             onChange={(e) => setFile(e.target.files[0])}/>
+
                     </div>
                 </div>
 
@@ -194,36 +199,38 @@ const ProductPlacement = () => {
 
                 <div className="inputplzort dflex">
                     <p>Adresse:</p>
-                    <input 
-                        type="text" id="inputtextsmall" 
-                        className="marginrightsmall" placeholder="  PLZ" 
-                        onChange={(e) => setPostCode(e.target.value)}/>
-                    <input 
-                        type="text" id="inputtextfieldort" 
-                        placeholder="  Ort" 
-                        onChange={(e) => setCity(e.target.value)}/>
+                    <input
+                        type="text" id="inputtextsmall"
+                        className="marginrightsmall" placeholder="  PLZ"
+                        onChange={(e) => setPostCode(e.target.value)} />
+                    <input
+                        type="text" id="inputtextfieldort"
+                        placeholder="  Ort"
+                        onChange={(e) => setCity(e.target.value)} />
                 </div>
                 <div className="inputstraße dflex">
                     <p>Strasse:</p>
-                    <input 
-                        type="text" id="inputtextfield" 
-                        onChange={(e) => setStreet(e.target.value)}/>
+                    <input
+                        type="text" id="inputtextfield"
+                        onChange={(e) => setStreet(e.target.value)} />
                 </div>
                 <div className="inputname dflex">
                     <p>Name:</p>
-                    <input 
-                        type="text" id="inputtextfield" 
-                        onChange={(e) => setName(e.target.value)}/>
+                    <input
+                        type="text" id="inputtextfield"
+                        onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div className="inputtelefonnummer dflex">
                     <p>Telefonnumer:</p>
-                    <input 
-                        type="text" id="inputtextfield" 
-                        onChange={(e) => setPhone(e.target.value)}/>
+                    <input
+                        type="text" id="inputtextfield"
+                        onChange={(e) => setPhone(e.target.value)} />
                 </div>
             </section>
+
             <section className="">
                     < AddArticleButton article={article} />
+
             </section>
         </>
 
