@@ -1,26 +1,26 @@
 const ArticleItem = (props) => {
 
+    const article = props.article
 
     return(
         <article className="articleItem">
             <div className="articlePic">
-                <img src={props.pic} alt="articlePic" />
+                <img src={article.img} alt="articlePic" />
             </div>
             <div>
-                <h3>{props.price}</h3>
-                <h3>{props.title}</h3>
-                <p>{props.descripton}</p>
+                <h3>{article.price}</h3>
+                <h3>{article.title}</h3>
+                <p>{article.descripton}</p>
                 <div >
                     <div>
-                        <p>Zustand</p>
-                        <p>Marke</p>
+                        <p>Kategorie</p>
                         <p>Lieferung</p>
                         <p>Auf Lager</p>
                     </div>
                     <div>
-                        <p>{props.condition}</p>
-                        <p>{props.brand}</p>
-                        <p>{props.onStock}</p>
+                        <p>{article.category}</p>
+                        <p>{article.brand}</p>
+                        <p>{article.amount}</p>
                     </div>
                 </div>
             </div>

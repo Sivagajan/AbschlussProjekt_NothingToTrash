@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 
 const LoginForm = (props) => {
 
-    
 
     return(
         <div>
@@ -21,7 +20,7 @@ const LoginForm = (props) => {
 
                     <input onChange={(e) => { props.setpassword(e.target.value) }} type="password" placeholder='Password' />
 
-                    <motion.button className="loginBtn" onClick={props.login}
+                    <motion.button className="loginBtn" onClick={props.login} 
                     whileTap={{scale: 0.85}}>Login</motion.button>
 
                 </article>
