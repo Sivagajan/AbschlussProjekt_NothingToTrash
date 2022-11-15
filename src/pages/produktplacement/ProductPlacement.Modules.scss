@@ -16,11 +16,14 @@
 }
 
 #display-image {
-    width: 300px;
-    height: 200px;
+    max-width: 300px;
+    max-height: 200px;
     border: 1px solid black;
     background-position: center;
     background-size: cover;
+        .image{
+            max-height: 200px;
+        }
 }
 
 #inputtextfield {

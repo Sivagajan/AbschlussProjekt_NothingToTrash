@@ -8,6 +8,7 @@ const ProductPlacement = () => {
 
 
     const [classiefieds, setClassifieds] = useState('')
+    const [category,setCategory] = useState('')
     const [delivery, setDelivery] = useState(false)
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
@@ -32,6 +33,7 @@ const ProductPlacement = () => {
 
     const article = {
         'classiefieds' : classiefieds,
+        'category' : category,
         'delivery' : delivery,
         'title' : title,
         'description' : description,
@@ -46,14 +48,6 @@ const ProductPlacement = () => {
         'phone' : phone,
         'rating' : rating
     }
-
-   /*  const image_input = document.querySelector("#image-input");
-    image_input.addEventListener("change", function() {
-            const reader = new FileReader();
-            reader.addEventListener("load", () => {
-                        const uploaded_image = reader.result;
-                        document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`; });
-                        reader.readAsDataURL(this.files[0]);}); */
 
     useEffect(() => {
         if (file) {
@@ -84,6 +78,10 @@ const ProductPlacement = () => {
         setPriceTyp(e.target.value)
     } 
 
+    const handleCategories = (e) => {
+        setCategory(e.option.value)
+    }
+
 
     return (
         <>
@@ -92,7 +90,6 @@ const ProductPlacement = () => {
 
                 <div className="inputbietesuche dflex">
 
-                    <form>
                         <p>Anzeigetyp:</p>
                         <input
                             type="radio" value="offer"
@@ -105,7 +102,7 @@ const ProductPlacement = () => {
                             onChange={handleClassifieds}
                         />
                         <p className="radiodescript">Ich suche</p>
-                    </form>
+                    
                 </div>
 
                 <div className="inputjanein dflex">
@@ -149,8 +146,6 @@ const ProductPlacement = () => {
 
                     <p className="radiodescript">EUR</p>
 
-                    <form>
-
                         <input 
                             type="radio" value="Festpreis" 
                             name="preis" id="radiobtn" 
@@ -169,7 +164,6 @@ const ProductPlacement = () => {
                             name="preis" id="radiobtn" 
                             onChange={(e) => handlePriceType} /> 
                         <p className="radiodescript">Zu Verschenken</p>
-                    </form>
 
                 </div>
 
@@ -177,7 +171,7 @@ const ProductPlacement = () => {
                     <p>Bilder:</p>
                     <div>
                         <div id="display-image">
-                            <img src={`${base64}`}/> </div>
+                            <img className="image" src={`${base64}`}/> </div>
                         <input 
                             type="file" id="image-input" 
                             accept="image/jpeg, image/png, image/jpg" 
@@ -189,11 +183,11 @@ const ProductPlacement = () => {
                 {/* Hier müssen wir noch props einfügen für die kategorien */}
                 <div className="kategorie dflex">
                     <p>Kategorie:</p>
-                    <select id="categorys" name="categorys">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="fiat">Fiat</option>
-                        <option value="audi">Audi</option>
+                    <select id="categorys" name="categorys" onChange={(e) => handleCategories}>
+                        <option value="furniture">Möbel</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="electronics">Elektronik</option>
+                        <option value="books">Bücher</option>
                     </select>
                 </div>
 
