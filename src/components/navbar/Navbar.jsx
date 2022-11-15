@@ -7,8 +7,18 @@ import Userlogin from '../../pages/userlogin/UserLogin'
 
 
 const Navbar = () => {
-
+    
     const [open, setOpen] = useState(false)
+
+    const openForm = () => {
+        setOpen(!open)
+    }
+
+    const logout = () =>{
+
+        const result = localStorage.removeItem('token')
+        console.log(result)
+    }
 
     return (
         <nav>
@@ -19,12 +29,16 @@ const Navbar = () => {
                     <a className='underline-animation link textdeconone' href="/">Über uns</a>
                 </div>
                 <div className='div2'>
-                    <Userlogin open={open} setOpen={setOpen} />
-                    <motion.a className='link textdeconone'
-                        whileTap={{ scale: 0.8, }}
-                        onClick={() => setOpen(true)}
-                    >Log In</motion.a>
-                    <RegisterButton />
+
+                    <Userlogin open={open} setOpen={setOpen}/>
+                    {open === true ? <motion.a className='link' 
+                    whileTap={{scale: 0.8,}}
+                    onClick={logout}
+                    >Log Out</motion.a>: <motion.a className='link' 
+                    whileTap={{scale: 0.8,}}
+                    onClick={openForm}
+                    >Log In</motion.a>}
+                    <RegisterButton/>
                 </div>
             </div>
         </nav>

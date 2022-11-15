@@ -13,3 +13,7 @@
   font-family: Robot400;
   box-sizing: border-box;
 }
+
+button {
+  cursor: pointer;
+}
