@@ -1,0 +1,74 @@
+.dflex {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.productplacementsec1 {
+  margin-top: 50px;
+  margin-left: 150px;
+  margin: 50px 0px 75px 150px;
+}
+
+.radiodescript {
+  width: auto;
+  margin-right: 25px;
+  margin-left: 5px;
+}
+
+#display-image {
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+  background-position: center;
+  background-size: cover;
+}
+
+#inputtextfield {
+  width: 700px;
+  background: rgba(95, 55, 239, 0.1);
+  border: none;
+  border-radius: 5px;
+}
+
+#inputtextbeschreibung {
+  width: 700px;
+  height: 100px;
+  background: rgba(95, 55, 239, 0.1);
+  border: none;
+  border-radius: 5px;
+}
+
+#inputtextsmall {
+  width: 50px;
+  background: rgba(95, 55, 239, 0.1);
+  border: none;
+  border-radius: 5px;
+}
+
+#inputtextfieldort {
+  width: 645px;
+  background: rgba(95, 55, 239, 0.1);
+  border: none;
+  border-radius: 5px;
+}
+
+#radiobtn {
+  background: rgb(50, 132, 255);
+  width: 16px;
+  vertical-align: middle;
+}
+
+#categorys {
+  width: 150px;
+  background: rgba(95, 55, 239, 0.1);
+  border: none;
+  border-radius: 5px;
+}
+
+.marginrightsmall {
+  margin-right: 5px;
+}
+
+p {
+  width: 200px;
+}/*# sourceMappingURL=ProductPlacement.Modules.css.map */

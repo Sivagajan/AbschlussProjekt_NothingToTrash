@@ -1,0 +1,22 @@
+.purplenbarbg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../../public/img/purplebar.png);
+  background-repeat: none;
+  height: 150px;
+}
+.purplenbarbg p {
+  color: white;
+  font-size: 25px;
+  width: 520px;
+}
+.purplenbarbg div {
+  position: relative;
+}
+.purplenbarbg div img {
+  position: absolute;
+  width: 65px;
+  right: -300px;
+  top: 20px;
+}/*# sourceMappingURL=PurpleBar.Modules.css.map */
