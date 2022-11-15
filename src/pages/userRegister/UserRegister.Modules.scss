@@ -1,12 +1,9 @@
 
-.container {
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-
+.registerSection {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     input[type=text],
     input[type=password] {
@@ -21,7 +18,7 @@
         color: rgba(0, 0, 0, 0.238);
     }
 
-    .loginBtn {
+    .registerBtn {
         margin-top: 5px;
         width: 100%;
         background-color: #7854F7;
@@ -49,13 +46,14 @@
         outline: none;
         border: none;
     }
-    
+
     .registerForm h1 {
+        margin-bottom: 5vh;
         text-align: center;
         width: 100%;
         color: black;
         font-family: Robot700;
         font-size: 2rem;
         line-height: 42px;
-    }
+        }
 }
