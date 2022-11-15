@@ -15,10 +15,10 @@ const Footer = () => {
                 <a href="#"><FontAwesomeIcon icon={faInstagramSquare} /></a>
             </div>
             <div className="footerdiv2">
-                <p>COPYRIGHT nothingtotrash 2021 -
-                </p>
-                <p><span>TERMS & CONDITIONS</span></p>
-                <p><span> PRIVACY POLICY</span></p>
+                <a href="#">COPYRIGHT nothingtotrash 2021 -</a>
+                <a href="#"><span>TERMS & CONDITIONS</span></a>
+                <a href="#"><span> PRIVACY POLICY</span></a>
+            
             </div>
         </footer >
     )
