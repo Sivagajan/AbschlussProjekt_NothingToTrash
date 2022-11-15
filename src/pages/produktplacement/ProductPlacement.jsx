@@ -182,7 +182,6 @@ const ProductPlacement = () => {
                     </div>
                 </div>
 
-                {/* Hier müssen wir noch props einfügen für die kategorien */}
                 <div className="kategorie dflex">
                     <p className="width200">Kategorie:</p>
                     <select id="categorys" name="categorys" onChange={handleCategories}>
