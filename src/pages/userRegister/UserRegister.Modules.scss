@@ -1,12 +1,86 @@
 .height1 {
     height: 100vh;
+    h1{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-family: Robot700;
+        font-size: 2rem;
+        line-height: 42px;
+    }
+    .headlineDive{
+        position: relative;
+        padding: 5vh 0;
+        .headlineOne{
+            position: absolute;
+            top: 70px;
+            left: 600px;
+        }
+        .headlineTwo{
+            position: absolute;
+            top: 113px;
+            left: 620px;
+        }
+    }
 }
 
 .registerSection {
-    margin-top: 150px;
+    padding-top: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    .registerFaces{
+        position: relative;
+
+        .faceB{
+            position: absolute;
+            bottom: 113px;
+            right: 113px;
+            z-index: -1;
+        }
+        .faceC{
+            position: absolute;
+            bottom: 165px;
+            left: 564px;
+            z-index: -1;
+        }
+        .faceF{
+            position: absolute;
+            bottom: -8px;
+            right: 287px;
+            z-index: -1;
+        }
+        .faceE{
+            position: absolute;
+            bottom: -75px;
+            left: 670px;
+            z-index: -1;
+        }
+        .faceD{
+            position: absolute;
+            top: 135px;
+            right: 150px;
+            z-index: -1;
+        }
+        .faceA{
+            position: absolute;
+            top: 165px;
+            left: 600px;
+            z-index: -1;
+        }
+        .dottsRed{
+            position: absolute;
+            bottom: -72px;
+            left: 135px;
+            z-index: -2;
+        }
+        .dottsGreen{
+            position: absolute;
+            top: -18px;
+            right: -364px;
+            z-index: -2;
+        }
+    }
 
     input[type=text],
     input[type=password] {
@@ -17,8 +91,8 @@
         border-radius: 3px;
         padding: 0 15px;
         font-size: 16px;
-        font-weight: 300;
         color: rgba(0, 0, 0, 0.238);
+        border: 0.5px solid rgba(0, 0, 0, 0.126);
     }
 
     .registerBtn {
@@ -40,7 +114,8 @@
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
         border: 2px solid rgb(255, 255, 255);
-        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 13px 60px, 
+        rgba(0, 0, 0, 0.22) 0px 13px 13px;
         padding: 60px 35px;
     }
 
@@ -54,9 +129,49 @@
         margin-bottom: 5vh;
         text-align: center;
         width: 100%;
-        color: black;
         font-family: Robot700;
         font-size: 2rem;
         line-height: 42px;
     }
+}
+
+
+.avatar {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+.avatarTwo {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	transform: translatey(0px);
+	animation: floatTwo 8s ease-in-out infinite;
+}
+
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+@keyframes floatTwo {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }

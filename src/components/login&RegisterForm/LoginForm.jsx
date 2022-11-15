@@ -11,7 +11,9 @@ const LoginForm = (props) => {
             initial={{ scale: 0 }}
             animate={{ scale: 1, x: 100 }}
             transition={{ type: "spring", stiffness: 260, damping: 20 }}>
+
             <article className="form">
+                <button onClick={props.closeUserLogin}>X</button>
                 <h1 className='text-align'>Mit Email anmelden</h1>
                 <p className='text-align'>Du hast bereits ein Konto? <Link to='/register'>Registrieren</Link> </p>
 
