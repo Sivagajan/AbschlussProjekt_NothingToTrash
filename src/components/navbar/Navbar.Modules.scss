@@ -20,7 +20,13 @@ nav {
             color: black;
             width: 30%;
             padding-right: 50px;
-
+            &:hover{
+                text-decoration: underline;
+                
+            }
+            
         }
+        
+
     }
 }
