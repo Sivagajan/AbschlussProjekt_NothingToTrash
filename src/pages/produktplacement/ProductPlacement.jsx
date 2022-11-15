@@ -79,7 +79,7 @@ const ProductPlacement = () => {
     } 
 
     const handleCategories = (e) => {
-        setCategory(e.option.value)
+        setCategory(e.target.value)
     }
 
 
@@ -183,7 +183,7 @@ const ProductPlacement = () => {
                 {/* Hier müssen wir noch props einfügen für die kategorien */}
                 <div className="kategorie dflex">
                     <p>Kategorie:</p>
-                    <select id="categorys" name="categorys" onChange={(e) => handleCategories}>
+                    <select id="categorys" name="categorys" onChange={handleCategories}>
                         <option value="furniture">Möbel</option>
                         <option value="fashion">Fashion</option>
                         <option value="electronics">Elektronik</option>
