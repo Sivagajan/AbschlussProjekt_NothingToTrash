@@ -5,3 +5,6 @@ Ideen:
 
 // Registrieren
     - gleiches Design wie login ohne Adress-Angabe. Wenn später noch luft ist, dann bauen wir noch einn "main Account" page ein - Kunden Daten ändern.
+
+// Log Out 
+    - muss in der Navbar eingesezt werden, wenn wir eingelogt sind
