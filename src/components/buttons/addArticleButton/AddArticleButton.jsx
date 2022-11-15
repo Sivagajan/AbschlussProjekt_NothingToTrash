@@ -1,7 +1,10 @@
 import './AddArticleButton.Modules.scss'
 import {motion} from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 
 const AddArticleButton = (props) => {
+
+    const nav = useNavigate()
 
     const article = props.article
 
