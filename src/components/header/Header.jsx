@@ -1,11 +1,12 @@
 import StartButton from '../buttons/startButton/StartButton'
 import './Header.Modules.scss'
-
+import Navbar from '../navbar/Navbar'
 
 
 const Header = (props) => {
     return (
         <header>
+            <Navbar />
             <section>
                 <img src="./img/headerpicture.png" alt="cartoon men on field" />
 
@@ -14,7 +15,7 @@ const Header = (props) => {
                     Sie kosten Abertausende Meerestiere das Leben Seevögel verwechseln Plastik mit natürlicher Nahrung,</p>
                 <p>Delfine verfangen sich in alten Fischernetzen. Hilf mit Müll zu reduzieren und trashnothing.
                 </p>
-                <StartButton setbg={props.setbg}/>
+                <StartButton setbg={props.setbg} />
 
             </section>
             <h2>Lebe eCommerce mal anders </h2>
