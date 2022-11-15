@@ -4,13 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Marketplace from './pages/marketplace/Marketplace'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import UserRegister from './pages/userRegister/UserRegister'
 import ProductPlacement from './pages/produktplacement/ProductPlacement';
 import ProductDetails from './pages/productdetails/ProductDetails';
+import Guard from './components/Guard';
 
-
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,8 +19,10 @@ root.render(
         <Route path='/' element={< App />} />
         <Route path='/market' element={< Marketplace />} />
         <Route path='/register' element={< UserRegister />} />
-        <Route path='/productplacement' element={< ProductPlacement />} />
-        <Route path='/productdetails' element={< ProductDetails />} />
+        <Route element={<Guard/>}>
+            <Route path='/productplacement' element={< ProductPlacement />} />
+            <Route path='/productdetails' element={< ProductDetails />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
