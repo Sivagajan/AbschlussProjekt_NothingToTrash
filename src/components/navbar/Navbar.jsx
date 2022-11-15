@@ -31,10 +31,10 @@ const Navbar = () => {
                 <div className='div2'>
 
                     <Userlogin open={open} setOpen={setOpen}/>
-                    {open === true ? <motion.a className='link' 
+                    {open === true ? <motion.a className='underline-animation link textdeconone' 
                     whileTap={{scale: 0.8,}}
                     onClick={logout}
-                    >Log Out</motion.a>: <motion.a className='link' 
+                    >Log Out</motion.a>:<motion.a className='underline-animation link textdeconone' 
                     whileTap={{scale: 0.8,}}
                     onClick={openForm}
                     >Log In</motion.a>}

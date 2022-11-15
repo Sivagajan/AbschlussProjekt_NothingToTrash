@@ -15,9 +15,9 @@ const Footer = () => {
                 <a href="#"><FontAwesomeIcon icon={faInstagramSquare} /></a>
             </div>
             <div className="footerdiv2">
-                <a href="#">COPYRIGHT nothingtotrash 2021 -</a>
-                <a href="#"><span>TERMS & CONDITIONS</span></a>
-                <a href="#"><span> PRIVACY POLICY</span></a>
+                <p className="fontSize">COPYRIGHT nothingtotrash 2021 － </p>
+                <a className="fontSize" href="#"><span>TERMS & CONDITIONS</span></a>
+                <a className="fontSize" href="#"><span> PRIVACY POLICY</span></a>
             
             </div>
         </footer >
