@@ -1,4 +1,3 @@
-import { getByTitle } from "@testing-library/react"
 import { useState, useEffect} from "react"
 import { useNavigate } from "react-router-dom"
 import AddArticleButton from "../../components/buttons/addArticleButton/AddArticleButton"
@@ -10,7 +9,7 @@ const ProductPlacement = () => {
 
     const [classiefieds, setClassifieds] = useState('')
     const [delivery, setDelivery] = useState(false)
-    const [getByTitle, setTitle] = useState('')
+    const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [amount, setAmount] = useState(0)
     const [price, setPrice] = useState('')
@@ -22,7 +21,39 @@ const ProductPlacement = () => {
     const [street, setStreet] = useState('')
     const [name,setName] = useState('')
     const [phone, setPhone] = useState('')
+    const [rating, setRating] = useState('')
 
+    const randomRating = () => {
+
+        const rating =  Math.floor((Math.random() * 6)+1)
+        console.log(rating)
+        setRating(rating)
+    }
+
+    const article = {
+        'classiefieds' : classiefieds,
+        'delivery' : delivery,
+        'title' : title,
+        'description' : description,
+        'amount' : amount,
+        'price' : price,
+        'priceType' : priceType,
+        'img' : base64,
+        'postCode' : postCode,
+        'city': city,
+        'street': street,
+        'name' : name,
+        'phone' : phone,
+        'rating' : rating
+    }
+
+   /*  const image_input = document.querySelector("#image-input");
+    image_input.addEventListener("change", function() {
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+                        const uploaded_image = reader.result;
+                        document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`; });
+                        reader.readAsDataURL(this.files[0]);}); */
 
     useEffect(() => {
         if(file){
@@ -30,10 +61,14 @@ const ProductPlacement = () => {
             const reader = new FileReader()
             reader.onload = handleReaderLoaded
             reader.readAsDataURL(file)
+            console.log(file)
+
+            randomRating()
         }
     },[file])
 
     const handleReaderLoaded = (event) =>{
+
         setBase64(event.target.result)
     }
 
@@ -45,6 +80,10 @@ const ProductPlacement = () => {
         setDelivery(e.target.value)
     }
 
+    const handlePriceType = (e) => {
+        setPriceTyp(e.target.value)
+    } 
+
     
 
     return (
@@ -53,7 +92,6 @@ const ProductPlacement = () => {
             <section className="productplacementsec1">
 
                 <div className="inputbietesuche dflex">
-                    
                     <form>
                         <p>Anzeigetyp:</p>
                         <input 
@@ -76,20 +114,20 @@ const ProductPlacement = () => {
                     <input 
                         type="radio" value={true} 
                         name="neinja" id="radiobtn"
-                        checked={delivery === true} 
-                        onClick={() => setDelivery(true)}/>
+                        onClick={() => handleDelivery}/>
                     <p className="radiodescript">Ja</p>
                     <input 
                         type="radio" value={false} 
                         name="neinja" id="radiobtn" 
-                        checked={delivery === false}
-                        onClick={() => setDelivery(false)} />
+                        onClick={() => handleDelivery} />
                     <p className="radiodescript">Nein</p>
                 </div>
 
                 <div className="inputtitel dflex">
                     <p>Titel der Anzeige:</p>
-                    <input type="text" id="inputtextfield" onChange={(e) => setTitle(e.target.value)}/>
+                    <input 
+                        type="text" id="inputtextfield" 
+                        onChange={(e) => setTitle(e.target.value)}/>
                 </div>
 
                 <div className="inputbeschreibung dflex">
@@ -108,45 +146,38 @@ const ProductPlacement = () => {
                     <input type="number" id="inputtextsmall" onChange={(e) => setPrice(e.target.value) } />
 
                     <p className="radiodescript">EUR</p>
-                    <input 
-                        type="radio" value="Festpreis" 
-                        name="preis" id="radiobtn" 
-                        checked={ priceType === 'fixedPrice'}
-                        onClick={(e) => setPriceTyp('fixedPrice')}
-                    />
-                    <p className="radiodescript">Festpreis</p>
-                    
-                    <input 
-                        type="radio" value="VB" 
-                        name="preis" id="radiobtn" 
-                        checked={ priceType === 'negotiable'}
-                        onClick={(e) => setPriceTyp('negotiable')}/>
-                    <p className="radiodescript">VB</p>
+                    <form>
 
-                    <input 
-                        type="radio" value="Zu Verschenken" 
-                        name="preis" id="radiobtn" 
-                        checked={ priceType === 'forFree'}
-                        onClick={(e) => setPriceTyp('forFree')} /> 
-                    <p className="radiodescript">Zu Verschenken</p>
+                        <input 
+                            type="radio" value="Festpreis" 
+                            name="preis" id="radiobtn" 
+                            onChange={(e) => handlePriceType}
+                            />
+                        <p className="radiodescript">Festpreis</p>
+                        
+                        <input 
+                            type="radio" value="VB" 
+                            name="preis" id="radiobtn" 
+                            onChange={(e) => handlePriceType}/>
+                        <p className="radiodescript">VB</p>
+
+                        <input 
+                            type="radio" value="Zu Verschenken" 
+                            name="preis" id="radiobtn" 
+                            onChange={(e) => handlePriceType} /> 
+                        <p className="radiodescript">Zu Verschenken</p>
+                    </form>
                 </div>
 
                 <div className="inputpicture dflex">
                     <p>Bilder:</p>
                     <div>
-                        <div id="display-image"></div>
+                        <div id="display-image">
+                            <img src={`${base64}`}/> </div>
                         <input 
                             type="file" id="image-input" 
                             accept="image/jpeg, image/png, image/jpg" 
                             onChange={(e) => setFile(e.target.files[0])}/>
-
-                        {/* const image_input = document.querySelector("#image-input");
-                        image_input.addEventListener("change", function() {
-                        const reader = new FileReader();
-                        reader.addEventListener("load", () => {
-                        const uploaded_image = reader.result;
-                        document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`; });
-                        reader.readAsDataURL(this.files[0]);}); */}
                     </div>
                 </div>
 
@@ -191,8 +222,8 @@ const ProductPlacement = () => {
                         onChange={(e) => setPhone(e.target.value)}/>
                 </div>
             </section>
-            <section>
-                    < AddArticleButton/>
+            <section className="">
+                    < AddArticleButton article={article} />
             </section>
         </>
 
