@@ -8,7 +8,6 @@ const Userlogin = (props) => {
     const [password, setPassword] = useState('')
     const nav = useNavigate()
 
-
     const login = async () => {
 
         console.log(username, password)
@@ -35,7 +34,7 @@ const Userlogin = (props) => {
     console.log(username, password)
     
     return (props.open)?(
-        <div >
+        <div>
             <div>
                 <LoginForm login={login} setusername={setUsername} setpassword={setPassword}/>
             </div>
