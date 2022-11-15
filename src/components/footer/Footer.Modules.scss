@@ -1,11 +1,12 @@
 footer {
+    width: 1420px;
     margin-top: 25px;
     margin-bottom: 15px;
     display: flex;
     justify-content: space-around;
 
     .footerdiv1 {
-        margin-left: 200px;
+        margin-left: 150px;
 
         a {
             color: #272D4E;
@@ -17,9 +18,10 @@ footer {
         display: flex;
 
         p {
+            padding-right: 5px;
+
             span {
                 text-decoration: underline;
-                padding-right: 5px;
             }
         }
     }
