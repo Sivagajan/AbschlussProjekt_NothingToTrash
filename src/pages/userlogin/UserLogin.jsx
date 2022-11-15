@@ -32,10 +32,11 @@ const Userlogin = (props) => {
         }
     }
 
-    console.log(username, password)
+    
     
     return (props.open)?(
         <div >
+
             <div>
                 <LoginForm login={login} setusername={setUsername} setpassword={setPassword}/>
             </div>
