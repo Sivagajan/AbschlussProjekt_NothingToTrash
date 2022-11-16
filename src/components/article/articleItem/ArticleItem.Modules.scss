@@ -1,0 +1,33 @@
+.articleItem{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 20px;
+    width: 750px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+
+    .articlePic{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 200px;
+        height: 200px;
+        .displayImg{
+            max-width: 200px;
+            max-height: 200px;
+        }
+    }
+
+    .articleDescription{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .articleDetails{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
