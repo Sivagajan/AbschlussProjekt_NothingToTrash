@@ -5,7 +5,7 @@ const DokumentationsButton = () => {
     return(
         <motion.button className='dokuBtn' 
                 /* whileHover={{ scale: 1 }} */
-                whileTap={{scale: 0.8}}
+                whileTap={{scale: 0.95}}
             > Zur Dokumentation </motion.button>
     )
 }

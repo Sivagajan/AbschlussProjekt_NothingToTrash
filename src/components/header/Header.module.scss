@@ -1,5 +1,5 @@
-header {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(29, 99, 212, 0.111) 100%);
+.header {
+    /* background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(29, 99, 212, 0.111) 100%); */
 
     .headersection {
         position: relative;
@@ -13,7 +13,6 @@ header {
         }
 
         h1 {
-            font-family: Robot700;
             width: 600px;
             font-size: 65px;
             margin-bottom: 15px;

@@ -7,7 +7,7 @@ const RegisterButton = () => {
 
             <Link to={'/register'}><motion.button className='registerBtn' 
                 whileHover={{ scale: 1 }}
-                whileTap={{scale: 0.8}}
+                whileTap={{scale: 0.95}}
             > Registriere Dich </motion.button></Link>
     )
 }
