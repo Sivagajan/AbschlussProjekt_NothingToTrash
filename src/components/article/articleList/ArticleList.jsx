@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { v4 as uuidV4} from 'uuid';
 import ArticleItem from '../articleItem/ArticleItem';
-
+import style from './ArticleList.module.scss'
 uuidV4();
 
 const ArticelList = () => {
@@ -25,7 +25,7 @@ const ArticelList = () => {
     },[])
 
     return(
-        <section className="articleList">
+        <section className={style.articleList}>
             {article.map(( article, key) => <ArticleItem key={key} article={article}/>)}
 
             <h1>hallo</h1>

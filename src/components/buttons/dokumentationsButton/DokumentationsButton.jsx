@@ -1,11 +1,10 @@
-import './dokumentationsButton.Modules.scss'
+import style from './dokumentationsButton.module.scss'
 import { motion } from 'framer-motion'
 
 const DokumentationsButton = () => {
     return(
-        <motion.button className='dokuBtn' 
-                /* whileHover={{ scale: 1 }} */
-                whileTap={{scale: 0.95}}
+        <motion.button className={style.dokuBtn} 
+            whileTap={{scale: 0.95}}
             > Zur Dokumentation </motion.button>
     )
 }

@@ -1,4 +1,4 @@
-import './AddArticleButton.Modules.scss'
+import style from './AddArticleButton.module.scss'
 import {motion} from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 
@@ -28,10 +28,8 @@ const AddArticleButton = (props) => {
     }
 
     return(
-        <motion.button   
-            whileHover={{ scale: 1.2}}
+        <motion.button className={style.addArticleBtn} 
             whileTap={{scale: 0.95}} 
-            className="addArticleBtn" 
             onClick={addArticle}> Artikel Hinzufügen 
         </motion.button>
     )

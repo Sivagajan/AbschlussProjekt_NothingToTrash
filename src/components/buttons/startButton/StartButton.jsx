@@ -1,4 +1,4 @@
-import './StartButton.Modules.scss'
+import style from './StartButton.module.scss'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import Userlogin from '../../../pages/userlogin/UserLogin'
@@ -10,8 +10,8 @@ const StartButton = () => {
     return(
         <>
             <Userlogin open={open} setOpen={setOpen}/>
-            <motion.button className='startBtn' 
-            whileTap={{scale: 0.8}}
+            <motion.button className={style.startBtn} 
+            whileTap={{scale: 0.98}}
             onClick={() => setOpen(true)}> Starte jetzt! </motion.button>
         
         </>
