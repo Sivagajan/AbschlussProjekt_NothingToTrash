@@ -1,29 +1,28 @@
-.completepage {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(29, 128, 212, 0.2) 100%);
-    width: 100vw;
-}
-
 .detailssec1 {
     margin-top: 150px;
     margin-left: 150px;
-    position: relative;
-
+    display: flex;
+    
+    .dflex {
+        display: flex;
+        margin-bottom: 10px;
+    }
 
     .imgdetails {
         max-width: 600px;
         max-height: 500px;
         margin-right: 25px;
-
     }
 
-    article {
+    .productInfo {
+        padding-left: 3vw;
         .price {
-            padding-top: 5px;
-            font-size: 20px;
+            padding-top: 8px;
+            font-size: 1.7rem;
         }
 
         .productdescription {
-            width: 500px;
+            width: 480px;
         }
     }
 }
@@ -42,24 +41,32 @@
     bottom: 0;
 }
 
-.zustandmarke {
-    padding-right: 50px;
-}
 
 .paddingbottom1 {
-    p {
-        padding-bottom: 20px;
+    .zustandmarke {
+        margin-top: 2vh;
+        padding-right: 3vw;
+    }
+    .pTag {
+        font-size: 14px;
+        padding-bottom: 2px;
     }
 }
 
 .registerBtnreverse {
     border: solid 1px #7854F7;
     color: #7854F7;
-    border-radius: 5px;
     padding: 14px 26px;
-    font-family: Robot400;
     background-color: white;
-    margin-right: 25px;
+    margin: 20px 15px 0 0;
+    width: 150px;
+}
 
-
+.registerBtn {
+    border: none;
+    margin: 20px 0 0 15px;
+    color: #ffff;
+    padding: 15px 27px;
+    width: 150px;
+    background-color: #7854F7;
 }
