@@ -1,7 +1,7 @@
 nav {
     display: flex;
     position: sticky;
-    max-width: 100vw;
+    width: 100vw;
     align-items: baseline;
     padding-top: 20px;
     z-index: 1000;
@@ -22,8 +22,8 @@ nav {
             color: #000;
             margin: 2rem 2rem 0 2rem;
         }
-        
-        .link{
+
+        .link {
             cursor: pointer;
         }
 

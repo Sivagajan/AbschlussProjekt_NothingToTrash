@@ -78,7 +78,7 @@
 }
 
 .kategorie {
-    margin-bottom: 100px;
+    margin-bottom: 175px;
 }
 
 .marginrightsmall {
@@ -92,4 +92,29 @@
 .artikelhinzufuegenbtn {
     text-align: center;
     padding-bottom: 5px;
+}
+
+.divrelativ {
+    position: relative;
+
+    .imggrp95 {
+        position: absolute;
+        top: -350px;
+        left: 50px;
+        width: 200px;
+    }
+
+    .imggrp96 {
+        position: absolute;
+        top: -500px;
+        right: 100px;
+        width: 250px;
+    }
+
+    .imggrp97 {
+        position: absolute;
+        top: -250px;
+        right: 150px;
+        width: 200px;
+    }
 }

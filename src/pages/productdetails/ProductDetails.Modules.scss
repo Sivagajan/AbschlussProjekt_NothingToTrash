@@ -1,16 +1,17 @@
 .completepage {
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(29, 128, 212, 0.2) 100%);
+    width: 100vw;
 }
 
 .detailssec1 {
     margin-top: 150px;
     margin-left: 150px;
-    height: 100%;
     position: relative;
 
 
     .imgdetails {
         max-width: 600px;
+        max-height: 500px;
         margin-right: 25px;
 
     }
@@ -28,8 +29,8 @@
 }
 
 .btnbottom {
-    margin-left: 200px;
-    margin-bottom: 120px;
+    margin-left: 150px;
+    margin-bottom: 100px;
 }
 
 .footerbottom {
@@ -45,9 +46,20 @@
     padding-right: 50px;
 }
 
-.paddingbottom {
+.paddingbottom1 {
     p {
         padding-bottom: 20px;
     }
+}
+
+.registerBtnreverse {
+    border: solid 1px #7854F7;
+    color: #7854F7;
+    border-radius: 5px;
+    padding: 14px 26px;
+    font-family: Robot400;
+    background-color: white;
+    margin-right: 25px;
+
 
 }
