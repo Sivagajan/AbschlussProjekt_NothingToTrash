@@ -1,4 +1,5 @@
 .purplenbarbg {
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +12,8 @@
         font-size: 25px;
         width: 520px;
     }
-    .registerBtn{
+
+    .registerBtn {
         border: 1.5px solid #fff;
         color: #ffff;
         border-radius: 5px;
