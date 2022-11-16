@@ -26,7 +26,8 @@ button{
   font-family: Robot400;
   font-size: 15px;
   border-radius: 5px;
+  cursor: pointer;
 }
-button, a {
+a {
   cursor: pointer;
 }
