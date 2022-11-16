@@ -35,7 +35,7 @@ const UserResgister = () => {
     }
 
     return (
-        <div className="height1">
+        <div className={style.height1}>
             <Navbar />
 
             <div className={style.headlineDiv}>
