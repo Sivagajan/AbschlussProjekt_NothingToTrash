@@ -1,12 +1,19 @@
 import style from './DetailButton.module.scss'
 import {motion} from 'framer-motion'
+import { Link } from 'react-router-dom'
 
-const DetailButton = () => {
+const DetailButton = (props) => {
+
+    const articleId = props.article._id
+
+    console.log(articleId)
     return(
-        <motion.button   
-        whileTap={{scale: 0.95}}
-        className={style.detailBtn}>Details ﹥ 
-    </motion.button>
+        <Link to={`/productdetails/${articleId}`}>
+            <motion.button   
+                whileTap={{scale: 0.95}}
+                className={style.detailBtn}>Details ﹥ 
+            </motion.button>
+        </Link>
     )
 }
 

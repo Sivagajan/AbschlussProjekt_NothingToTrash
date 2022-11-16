@@ -2,38 +2,67 @@ import Navbar from "../../components/navbar/Navbar"
 import Footer from "../../components/footer/Footer"
 import style from './ProductDetails.module.scss'
 import { motion } from 'framer-motion'
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { useNavigate, useParams } from "react-router-dom"
 import ArticleItem from '../../components/article/articleItem/ArticleItem'
 
 const ProductDetails = () => {
+
+
+    const params = useParams()
+
+    console.log(params)
+
+    const [detailedArticle, setdetailedArticle] = useState([])
+
+    useEffect(() => {
+
+        const fetchdata = async () => {
+            
+            const result = await fetch('http://localhost:9090/article/article', {
+                method : 'POST',
+                headers:{
+                    'content-type' : 'application/json',
+                    Authentication : 'Bearer ' + localStorage.getItem('token')
+                },
+                body: JSON.stringify(params)
+            })
+            
+            if(result.status === 200){
+                
+                const data = await result.json()
+                setdetailedArticle(data)
+            }
+            
+        }
+        fetchdata()
+    },[])
+
+    console.log(detailedArticle)
 
     return (
 
         < div className={style.backgroundblue}>
             <Navbar />
             <section className={`${style.detailssec1} ${style.dflex}`}>
-                <img className={style.imgdetails} src="./img/tablet.jpg" alt="" />
+                <img className={style.imgdetails} src={detailedArticle.img ? detailedArticle.img : 'Kein Bild '} alt="" />
                 <article className={style.productInfo}>
-                    <h2>iPad</h2>
-                    <p className={style.price}>45,00 EUR</p>
+                    <h2>{detailedArticle.title}</h2>
+                    <p className={style.price}>{`${detailedArticle.price} EUR`}</p>
                     <div className={`${style.paddingbottom1} ${style.dflex}`}>
                         <div className={style.zustandmarke}>
-                            <p className={style.pTag}>Zustand</p>
-                            <p className={style.pTag}>Marke</p>
+                            <p className={style.pTag}>Kategorie</p>
                             <p className={style.pTag}>Lieferung</p>
                             <p className={style.pTag}>Anzahl</p>
                         </div>
                         <div className={style.zustandmarke}>
-                            <p className={style.pTag}>Wie neu</p>
-                            <p className={style.pTag}>iPad</p>
-                            <p className={style.pTag}>Ja</p>
-                            <p className={style.pTag}>1 stk.</p>
+                            <p className={style.pTag}>{detailedArticle.category ? detailedArticle.category : ' bitte vorher erfragen'}</p>
+                            <p className={style.pTag}>{detailedArticle.delivery ? detailedArticle.delivery : ' bitte vorher erfragen'}</p>
+                            <p className={style.pTag}>{detailedArticle.amount ? detailedArticle.amount : '1'}</p>
                         </div>
                     </div>
                     <h3>Produktbeschreibung</h3>
-                    <p className={style.productdescription}>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur illum saepe rem, beatae consequatur maxime incidunt. Nemo voluptatem consequatur non repellendus corporis totam, expedita minus, inventore exercitationem, mollitia dolore aperiam.</p>
+                    <p className={style.productdescription}>{detailedArticle.description ? detailedArticle.description : 'Manchmal sagt ein Bild mehr aus, als 1000 worte'}</p>
                 </article>
             </section>
 

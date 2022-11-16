@@ -1,4 +1,5 @@
 import WunschButton from '../../buttons/wishButton/WunschButton'
+import DetailButton from '../../buttons/detailButton/DetailButton'
 import style from './ArticleItem.module.scss'
 
 const ArticleItem = (props) => {
@@ -42,7 +43,7 @@ const ArticleItem = (props) => {
                 </div>
             </div>
             <div className={style.buttons}>
-                <button>Details</button>{/* Button Details */}
+                <DetailButton article={article} />
                 <WunschButton/>
             </div>
         </article>

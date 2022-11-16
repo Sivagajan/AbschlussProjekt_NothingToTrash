@@ -21,7 +21,7 @@ root.render(
         <Route path='/register' element={< UserRegister />} />
         <Route element={<Guard/>}>
             <Route path='/productplacement' element={< ProductPlacement />} />
-            <Route path='/productdetails' element={< ProductDetails />} />
+            <Route path='/productdetails/:id' element={< ProductDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>
