@@ -1,5 +1,5 @@
 import RegisterButton from '../buttons/registerButton/RegisterButton'
-import './Navbar.Modules.scss'
+import style from './Navbar.module.scss'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import Userlogin from '../../pages/userlogin/UserLogin'
@@ -36,19 +36,19 @@ const Navbar = () => {
     return (
         <nav>
             <p>nothingtotrash</p>
-            <div className="aligneitems1 dflex">
-                <div className='div1'>
-                    <a className='underline-animation link textdeconone' href="/market">Marktplatz</a>
-                    <a className='underline-animation link textdeconone' href="/">Über uns</a>
+            <div className={`${style.aligneitems1} ${style.dflex}`}>
+                <div className={style.div1}>
+                    <a className={`${style.underlineAnimation} ${style.link} ${style.textdeconone}`} href="/market">Marktplatz</a>
+                    <a className={`${style.underlineAnimation} ${style.link} ${style.textdeconone}`} href="/">Über uns</a>
                 </div>
-                <div className='div2'>
+                <div className={style.div2}>
 
                     <Userlogin open={open} setOpen={setOpen} setKey={setKey}/>
-                    {key === true ? <motion.a className='underline-animation link textdeconone' 
-                    whileTap={{scale: 0.8,}}
+                    {key === true ? <motion.a className={`${style.underlineAnimation} ${style.link} ${style.textdeconone}`} 
+                    whileTap={{scale: 0.95}}
                     onClick={logout}
-                    >Log Out</motion.a>:<motion.a className='underline-animation link textdeconone' 
-                    whileTap={{scale: 0.8,}}
+                    >Log Out</motion.a>:<motion.a className={`${style.underlineAnimation} ${style.link} ${style.textdeconone}`} 
+                    whileTap={{scale: 0.95}}
                     onClick={openForm}
                     >Log In</motion.a>}
                     <RegisterButton/>

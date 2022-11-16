@@ -10,8 +10,8 @@
   
   .slider__track,
   .slider__range,
-  .slider__left-value,
-  .slider__right-value {
+  .slider__left_value,
+  .slider__right_value {
     position: absolute;
   }
   
@@ -32,8 +32,8 @@
     z-index: 2;
   }
   
-  .slider__left-value,
-  .slider__right-value {
+  .slider__left_value,
+  .slider__right_value {
     color: #000000;
     margin-top: 20px;
     .valInput{
@@ -46,7 +46,7 @@
     }
   }
 
-  .slider__right-value {
+  .slider__right_value {
     right: -4px;
   }
   
@@ -64,12 +64,12 @@
     outline: none;
   }
   
-  .thumb--left {
+  .thumbLeft {
     z-index: 3;
     background-color: #ced4da;
   }
   
-  .thumb--right {
+  .thumbRight {
     z-index: 4;
     background-color:#ced4da ;
   }

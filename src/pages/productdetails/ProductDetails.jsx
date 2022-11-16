@@ -1,6 +1,6 @@
 import Navbar from "../../components/navbar/Navbar"
 import Footer from "../../components/footer/Footer"
-import './ProductDetails.Modules.scss'
+import style from './ProductDetails.module.scss'
 import { motion } from 'framer-motion'
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
@@ -10,21 +10,21 @@ const ProductDetails = () => {
 
     return (
 
-        < div className="backgroundblue">
+        < div className={style.backgroundblue}>
             <Navbar />
-            <section className="detailssec1 dflex">
-                <img className="imgdetails" src="./img/tablet.jpg" alt="" />
+            <section className={`${style.detailssec1} ${style.dflex}`}>
+                <img className={style.imgdetails} src="./img/tablet.jpg" alt="" />
                 <article>
                     <h2>Couch</h2>
-                    <p className="price">45,00 EUR</p>
-                    <div className="paddingbottom1 dflex">
-                        <div className="zustandmarke">
+                    <p className={style.price}>45,00 EUR</p>
+                    <div className={`${style.paddingbottom1} ${style.dflex}`}>
+                        <div className={style.zustandmarke}>
                             <p>Zustand</p>
                             <p>Marke</p>
                             <p>Lieferung</p>
                             <p>Anzahl</p>
                         </div>
-                        <div className="zustandmarke2">
+                        <div className={style.zustandmarke2}>
                             <p>Zustand</p>
                             <p>Marke</p>
                             <p>Lieferung</p>
@@ -32,18 +32,19 @@ const ProductDetails = () => {
                         </div>
                     </div>
                     <h3>Produktbeschreibung</h3>
-                    <p className="productdescription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur illum saepe rem, beatae consequatur maxime incidunt. Nemo voluptatem consequatur non repellendus corporis totam, expedita minus, inventore exercitationem, mollitia dolore aperiam.</p>
+                    <p className={style.productdescription}>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur illum saepe rem, beatae consequatur maxime incidunt. Nemo voluptatem consequatur non repellendus corporis totam, expedita minus, inventore exercitationem, mollitia dolore aperiam.</p>
                 </article>
             </section>
 
             {/* BUTTON OHNE FUNKTION */}
-            <div className="btnbottom">
-                <motion.button className="registerBtnreverse" onClick={""}
+            <div className={style.btnbottom}>
+                <motion.button className={style.registerBtnreverse} onClick={""}
                     whileTap={{ scale: 0.95 }}>Bearbeiten</motion.button>
-                <motion.button className="registerBtn" onClick={""}
+                <motion.button className={style.registerBtn} onClick={""}
                     whileTap={{ scale: 0.95 }}>Verkauft</motion.button>
             </div>
-            <div className="footerbottom"><Footer /></div>
+            <div className={style.footerbottom}><Footer /></div>
         </div >
     )
 }

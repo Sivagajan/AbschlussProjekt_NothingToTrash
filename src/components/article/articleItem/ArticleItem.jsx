@@ -1,4 +1,5 @@
-import './ArticleItem.Modules.scss'
+import WunschButton from '../../buttons/wishButton/WunschButton'
+import style from './ArticleItem.module.scss'
 
 const ArticleItem = (props) => {
 
@@ -18,16 +19,16 @@ const ArticleItem = (props) => {
     }
 
     return(
-        <article className="articleItem">
-            <div className="articlePic">
-                <img className='displayImg' src={article.img} alt="displayImg" />
+        <article className={style.articleItem}>
+            <div className={style.articlePic}>
+                <img className={style.displayImg} src={article.img} alt="displayImg" />
             </div>
-            <div className='articlDescription'>
+            <div className={style.articlDescription}>
                 <h4>{!article.category ? 'Kein Preis':`${article.price} EUR`}</h4>
                 <h3>{!article.title ? 'Kein Titel':article.title}</h3>
                 <h5>{!article.description ? 'Keine Beschreibung' : article.description}</h5>
 
-                <div className='articleDetails'>
+                <div className={style.articleDetails}>
                     <div>
                         <p>Kategorie</p>
                         <p>Lieferung</p>
@@ -40,9 +41,9 @@ const ArticleItem = (props) => {
                     </div>
                 </div>
             </div>
-            <div className='buttons'>
+            <div className={style.buttons}>
                 <button>Details</button>{/* Button Details */}
-                <button>Auf die Wunschliste</button>{/* Button Auf die Wunschliste*/}
+                <WunschButton/>
             </div>
         </article>
     )
