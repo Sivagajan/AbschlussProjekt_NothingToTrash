@@ -35,7 +35,7 @@ const Navbar = () => {
 
     return (
         <nav>
-            <p>nothingtotrash</p>
+            <p className={style.navPTag}>nothingtotrash</p>
             <div className={`${style.aligneitems1} ${style.dflex}`}>
                 <div className={style.div1}>
                     <a className={`${style.underlineAnimation} ${style.link} ${style.textdeconone}`} href="/market">Marktplatz</a>

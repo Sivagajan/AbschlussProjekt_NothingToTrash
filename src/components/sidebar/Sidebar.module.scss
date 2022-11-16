@@ -1,5 +1,4 @@
 .sidebarWrap{
-
     width: 210px;
     float: left;
     position: relative;
@@ -7,7 +6,7 @@
     margin-left: 5vw;
     
     .sidebar{
-        width: 200px;
+        width: 250px;
         height: 100vh;
         position: absolute;
         position: sticky;
@@ -16,9 +15,7 @@
             font-size: 17px;
             margin-top: 10px;
         }
-        p{
-            font-size: 14px;
-        }
+
         .categories{
             .category{
                 display: grid;
@@ -37,7 +34,6 @@
         .labelBrand{
             justify-items: stretch;
             font-size: 14px;
-            
         }
     
         .div_ratings{
@@ -66,6 +62,31 @@
             justify-content: start;
             height: 20px;
             justify-items: stretch;
+        }
+    }
+    .dFlex{
+        display: flex;
+        .resetBtn {
+            border: none;
+            margin: 0 5px;
+            color: #000;
+            padding: 15px 0;
+            width: 110px;
+            background-color: #fff;
+            font-family: Robot700;
+            &:hover{
+                box-shadow: rgb(215, 220, 224) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+            }
+        }
+        
+        .anwendenBtn{
+            border: none;
+            color: #fff;
+            padding: 15px 20px;
+            background-color: #7854F7;
+            &:hover{
+                box-shadow: rgba(0, 0, 0, 0.623) 0px 1px 2px;
+            }
         }
     }
 }

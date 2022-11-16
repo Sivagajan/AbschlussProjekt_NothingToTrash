@@ -10,7 +10,7 @@ const Header = (props) => {
             <section className={style.headersection}>
                 <img src="./img/headerpicture.png" alt="cartoon men on field" />
 
-                <h1>Hilf mit die Umwelt zu schützen</h1>
+                <h1 className={style.H1}>Hilf mit die Umwelt zu schützen</h1>
 
                 <p>Abfälle bedrohen Vögel, Delfine und Co. Mehr als zehn Millionen Tonnen Abfälle gelangen jährlich in die Ozeane.
                 Sie kosten Abertausende Meerestiere das Leben Seevögel verwechseln Plastik mit natürlicher Nahrung,</p>

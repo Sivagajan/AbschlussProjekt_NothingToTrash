@@ -12,11 +12,12 @@ const LoginForm = (props) => {
             animate={{ scale: 1, x: 100 }}
             transition={{ type: "spring", stiffness: 260, damping: 20 }}>
 
+                
             <article className={style.form}>
-
-                <button onClick={props.closeUserLogin}>X</button>
-
-                <h1 className={style.textAlign}>Mit Email anmelden</h1>
+                
+                <button className={style.closeBtn} onClick={props.closeUserLogin}>X</button>
+                
+                <h1 className={style.H1}>Mit Email anmelden</h1>
                 <p className={style.textAlign}>Du hast bereits ein Konto? <Link to='/register'>Registrieren</Link> </p>
 
                 <input onChange={(e) => { props.setusername(e.target.value) }} type="text" placeholder='Username' />
@@ -24,7 +25,7 @@ const LoginForm = (props) => {
                 <input onChange={(e) => { props.setpassword(e.target.value) }} type="password" placeholder='Password' />
 
                 <motion.button className={style.loginBtn} onClick={props.login}
-                    whileTap={{ scale: 0.85 }}>Login</motion.button>
+                    whileTap={{ scale: 0.95 }}>Login</motion.button>
 
             </article>
         </motion.section>

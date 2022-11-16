@@ -3,7 +3,7 @@ import { useState } from "react"
 import Slider from "../slider/Slider"
 import style from './Sidebar.module.scss'
 import { faStar } from "@fortawesome/free-solid-svg-icons"
-
+import {motion} from 'framer-motion'
 
 const Sidebar = () => {
 
@@ -86,18 +86,23 @@ const Sidebar = () => {
                             </label>
                     </div>
                 </article>
+
                 <article className={style.articleSlider}>
                     <h3>Preis</h3>
                     <div className={style.slider}>
-                    <Slider min={0} max={200} onChange={(setMin,setMax) => console.log(`min = ${min}, max = ${max}`)}/>
+                    <Slider min={0} max={350} onChange={(setMin,setMax) => console.log(`min = ${min}, max = ${max}`)}/>
                     </div>
                 </article>
-                <article>
-                    <div>
-                        <button>Filtern</button>
-                        <button>Reset</button>
-                    </div>
+
+                <article className={style.dFlex}>
+                    <motion.button className={style.anwendenBtn}
+                    whileTap={{scale: 0.95}}
+                    >Anwenden</motion.button>
+                    <motion.button className={style.resetBtn}
+                    whileTap={{scale: 0.95}}
+                    >Reset</motion.button>
                 </article>
+                
             </div>
 
         </section>

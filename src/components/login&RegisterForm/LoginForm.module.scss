@@ -23,6 +23,7 @@
         font-size: 16px;
         font-weight: 300;
         color: rgba(0, 0, 0, 0.238);
+        border: 0.5px solid rgba(0, 0, 0, 0.126);
     }
 
     .loginBtn {
@@ -39,16 +40,15 @@
 
     .form {
         margin: 0 auto;
-        height: 520px;
+        height: 450px;
         width: 450px;
-        /*   max-width: 450px;
-        min-width: 450px; */
-        background-color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.888);
         transform: translate(-50%, -50%);
         border-radius: 10px;
         border: 2px solid rgb(255, 255, 255);
         box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
         padding: 60px 35px;
+        position: relative;
     }
 
     .form * {
@@ -57,20 +57,26 @@
         border: none;
     }
 
-    .textAlign {
-        text-align: center;
+    .closeBtn{
+        background-color: transparent;
+        position: absolute;
+        left: 420px;
+        top: 15px;
+        &:hover{
+            font-size: 20px;
+        }
+    }
+
+    .H1{
         width: 100%;
         color: black;
-    }
-
-    .form h1 {
-        font-family: Robot700;
         font-size: 40px;
         line-height: 42px;
+        text-align: center;
     }
 
-    .form p {
-
+    .textAlign{
+        text-align: center;
         font-size: 15px;
     }
 }

@@ -28,7 +28,7 @@ const MarktplatzHeader = (props) => {
 
             </section>
 
-            <Link to='/productdetails'>
+            <Link to='/productplacement'>
             <motion.button className={style.submitProductBtn} 
                 whileTap={{scale: 0.95}}
             > Produkt einstellen </motion.button>
