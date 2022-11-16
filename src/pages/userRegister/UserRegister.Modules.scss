@@ -1,6 +1,7 @@
 .height1 {
     height: 100vh;
-    h1{
+
+    h1 {
         align-items: center;
         display: flex;
         justify-content: center;
@@ -8,17 +9,20 @@
         font-size: 2rem;
         line-height: 42px;
     }
-    .headlineDive{
+
+    .headlineDive {
         position: relative;
         padding: 5vh 0;
-        .headlineOne{
+
+        .headlineOne {
             position: absolute;
-            top: 70px;
+            top: 100px;
             left: 600px;
         }
-        .headlineTwo{
+
+        .headlineTwo {
             position: absolute;
-            top: 113px;
+            top: 140px;
             left: 620px;
         }
     }
@@ -29,52 +33,60 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .registerFaces{
+
+    .registerFaces {
         position: relative;
 
-        .faceB{
+        .faceB {
             position: absolute;
             bottom: 113px;
             right: 113px;
             z-index: -1;
         }
-        .faceC{
+
+        .faceC {
             position: absolute;
             bottom: 165px;
             left: 564px;
             z-index: -1;
         }
-        .faceF{
+
+        .faceF {
             position: absolute;
             bottom: -8px;
             right: 287px;
             z-index: -1;
         }
-        .faceE{
+
+        .faceE {
             position: absolute;
             bottom: -75px;
             left: 670px;
             z-index: -1;
         }
-        .faceD{
+
+        .faceD {
             position: absolute;
             top: 135px;
             right: 150px;
             z-index: -1;
         }
-        .faceA{
+
+        .faceA {
             position: absolute;
             top: 165px;
             left: 600px;
             z-index: -1;
         }
-        .dottsRed{
+
+        .dottsRed {
             position: absolute;
             bottom: -72px;
             left: 135px;
             z-index: -2;
         }
-        .dottsGreen{
+
+        .dottsGreen {
             position: absolute;
             top: -18px;
             right: -364px;
@@ -114,8 +126,8 @@
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
         border: 2px solid rgb(255, 255, 255);
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 13px 60px, 
-        rgba(0, 0, 0, 0.22) 0px 13px 13px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 13px 60px,
+            rgba(0, 0, 0, 0.22) 0px 13px 13px;
         padding: 60px 35px;
     }
 
@@ -137,41 +149,46 @@
 
 
 .avatar {
-	width: 150px;
-	height: 150px;
-	overflow: hidden;
-	transform: translatey(0px);
-	animation: float 6s ease-in-out infinite;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
 }
 
 .avatarTwo {
-	width: 150px;
-	height: 150px;
-	overflow: hidden;
-	transform: translatey(0px);
-	animation: floatTwo 8s ease-in-out infinite;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    transform: translatey(0px);
+    animation: floatTwo 8s ease-in-out infinite;
 }
 
 
 @keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-20px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
 }
+
 @keyframes floatTwo {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-20px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
 }

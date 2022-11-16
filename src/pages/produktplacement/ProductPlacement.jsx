@@ -227,6 +227,11 @@ const ProductPlacement = () => {
                 < AddArticleButton article={article} />
 
             </section>
+            <div className="divrelativ">
+                <img className="imggrp95" src="./img/Group95.png" alt="" />
+                <img className="imggrp96" src="./img/Group96.png" alt="" />
+                <img className="imggrp97" src="./img/Group97.png" alt="" />
+            </div>
             <Footer />
         </div>
 
