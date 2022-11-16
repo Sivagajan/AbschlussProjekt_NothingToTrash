@@ -3,7 +3,7 @@ import style from '../marktPlatzHeader/MarktplatzHeader.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import { motion } from 'framer-motion'
-
+import { Link } from 'react-router-dom'
 
 const MarktplatzHeader = (props) => {
     return (
@@ -28,9 +28,12 @@ const MarktplatzHeader = (props) => {
 
             </section>
 
+            <Link to='/productdetails'>
             <motion.button className={style.submitProductBtn} 
                 whileTap={{scale: 0.95}}
             > Produkt einstellen </motion.button>
+            </Link>
+            
 
 
         </header>
