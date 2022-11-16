@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Outlet, useNavigate } from "react-router-dom"
 
 
@@ -13,6 +13,7 @@ const Guard = () => {
                 }
             })
             const data = await response.json()
+            console.log(data)
 
             if(!data.state){
                 alert('Zurück zu den Schatten! Du kannst nicht vorbei!')
