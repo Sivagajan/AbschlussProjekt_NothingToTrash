@@ -1,0 +1,68 @@
+.marktPlatzHeader{
+    text-align: center;
+    margin: 5vh 21vw;
+    
+    .marktPlatzHeaderHeadline{
+        font-family: Robot700;
+        font-size: 45px;
+        width: 44vw;
+        margin: 10vh auto 5vh;
+    }
+
+    .submitProductBtn {
+        border: none;
+        color: #ffff;
+        padding: 20px 60px;
+        background-color: #7854F7;
+    }
+}
+
+.inputField{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+
+    .searhField{
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: rgb(181, 161, 255);
+        border-radius: 5px;
+        width: 30vw;
+        margin: 5vh 0 8vh 0;
+        
+
+    input[type="search"] {
+        padding: 15px;
+        height: 5vh;
+        width: 100%;
+        border: none;
+        background-color: rgb(181, 161, 255);
+        margin: 0;
+        font-size: 14px;
+        color: #000;
+        border-radius: inherit;
+        &::placeholder{
+            color: #000;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+
+    button[type="submit"] {
+        width: 40px;
+        margin: 0;
+        border: none;
+        background-color: rgb(181, 161, 255);
+        border-radius: inherit;
+        &:hover{
+            cursor: pointer;
+        }
+        &:focus{
+            box-shadow: 0 0 3px rgba(120, 84, 247, 0.5);
+            outline: none;
+        }
+    }
+}
+}

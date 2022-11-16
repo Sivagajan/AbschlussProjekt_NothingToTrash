@@ -11,8 +11,7 @@ const StartButton = () => {
         <>
             <Userlogin open={open} setOpen={setOpen}/>
             <motion.button className='startBtn' 
-                /* whileHover={{ scale: 1 }} */
-                whileTap={{scale: 0.8}}
+            whileTap={{scale: 0.8}}
             onClick={() => setOpen(true)}> Starte jetzt! </motion.button>
         
         </>

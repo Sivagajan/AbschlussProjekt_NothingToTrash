@@ -30,7 +30,7 @@ const AddArticleButton = (props) => {
     return(
         <motion.button   
             whileHover={{ scale: 1.2}}
-            whileTap={{ scale: 0.8}} 
+            whileTap={{scale: 0.95}} 
             className="addArticleBtn" 
             onClick={addArticle}> Artikel Hinzufügen 
         </motion.button>
