@@ -1,43 +1,71 @@
-.sidebar{
-    width: 200px;
-    .categories{
+.sidebarWrap{
+
+    width: 210px;
+    float: left;
+    position: relative;
+    background-color: none;
+    margin-left: 5vw;
+    
+    .sidebar{
+        width: 200px;
+        height: 100vh;
+        position: absolute;
+        position: sticky;
         
-        .category{
+        h3 {
+            font-size: 17px;
+            margin-top: 10px;
+        }
+        p{
+            font-size: 14px;
+        }
+        .categories{
+            .category{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    
+        .brands{
+            width: 150px;
+            align-items:center;
             display: grid;
+            justify-items: start;
             grid-template-columns: repeat(2,1fr);
         }
-    }
 
-    .brands{
-        width: 150px;
-        align-items:center;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .div_ratings{
-        width: 150px;
-        align-items:center;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .slider{
-        margin-top: 30px;
-    }
-
-    .priceInput{
-        margin-top: 60px;
-        display: flex;
-    }
-
-    .articleSlider{
-        height: 200px;
-    }
-
-    .labelStar{
-        display: flex;
-        justify-content: start;
-        height: 20px;
+        .labelBrand{
+            justify-items: stretch;
+            font-size: 14px;
+            
+        }
+    
+        .div_ratings{
+            width: 150px;
+            align-items:center;
+            display: grid;
+            justify-items: start;
+            grid-template-columns: repeat(2,1fr);
+        }
+    
+        .slider{
+            margin-top: 30px;
+        }
+    
+        .priceInput{
+            margin-top: 60px;
+            display: flex;
+        }
+    
+        .articleSlider{
+            height: 200px;
+        }
+    
+        .labelStar{
+            display: flex;
+            justify-content: start;
+            height: 20px;
+            justify-items: stretch;
+        }
     }
 }

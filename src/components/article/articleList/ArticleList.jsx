@@ -27,8 +27,6 @@ const ArticelList = () => {
     return(
         <section className={style.articleList}>
             {article.map(( article, key) => <ArticleItem key={key} article={article}/>)}
-
-            <h1>hallo</h1>
         </section>
     )
 }
