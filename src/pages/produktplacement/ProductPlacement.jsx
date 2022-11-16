@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import AddArticleButton from "../../components/buttons/addArticleButton/AddArticleButton"
 import Navbar from "../../components/navbar/Navbar"
 import Footer from "../../components/footer/Footer"
-import "./ProductPlacement.Modules.scss"
+import style from "./ProductPlacement.module.scss"
 
 
 const ProductPlacement = () => {
@@ -86,44 +86,44 @@ const ProductPlacement = () => {
 
 
     return (
-        <div className="backgroundblue">
+        <div className={style.backgroundblue}>
             < Navbar />
-            <section className="productplacementsec1">
+            <section className={style.productplacementsec1}>
 
-                <div className="dflex">
+                <div className={style.dflex}>
 
-                    <p className="width200">Anzeigetyp:</p>
+                    <p className={style.width200}>Anzeigetyp:</p>
                     <input
                         type="radio" value="offer"
                         name="anzeigetyp" id="radiobtn"
                         onChange={handleClassifieds} />
-                    <p className="radiodescript">Ich biete</p>
+                    <p className={style.radiodescript}>Ich biete</p>
                     <input
                         type="radio" value="search"
                         name="anzeigetyp" id="radiobtn"
                         onChange={handleClassifieds}
                     />
-                    <p className="radiodescript">Ich suche</p>
+                    <p className={style.radiodescript}>Ich suche</p>
 
                 </div>
 
-                <div className="inputjanein dflex">
-                    <p className="width200">Lieferung:</p>
+                <div className={`${style.inputjanein} ${style.dflex}`}>
+                    <p className={style.width200}>Lieferung:</p>
 
                     <input
                         type="radio" value={true}
                         name="neinja" id="radiobtn"
                         onClick={() => handleDelivery} />
-                    <p className="radiodescript">Ja</p>
+                    <p className={style.radiodescript}>Ja</p>
                     <input
                         type="radio" value={false}
                         name="neinja" id="radiobtn"
                         onClick={() => handleDelivery} />
-                    <p className="radiodescript">Nein</p>
+                    <p className={style.radiodescript}>Nein</p>
                 </div>
 
-                <div className="inputtitel dflex">
-                    <p className="width200">Titel der Anzeige:</p>
+                <div className={`${style.inputtitel} ${style.dflex}`}>
+                    <p className={style.width200}>Titel der Anzeige:</p>
 
                     <input
                         type="text" id="inputtextfield"
@@ -131,49 +131,49 @@ const ProductPlacement = () => {
 
                 </div>
 
-                <div className="inputbeschreibung dflex">
-                    <p className="width200">Beschreibung:</p>
+                <div className={`${style.inputbeschreibung} ${style.dflex}`}>
+                    <p className={style.width200}>Beschreibung:</p>
                     <input type="text" id="inputtextbeschreibung"
                         onChange={(e) => setDescription(e.target.value)} />
                 </div>
 
-                <div className="inputanzahl dflex">
-                    <p className="width200">Anzahl:</p>
+                <div className={`${style.inputanzahl} ${style.dflex}`}>
+                    <p className={style.width200}>Anzahl:</p>
                     <input type="text" id="inputtextsmall" onChange={(e) => setAmount(e.target.value)} />
                 </div>
 
-                <div className="inputpreis dflex">
-                    <p className="width200">Preis:</p>
+                <div className={`${style.inputpreis} ${style.dflex}`}>
+                    <p className={style.width200}>Preis:</p>
                     <input type="number" id="inputtextsmall" onChange={(e) => setPrice(e.target.value)} />
 
-                    <p className="radiodescript">EUR</p>
+                    <p className={style.radiodescript}>EUR</p>
 
                     <input
                         type="radio" value="Festpreis"
                         name="preis" id="radiobtn"
                         onChange={(e) => handlePriceType}
                     />
-                    <p className="radiodescript">Festpreis</p>
+                    <p className={style.radiodescript}>Festpreis</p>
 
                     <input
                         type="radio" value="VB"
                         name="preis" id="radiobtn"
                         onChange={(e) => handlePriceType} />
-                    <p className="radiodescript">VB</p>
+                    <p className={style.radiodescript}>VB</p>
 
                     <input
                         type="radio" value="Zu Verschenken"
                         name="preis" id="radiobtn"
                         onChange={(e) => handlePriceType} />
-                    <p className="radiodescript">Zu Verschenken</p>
+                    <p className={style.radiodescript}>Zu Verschenken</p>
 
                 </div>
 
-                <div className="inputpicture dflex">
-                    <p className="width200">Bilder:</p>
+                <div className={`${style.inputpicture} ${style.dflex}`}>
+                    <p className={style.width200}>Bilder:</p>
                     <div>
                         <div id="display-image">
-                            <img className="image" src={`${base64}`} /> </div>
+                            <img className={style.image} src={`${base64}`} /> </div>
                         <input
                             type="file" id="image-input"
                             accept="image/jpeg, image/png, image/jpg"
@@ -182,8 +182,8 @@ const ProductPlacement = () => {
                     </div>
                 </div>
 
-                <div className="kategorie dflex">
-                    <p className="width200">Kategorie:</p>
+                <div className={`${style.kategorie} ${style.dflex}`}>
+                    <p className={style.width200}>Kategorie:</p>
                     <select id="categorys" name="categorys" onChange={handleCategories}>
                         <option value="furniture">Möbel</option>
                         <option value="fashion">Fashion</option>
@@ -192,45 +192,45 @@ const ProductPlacement = () => {
                     </select>
                 </div>
 
-                <div className="inputplzort dflex">
-                    <p className="width200">Adresse:</p>
+                <div className={`${style.inputplzort} ${style.dflex}`}>
+                    <p className={style.width200}>Adresse:</p>
                     <input
                         type="text" id="inputtextsmall"
-                        className="marginrightsmall" placeholder="  PLZ"
+                        className={style.marginrightsmall} placeholder="  PLZ"
                         onChange={(e) => setPostCode(e.target.value)} />
                     <input
                         type="text" id="inputtextfieldort"
                         placeholder="  Ort"
                         onChange={(e) => setCity(e.target.value)} />
                 </div>
-                <div className="inputstraße dflex">
-                    <p className="width200">Strasse:</p>
+                <div className={`${style.inputstraße} ${style.dflex}`}>
+                    <p className={style.width200}>Strasse:</p>
                     <input
                         type="text" id="inputtextfield"
                         onChange={(e) => setStreet(e.target.value)} />
                 </div>
-                <div className="inputname dflex">
-                    <p className="width200">Name:</p>
+                <div className={`${style.inputname} ${style.dflex}`}>
+                    <p className={style.width200}>Name:</p>
                     <input
                         type="text" id="inputtextfield"
                         onChange={(e) => setName(e.target.value)} />
                 </div>
-                <div className="inputtelefonnummer dflex">
-                    <p className="width200">Telefonnumer:</p>
+                <div className={`${style.inputtelefonnummer} ${style.dflex}`}>
+                    <p className={style.width200}>Telefonnumer:</p>
                     <input
                         type="text" id="inputtextfield"
                         onChange={(e) => setPhone(e.target.value)} />
                 </div>
             </section>
 
-            <section className="artikelhinzufuegenbtn">
+            <section className={style.artikelhinzufuegenbtn}>
                 < AddArticleButton article={article} />
 
             </section>
-            <div className="divrelativ">
-                <img className="imggrp95" src="./img/Group95.png" alt="" />
-                <img className="imggrp96" src="./img/Group96.png" alt="" />
-                <img className="imggrp97" src="./img/Group97.png" alt="" />
+            <div className={style.divrelativ}>
+                <img className={style.imggrp95} src="./img/Group95.png" alt="" />
+                <img className={style.imggrp96} src="./img/Group96.png" alt="" />
+                <img className={style.imggrp97}src="./img/Group97.png" alt="" />
             </div>
             <Footer />
         </div>
