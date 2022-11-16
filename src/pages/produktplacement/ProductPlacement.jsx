@@ -8,7 +8,25 @@ import style from "./ProductPlacement.module.scss"
 
 const ProductPlacement = () => {
 
+    const [userID, setUserID] = useState('')
+    
+    useEffect(() => {
 
+        const checkToken = async () => {
+            const response = await fetch('http://localhost:9090/api/verify', {
+                headers: {
+                    Authentication: 'Bearer ' + localStorage.getItem('token')
+                }
+            })
+            const data = await response.json()
+            console.log('addArticle',data.result.user)
+            
+            setUserID(data.result.user)
+            
+        }
+        checkToken()
+    },[])
+        
     const [classiefieds, setClassifieds] = useState('')
     const [category, setCategory] = useState('')
     const [delivery, setDelivery] = useState(false)
@@ -48,7 +66,8 @@ const ProductPlacement = () => {
         'street': street,
         'name': name,
         'phone': phone,
-        'rating': rating
+        'rating': rating,
+        'user' : userID
     }
 
     useEffect(() => {
@@ -224,7 +243,7 @@ const ProductPlacement = () => {
             </section>
 
             <section className={style.artikelhinzufuegenbtn}>
-                < AddArticleButton article={article} />
+                < AddArticleButton article={article}/>
 
             </section>
             <div className={style.divrelativ}>

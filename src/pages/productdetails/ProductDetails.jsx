@@ -67,9 +67,10 @@ const ProductDetails = () => {
             </section>
 
             <div className={style.btnbottom}>
-
-                <motion.button className={style.registerBtnreverse} onClick={""}
+                
+                    <motion.button className={style.registerBtnreverse} onClick={""}
                     whileTap={{ scale: 0.95 }}>Bearbeiten</motion.button>
+                
                 <motion.button className={style.registerBtn} onClick={""}
                     whileTap={{ scale: 0.95 }}>Verkauft</motion.button>
             </div>

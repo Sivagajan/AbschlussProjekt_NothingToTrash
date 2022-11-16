@@ -1,6 +1,8 @@
 import style from './AddArticleButton.module.scss'
 import {motion} from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+
 
 const AddArticleButton = (props) => {
 
@@ -10,15 +12,18 @@ const AddArticleButton = (props) => {
 
     console.log('AAB',article)
 
-    const addArticle = async () => {
+    const addArticle = async (props) => {
+
+        console.log(props)
 
         const response = await fetch('http://localhost:9090/article/add', {
             method:'POST',
             headers :{
                 'content-type' : 'application/json',
                 Authentication : 'Bearer ' + localStorage.getItem('token')},
-            body: JSON.stringify(article)
+            body: JSON.stringify(article,props)
         })
+
 
         const data = await response.json()
 
