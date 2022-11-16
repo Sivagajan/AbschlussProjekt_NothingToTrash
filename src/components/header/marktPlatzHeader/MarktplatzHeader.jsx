@@ -7,6 +7,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 const MarktplatzHeader = (props) => {
     return (
         <header className='marktPlatz-header'>
+
             <section className='marktPlatz-headerSection'>
                 <h1>Hilf mit die Umwelt zu schützen</h1>
                 <p>Abfälle bedrohen Vögel, Delfine und Co. Mehr als zehn Millionen Tonnen Abfälle gelangen jährlich in die Ozeane.

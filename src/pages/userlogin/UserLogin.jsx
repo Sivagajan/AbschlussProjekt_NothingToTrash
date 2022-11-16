@@ -20,8 +20,6 @@ const Userlogin = (props) => {
             body: JSON.stringify({ username, password })
         })
 
-
-
         if (result.status === 200) {
 
             const data = await result.json()
@@ -36,8 +34,8 @@ const Userlogin = (props) => {
     console.log(username, password)
 
     return (props.open) ? (
-        <LoginForm login={login} setusername={setUsername} setpassword={setPassword} />
-    ) : ""
+        <LoginForm login={login} closeUserLogin={() => props.setOpen(false)} setusername={setUsername} setpassword={setPassword} />
+    ) : null
 
 }
 

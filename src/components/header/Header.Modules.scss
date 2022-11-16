@@ -1,13 +1,10 @@
 header {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(29, 128, 212, 0.2) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(29, 99, 212, 0.111) 100%);
 
     .headersection {
         position: relative;
         margin-top: 150px;
         margin-left: 150px;
-
-
-
         img {
             position: absolute;
             right: 0px;
@@ -16,26 +13,24 @@ header {
         }
 
         h1 {
+            font-family: Robot700;
             width: 600px;
             font-size: 65px;
             margin-bottom: 15px;
-
         }
 
         p {
-            width: 750px;
+            width: 55vw;
             line-height: 25px;
-
         }
-
-
     }
 
     h2 {
+        font-family: Robot700;
         text-align: center;
         font-size: 45px;
         width: 400px;
-        margin: 250px auto;
+        margin: 20vh auto 30vh;
     }
 }
 
