@@ -1,71 +1,72 @@
-.sidebarWrap{
+.sidebarWrap {
     width: 210px;
-    float: left;
-    position: relative;
     background-color: none;
     margin-left: 5vw;
-    
-    .sidebar{
+
+
+    .sidebar {
         width: 250px;
         height: 100vh;
         position: absolute;
-        position: sticky;
-        
+
+
         h3 {
             font-size: 17px;
             margin-top: 10px;
         }
 
-        .categories{
-            .category{
+        .categories {
+            .category {
                 display: grid;
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
         }
-    
-        .brands{
+
+        .brands {
             width: 150px;
-            align-items:center;
+            align-items: center;
             display: grid;
             justify-items: start;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
 
-        .labelBrand{
+        .labelBrand {
             justify-items: stretch;
             font-size: 14px;
         }
-    
-        .div_ratings{
+
+        .div_ratings {
             width: 150px;
-            align-items:center;
+            align-items: center;
             display: grid;
             justify-items: start;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
-    
-        .slider{
+
+        .slider {
             margin-top: 30px;
         }
-    
-        .priceInput{
+
+        .priceInput {
             margin-top: 60px;
             display: flex;
         }
-    
-        .articleSlider{
+
+        .articleSlider {
             height: 200px;
         }
-    
-        .labelStar{
+
+        .labelStar {
             display: flex;
             justify-content: start;
             height: 20px;
             justify-items: stretch;
         }
     }
-    .dFlex{
+
+    .dFlex {
         display: flex;
+
         .resetBtn {
             border: none;
             margin: 0 5px;
@@ -74,17 +75,19 @@
             width: 110px;
             background-color: #fff;
             font-family: Robot700;
-            &:hover{
+
+            &:hover {
                 box-shadow: rgb(215, 220, 224) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
             }
         }
-        
-        .anwendenBtn{
+
+        .anwendenBtn {
             border: none;
             color: #fff;
             padding: 15px 20px;
             background-color: #7854F7;
-            &:hover{
+
+            &:hover {
                 box-shadow: rgba(0, 0, 0, 0.623) 0px 1px 2px;
             }
         }
