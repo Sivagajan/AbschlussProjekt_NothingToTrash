@@ -17,7 +17,7 @@ const LoginForm = (props) => {
                 
                 <button className={style.closeBtn} onClick={props.closeUserLogin}>X</button>
                 
-                <h1 className={style.H1}>Mit Email anmelden</h1>
+                <h1 className={style.loginH1}>Mit Email anmelden</h1>
                 <p className={style.textAlign}>Du hast bereits ein Konto? <Link to='/register'>Registrieren</Link> </p>
 
                 <input onChange={(e) => { props.setusername(e.target.value) }} type="text" placeholder='Username' />

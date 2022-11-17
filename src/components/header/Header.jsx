@@ -12,7 +12,7 @@ const Header = (props) => {
 
                 <h1 className={style.H1}>Hilf mit die Umwelt zu schützen</h1>
 
-                <p>Abfälle bedrohen Vögel, Delfine und Co. Mehr als zehn Millionen Tonnen Abfälle gelangen jährlich in die Ozeane.
+                <p className={style.headerPTag}>Abfälle bedrohen Vögel, Delfine und Co. Mehr als zehn Millionen Tonnen Abfälle gelangen jährlich in die Ozeane.
                 Sie kosten Abertausende Meerestiere das Leben Seevögel verwechseln Plastik mit natürlicher Nahrung,</p>
 
                 <p className={style.paddingbottom}>Delfine verfangen sich in alten Fischernetzen. Hilf mit Müll zu reduzieren und trashnothing.
