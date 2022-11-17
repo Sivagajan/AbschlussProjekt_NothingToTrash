@@ -78,7 +78,7 @@ const Main = () => {
                 <h2 className={style.mainH2}>Von echten Menschen unterstützt</h2>
                 <p className={style.mainPTag}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget.</p>
 
-                <img className={style.gruppenfoto} src="./img/gruppenfoto.png" alt="" />
+                <img className={style.gruppenfoto} src="./img/UnsereGruppe.png" alt="" />
                 <div className={style.mainImgContainer}>
                     <img className={`${style.grpdecoration1} ${style.imgStyle}`} src="./img/Ellipse32.png" alt="" />
                     <img className={`${style.grpdecoration2} ${style.imgStyle}`} src="./img/Ellipse34.png" alt="" />
