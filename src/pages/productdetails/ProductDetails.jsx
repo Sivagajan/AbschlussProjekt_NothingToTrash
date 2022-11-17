@@ -11,49 +11,54 @@ import WunschButton from "../../components/buttons/wishButton/WunschButton"
 const ProductDetails = () => {
     
     const [detailedArticle, setdetailedArticle] = useState([])
+    const [cache, setCache] = useState([])
+    const [userID, setUserID] =useState('')
     const params = useParams()
     const [edit,setEdit] = useState(false)
-
-    const [title,setTitle] = useState(detailedArticle.title)
-    const [price, setPrice] = useState(detailedArticle.price)
-    const [category,setCategory] = useState(detailedArticle.category)
-    const [delivery,setDelivery] = useState(detailedArticle.delivery)
-    const [amount, setAmount] = useState(detailedArticle.amount)
-    const [description, setDescription] = useState(detailedArticle.description)
-    const [file, setFile] = useState(null)
-    const [base64, setBase64] = useState(detailedArticle.base64)
+    const [newfile, setFile] = useState(null)
+    const [newbase64, setNewBase64] = useState('')
 
     const handleReaderLoaded = (event) => {
 
-        setBase64(event.target.result)
+        setNewBase64(event.target.result) 
+        detailedArticle.img = newbase64
     }
+
+        const checkToken = async () => {
+            const response = await fetch('http://localhost:9090/api/verify', {
+                headers: {
+                    Authentication: 'Bearer ' + localStorage.getItem('token')
+                }
+            })
+            const data = await response.json()
+            console.log('addArticle', data.result.user)
+
+            setUserID(data.result.user)
+
+            console.log(userID)
+
+        }
+        
+
 
     useEffect(() => {
-        if (file) {
-            console.log(file.size)
+        if (newfile) {
+            console.log(newfile.size)
             const reader = new FileReader()
             reader.onload = handleReaderLoaded
-            reader.readAsDataURL(file)
-            console.log(file)
+            reader.readAsDataURL(newfile)
+            console.log(newfile)
         }
-    }, [file])
-
-    const article = {
-        'category': category,
-        'delivery': delivery,
-        'title': title,
-        'description': description,
-        'amount': amount,
-        'price': price,
-        'img': base64,
-    }
-
-    console.log(category)
+    }, [newfile])
 
     const letsEdit = () => {
         setEdit(!edit)
     }
 
+    const newPic = (e) => {
+        setFile(e)
+        setdetailedArticle(prev => { return { ...prev, img:newbase64}})
+    }
 
     useEffect(() => {  // daten holen
 
@@ -72,29 +77,35 @@ const ProductDetails = () => {
                 
                 const data = await result.json()
                 setdetailedArticle(data)
+                setCache(data)
             }
             
         }
         fetchdata()
     },[])
+    
+    const abort = () => {
+        letsEdit()
+        setdetailedArticle(cache)
+    }
 
     console.log(detailedArticle)
 
 
     return (
 
-        < div className={style.backgroundblue}>
+        < div className={style.backgroundblue}>  {/* Userabfrage mit token */}
             <Navbar />
             <section className={`${style.detailssec1} ${style.dflex}`}>
                 <img className={style.imgdetails} src={detailedArticle.img ? detailedArticle.img : 'Kein Bild '} alt="" />
                 {edit === true ?<input
                     type="file" id="image-input"
                     accept="image/jpeg, image/png, image/jpg"
-                    onChange={(e) => setFile(e.target.files[0])}/>:""}
+                    onChange={(e) => newPic(e.target.files[0])}/>:""}
 
                 <article className={style.productInfo}>
-                    <h2 contentEditable={edit} onInput={(e) => {setTitle(e.target.innerText)}}>{detailedArticle.title}</h2>
-                    <p contentEditable={edit} onInput={(e) => {setPrice(e.target.innerText)}} className={style.price}>{`${detailedArticle.price} EUR`}</p>
+                    <h2 contentEditable={edit} onInput={(e) => {setdetailedArticle(prev => { return{ ...prev, title: e.target.innerText}})}}>{detailedArticle.title}</h2>
+                    <p contentEditable={edit} onInput={(e) => {setdetailedArticle(prev => { return{ ...prev, price: e.target.innerText}})}} className={style.price}>{`${detailedArticle.price} EUR`}</p>
                     <div className={`${style.paddingbottom1} ${style.dflex}`}>
                         <div className={style.zustandmarke}>
                             <p className={style.pTag}>Kategorie</p>
@@ -102,33 +113,36 @@ const ProductDetails = () => {
                             <p className={style.pTag}>Anzahl</p>
                         </div>
                         <div className={style.zustandmarke}>
-                            <p contentEditable={edit} onChange={(e)=>{setCategory(e.target.innerText)}} className={style.pTag}>{detailedArticle.category ? detailedArticle.category : ' bitte vorher erfragen'}</p>
-                            <p contentEditable={edit} onInput={(e) =>{setDelivery(e.target.innerText)}} className={style.pTag}>{detailedArticle.delivery ? detailedArticle.delivery : ' bitte vorher erfragen'}</p>
-                            <p contentEditable={edit} onInput={(e)=>{setAmount(e.target.innerText)}} className={style.pTag}>{detailedArticle.amount ? detailedArticle.amount : '1'}</p>
+                            <p contentEditable={edit} onInput={(e)=>{setdetailedArticle( prev => { return {...prev, category: e.target.innerText}})}} className={style.pTag}>{detailedArticle.category ? detailedArticle.category : ' bitte vorher erfragen'}</p>
+                            <p contentEditable={edit} onInput={(e) =>{setdetailedArticle(prev => { return{ ...prev,delivery: e.target.innerText}})}} className={style.pTag}>{detailedArticle.delivery ? detailedArticle.delivery : ' bitte vorher erfragen'}</p>
+                            <p contentEditable={edit} onInput={(e)=>{setdetailedArticle(prev => { return{ ...prev, amount:e.target.innerText}})}} className={style.pTag}>{detailedArticle.amount ? detailedArticle.amount : '1'}</p>
                         </div>
                     </div>
                     <WunschButton />
                     <h3>Produktbeschreibung</h3>
-                    <p contentEditable={edit} onInput={(e) => {setDescription(e.target.innerText)}} className={style.productdescription}>{detailedArticle.description ? detailedArticle.description : 'Manchmal sagt ein Bild mehr aus, als 1000 worte'}</p>
+                    <p contentEditable={edit} onInput={(e) => {setdetailedArticle(prev => { return{ ...prev, description: e.target.innerText}})}} className={style.productdescription}>{detailedArticle.description ? detailedArticle.description : 'kein Bild'}</p>
                 </article>
             </section>
 
-            <div className={style.btnbottom}>
+            {userID === detailedArticle.user ? <div className={style.btnbottom}>
 
             {edit === false ?<motion.button 
                 className={style.registerBtnreverse} 
                 onClick={letsEdit}
-                whileTap={{ scale: 0.95 }}>Bearbeiten</motion.button>:
-            <UpdateArticleButton article = {article} letsedit={letsEdit} params={params}/>
+                whileTap={{ scale: 0.95 }}>Bearbeiten</motion.button>
+                : <UpdateArticleButton article = {detailedArticle} params={params}/>
             }
-
-            <p>abrechen</p>
+            
+            {edit === true ? <motion.button 
+                    className={style.registerBtn} 
+                    onClick={abort}
+                    whileTap={{ scale: 0.95 }}>Abbrechen</motion.button>:""}
                 
                 <motion.button 
                     className={style.registerBtn} 
                     onClick={""}
                     whileTap={{ scale: 0.95 }}>Verkauft</motion.button>
-            </div>
+            </div>:""}
 
             <div className={style.footerbottom}><Footer /></div>
         </div >
