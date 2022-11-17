@@ -12,11 +12,11 @@ main {
 .articleleft {
     width: 340px;
 
-    div {
+    .mainImgContainer {
         position: relative;
         padding-bottom: 50px;
 
-        img {
+        .mainImg {
             max-width: 410px;
             position: absolute;
             left: -40px;
@@ -38,11 +38,10 @@ main {
     width: 340px;
     padding-top: 70px;
 
-    div {
+    .mainImgContainer {
         position: relative;
         padding-bottom: 50px;
-
-        img {
+        .middlepicture {
             max-width: 410px;
             position: absolute;
             left: -40px;
@@ -55,7 +54,7 @@ main {
     width: 340px;
     padding-top: 140px;
 
-    div {
+    .mainImgContainer {
         position: relative;
         padding-bottom: 50px;
 
@@ -92,7 +91,7 @@ main {
     }
 }
 
-h3 {
+.styleH3 {
     font-size: 25px;
     padding-top: 10px;
     padding-bottom: 5px;
@@ -163,7 +162,7 @@ p {
             max-width: 370px;
             margin-left: 45%;
 
-            h3 {
+            .mainH3 {
                 color: white;
                 line-height: 16px;
             }
@@ -230,7 +229,7 @@ p {
             margin-left: 30%;
             margin-top: 60px;
 
-            h3 {
+            .mainH3 {
                 color: white;
                 line-height: 16px;
             }
@@ -252,12 +251,12 @@ p {
     margin-top: 100px;
     text-align: center;
 
-    h2 {
+    .mainH2 {
         font-size: 45px;
         margin-bottom: 20px;
     }
 
-    p {
+    .mainPTag {
         width: 500px;
         margin: 0 auto;
         color: #7854F7;
@@ -269,10 +268,10 @@ p {
 
     }
 
-    div {
+    .mainImgContainer {
         position: relative;
 
-        img {
+        .imgStyle{
             position: absolute;
         }
 
@@ -306,7 +305,6 @@ p {
             left: 100px;
             top: -30px;
             z-index: -10;
-
         }
     }
 

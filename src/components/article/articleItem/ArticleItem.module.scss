@@ -1,23 +1,24 @@
 .articleItem{
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 20px;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    margin: 35px 0;
     width: 750px;
     height: 300px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     align-items: center;
-
     .articlePic{
+        
+        margin-right: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 200px;
-        height: 200px;
+        object-fit: cover;
         .displayImg{
-            max-width: 200px;
-            max-height: 200px;
+            border-radius: 5px 0 0 5px;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
         }
     }
 
@@ -30,4 +31,16 @@
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
+}
+
+.buttons{
+    margin: 0 40px;
+}
+
+.headlineH4, .headlineH3, .headlineH5 {
+    margin: 10px 0;
+}
+
+.headlineH4, .headlineH3 {
+    font-size: 20px;
 }

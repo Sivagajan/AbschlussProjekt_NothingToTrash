@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import ArticleItem from '../../components/article/articleItem/ArticleItem'
 import UpdateArticleButton from "../../components/buttons/updateArticleButton/UpdateArticleButton"
+import WunschButton from "../../components/buttons/wishButton/WunschButton"
 
 const ProductDetails = () => {
     
@@ -106,6 +107,7 @@ const ProductDetails = () => {
                             <p contentEditable={edit} onInput={(e)=>{setAmount(e.target.innerText)}} className={style.pTag}>{detailedArticle.amount ? detailedArticle.amount : '1'}</p>
                         </div>
                     </div>
+                    <WunschButton />
                     <h3>Produktbeschreibung</h3>
                     <p contentEditable={edit} onInput={(e) => {setDescription(e.target.innerText)}} className={style.productdescription}>{detailedArticle.description ? detailedArticle.description : 'Manchmal sagt ein Bild mehr aus, als 1000 worte'}</p>
                 </article>

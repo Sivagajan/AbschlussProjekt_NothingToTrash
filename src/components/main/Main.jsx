@@ -6,32 +6,33 @@ const Main = () => {
         <main>
             <section className={style.section1main}>
                 <article className={style.articleleft}>
-                    <div>
-                        <img src="./img/mennotebook1.png" alt="" />
+                    <div className={style.mainImgContainer}>
+                        <img className={style.mainImg} src="./img/mennotebook1.png" alt="" />
 
                         <img className={style.picturez50} src="./img/mobilephone1.png" alt="" />
                     </div>
-                    <h3>Verkaufen statt wegwerfen</h3>
+
+                    <h3 className={`${style.mainH3} ${style.styleH3}`}>Verkaufen statt wegwerfen</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget.</p>
                 </article>
+
                 <article className={style.articlemiddle}>
-                    <div>
+                    <div className={style.mainImgContainer}>
                         <img className={style.middlepicture} src="./img/chairs2middle.png" alt="" />
                     </div>
-                    <h3>Verschenke und Schütze</h3>
+                    <h3 className={`${style.mainH3} ${style.styleH3}`}>Verschenke und Schütze</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget.</p>
                 </article>
 
                 <article className={style.articleright}>
-                    <div>
-                        <img src="./img/Rectangle225.png" alt="" />
+                    <div className={style.mainImgContainer}>
+                        <img className={style.imgStyle} src="./img/Rectangle225.png" alt="" />
                         <img className={style.rightrightpic} src="./img/Rectangle226.png" alt="" />
                         <img className={style.topleftpic} src="./img/Rectangle227.png" alt="" />
                         <img className={style.toprightpic} src="./img/Rectangle228.png" alt="" />
 
-
                     </div>
-                    <h3>Der Umwelt zuliebe</h3>
+                    <h3 className={`${style.mainH3} ${style.styleH3}`}>Der Umwelt zuliebe</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget. </p>
                 </article>
 
@@ -47,8 +48,8 @@ const Main = () => {
                         <img className={style.section2a1pic4} src="./img/hochkantpunkte.png" alt="" />
                     </div>
                     <div className={style.section2a1d2}>
-                        <h3>Ohne</h3>
-                        <h3>Limits</h3>
+                        <h3 className={style.mainH3}>Ohne</h3>
+                        <h3 className={style.mainH3}>Limits</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget.</p>
                         <DokumentationsButton />
                     </div>
@@ -64,8 +65,8 @@ const Main = () => {
                             className={style.section2a2pic4} src="./img/kleinerkreis.png" alt="" />
                     </div>
                     <div className={style.section2a2d2}>
-                        <h3>Kenne deine</h3>
-                        <h3>Community</h3>
+                        <h3 className={style.mainH3}>Kenne deine</h3>
+                        <h3 className={style.mainH3}>Community</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget.</p>
                         <DokumentationsButton />
                     </div>
@@ -74,12 +75,12 @@ const Main = () => {
             </section>
 
             <section className={style.section3}>
-                <h2>Von echten Menschen unterstützt</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget.</p>
+                <h2 className={style.mainH2}>Von echten Menschen unterstützt</h2>
+                <p className={style.mainPTag}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus faucibus egestas neque, quis nunc in turpis cursus eget.</p>
 
                 <img className={style.gruppenfoto} src="./img/gruppenfoto.png" alt="" />
-                <div>
-                    <img className={style.grpdecoration1} src="./img/Ellipse32.png" alt="" />
+                <div className={style.mainImgContainer}>
+                    <img className={`${style.grpdecoration1} ${style.imgStyle}`} src="./img/Ellipse32.png" alt="" />
                     <img className={style.grpdecoration2} src="./img/Ellipse34.png" alt="" />
                     <img className={style.grpdecoration3} src="./img/Ellipse36.png" alt="" />
                     <img className={style.grpdecoration4} src="./img/Group5.png" alt="" />
