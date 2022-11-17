@@ -1,0 +1,19 @@
+.dlfex {
+    display: flex;
+}
+
+.marginbottom {
+    margin-bottom: 100px;
+}
+
+.sidebar {
+    position: relative;
+    z-index: 1;
+
+}
+
+.sidebar.fixed {
+    position: fixed;
+    left: 0;
+    top: 70px;
+}

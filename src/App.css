@@ -1,10 +1,11 @@
-@font-face{
+@font-face {
   font-family: Robot400;
-  src:url('../public/fonts/Roboto-Regular.ttf')
+  src: url('../public/fonts/Roboto-Regular.ttf')
 }
-@font-face{
+
+@font-face {
   font-family: Robot700;
-  src:url('../public/fonts/Roboto-Bold.ttf')
+  src: url('../public/fonts/Roboto-Bold.ttf')
 }
 
 * {
@@ -14,11 +15,14 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(29, 99, 212, 0.111) 100%);
+  background-repeat: no-repeat;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3 {
   font-family: Robot700;
 }
 
@@ -26,12 +30,14 @@ p {
   font-size: 14px;
 }
 
-button{
+button {
   font-family: Robot400;
   font-size: 15px;
   border-radius: 5px;
 }
 
-input[type=checkbox], a, button {
+input[type=checkbox],
+a,
+button {
   cursor: pointer;
 }

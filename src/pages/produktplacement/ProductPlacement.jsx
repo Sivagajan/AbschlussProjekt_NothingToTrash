@@ -9,7 +9,7 @@ import style from "./ProductPlacement.module.scss"
 const ProductPlacement = () => {
 
     const [userID, setUserID] = useState('')
-    
+
     useEffect(() => {
 
         const checkToken = async () => {
@@ -19,14 +19,14 @@ const ProductPlacement = () => {
                 }
             })
             const data = await response.json()
-            console.log('addArticle',data.result.user)
-            
+            console.log('addArticle', data.result.user)
+
             setUserID(data.result.user)
-            
+
         }
         checkToken()
-    },[])
-        
+    }, [])
+
     const [classiefieds, setClassifieds] = useState('')
     const [category, setCategory] = useState('')
     const [delivery, setDelivery] = useState(false)
@@ -67,7 +67,7 @@ const ProductPlacement = () => {
         'name': name,
         'phone': phone,
         'rating': rating,
-        'user' : userID
+        'user': userID
     }
 
     useEffect(() => {
@@ -105,7 +105,7 @@ const ProductPlacement = () => {
 
 
     return (
-        <div className={style.backgroundblue}>
+        <div>
             < Navbar />
             <section className={style.productplacementsec1}>
 
@@ -114,12 +114,12 @@ const ProductPlacement = () => {
                     <p className={style.width200}>Anzeigetyp:</p>
                     <input
                         type="radio" value="offer"
-                        name="anzeigetyp" id="radiobtn"
+                        name="anzeigetyp" id={style.radiobtn}
                         onChange={handleClassifieds} />
                     <p className={style.radiodescript}>Ich biete</p>
                     <input
                         type="radio" value="search"
-                        name="anzeigetyp" id="radiobtn"
+                        name="anzeigetyp" id={style.radiobtn}
                         onChange={handleClassifieds}
                     />
                     <p className={style.radiodescript}>Ich suche</p>
@@ -131,12 +131,12 @@ const ProductPlacement = () => {
 
                     <input
                         type="radio" value={true}
-                        name="neinja" id="radiobtn"
+                        name="neinja" id={style.radiobtn}
                         onClick={() => handleDelivery} />
                     <p className={style.radiodescript}>Ja</p>
                     <input
                         type="radio" value={false}
-                        name="neinja" id="radiobtn"
+                        name="neinja" id={style.radiobtn}
                         onClick={() => handleDelivery} />
                     <p className={style.radiodescript}>Nein</p>
                 </div>
@@ -145,44 +145,44 @@ const ProductPlacement = () => {
                     <p className={style.width200}>Titel der Anzeige:</p>
 
                     <input
-                        type="text" id="inputtextfield"
+                        type="text" id={style.inputtextfield}
                         onChange={(e) => setTitle(e.target.value)} />
 
                 </div>
 
                 <div className={`${style.inputbeschreibung} ${style.dflex}`}>
                     <p className={style.width200}>Beschreibung:</p>
-                    <input type="text" id="inputtextbeschreibung"
+                    <input type="text" id={style.inputtextbeschreibung}
                         onChange={(e) => setDescription(e.target.value)} />
                 </div>
 
                 <div className={`${style.inputanzahl} ${style.dflex}`}>
                     <p className={style.width200}>Anzahl:</p>
-                    <input type="text" id="inputtextsmall" onChange={(e) => setAmount(e.target.value)} />
+                    <input type="text" id={style.inputtextsmall} onChange={(e) => setAmount(e.target.value)} />
                 </div>
 
                 <div className={`${style.inputpreis} ${style.dflex}`}>
                     <p className={style.width200}>Preis:</p>
-                    <input type="number" id="inputtextsmall" onChange={(e) => setPrice(e.target.value)} />
+                    <input type="number" id={style.inputtextsmall} onChange={(e) => setPrice(e.target.value)} />
 
                     <p className={style.radiodescript}>EUR</p>
 
                     <input
                         type="radio" value="Festpreis"
-                        name="preis" id="radiobtn"
+                        name="preis" id={style.radiobtn}
                         onChange={(e) => handlePriceType}
                     />
                     <p className={style.radiodescript}>Festpreis</p>
 
                     <input
                         type="radio" value="VB"
-                        name="preis" id="radiobtn"
+                        name="preis" id={style.radiobtn}
                         onChange={(e) => handlePriceType} />
                     <p className={style.radiodescript}>VB</p>
 
                     <input
                         type="radio" value="Zu Verschenken"
-                        name="preis" id="radiobtn"
+                        name="preis" id={style.radiobtn}
                         onChange={(e) => handlePriceType} />
                     <p className={style.radiodescript}>Zu Verschenken</p>
 
@@ -191,7 +191,7 @@ const ProductPlacement = () => {
                 <div className={`${style.inputpicture} ${style.dflex}`}>
                     <p className={style.width200}>Bilder:</p>
                     <div>
-                        <div id="display-image">
+                        <div id={style.displayimage}>
                             <img className={style.image} src={`${base64}`} /> </div>
                         <input
                             type="file" id="image-input"
@@ -203,7 +203,7 @@ const ProductPlacement = () => {
 
                 <div className={`${style.kategorie} ${style.dflex}`}>
                     <p className={style.width200}>Kategorie:</p>
-                    <select id="categorys" name="categorys" onChange={handleCategories}>
+                    <select id={style.categorys} name="categorys" onChange={handleCategories}>
                         <option value="furniture">Möbel</option>
                         <option value="fashion">Fashion</option>
                         <option value="electronics">Elektronik</option>
@@ -214,42 +214,42 @@ const ProductPlacement = () => {
                 <div className={`${style.inputplzort} ${style.dflex}`}>
                     <p className={style.width200}>Adresse:</p>
                     <input
-                        type="text" id="inputtextsmall"
+                        type="text" id={style.inputtextsmall}
                         className={style.marginrightsmall} placeholder="  PLZ"
                         onChange={(e) => setPostCode(e.target.value)} />
                     <input
-                        type="text" id="inputtextfieldort"
+                        type="text" id={style.inputtextfieldort}
                         placeholder="  Ort"
                         onChange={(e) => setCity(e.target.value)} />
                 </div>
                 <div className={`${style.inputstraße} ${style.dflex}`}>
                     <p className={style.width200}>Strasse:</p>
                     <input
-                        type="text" id="inputtextfield"
+                        type="text" id={style.inputtextfield}
                         onChange={(e) => setStreet(e.target.value)} />
                 </div>
                 <div className={`${style.inputname} ${style.dflex}`}>
                     <p className={style.width200}>Name:</p>
                     <input
-                        type="text" id="inputtextfield"
+                        type="text" id={style.inputtextfield}
                         onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div className={`${style.inputtelefonnummer} ${style.dflex}`}>
                     <p className={style.width200}>Telefonnumer:</p>
                     <input
-                        type="text" id="inputtextfield"
+                        type="text" id={style.inputtextfield}
                         onChange={(e) => setPhone(e.target.value)} />
                 </div>
             </section>
 
             <section className={style.artikelhinzufuegenbtn}>
-                < AddArticleButton article={article}/>
+                < AddArticleButton article={article} />
 
             </section>
             <div className={style.divrelativ}>
                 <img className={style.imggrp95} src="./img/Group95.png" alt="" />
                 <img className={style.imggrp96} src="./img/Group96.png" alt="" />
-                <img className={style.imggrp97}src="./img/Group97.png" alt="" />
+                <img className={style.imggrp97} src="./img/Group97.png" alt="" />
             </div>
             <Footer />
         </div>
