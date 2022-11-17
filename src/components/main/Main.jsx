@@ -57,7 +57,7 @@ const Main = () => {
 
                 <article className={style.section2article2}>
                     <div className={style.section2a2d1}>
-                        <img className={style.section2a2pic1} src="./img/section2pic2.png" alt="" />
+                        <img className={`${style.section2a2pic1} ${style.image}`} src="./img/section2pic2.png" alt="" />
                         <img className={style.section2a1pic2shadow} src="./img/shadowpic2.png" alt="" />
                         <img className={style.section2a2pic2} src="./img/mittelgroßerkreis.png" alt="" />
                         <img className={style.section2a2pic3} src="./img/querpunkte.png" alt="" />
@@ -81,10 +81,10 @@ const Main = () => {
                 <img className={style.gruppenfoto} src="./img/gruppenfoto.png" alt="" />
                 <div className={style.mainImgContainer}>
                     <img className={`${style.grpdecoration1} ${style.imgStyle}`} src="./img/Ellipse32.png" alt="" />
-                    <img className={style.grpdecoration2} src="./img/Ellipse34.png" alt="" />
-                    <img className={style.grpdecoration3} src="./img/Ellipse36.png" alt="" />
-                    <img className={style.grpdecoration4} src="./img/Group5.png" alt="" />
-                    <img className={style.grpdecoration5} src="./img/Group13.png" alt="" />
+                    <img className={`${style.grpdecoration2} ${style.imgStyle}`} src="./img/Ellipse34.png" alt="" />
+                    <img className={`${style.grpdecoration3} ${style.imgStyle}`} src="./img/Ellipse36.png" alt="" />
+                    <img className={`${style.grpdecoration4} ${style.imgStyle}`} src="./img/Group5.png" alt="" />
+                    <img className={`${style.grpdecoration5} ${style.imgStyle}`} src="./img/Group13.png" alt="" />
                 </div>
 
             </section>

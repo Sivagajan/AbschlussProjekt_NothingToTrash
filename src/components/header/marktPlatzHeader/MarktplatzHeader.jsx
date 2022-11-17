@@ -21,9 +21,10 @@ const MarktplatzHeader = (props) => {
 
             <section className={style.inputField}>
 
-                <div className={style.searhField}>
+                <div className={style.searhField}> 
                     <input type="search" placeholder='Suche nach Produkt, Kategorie...'/>
                     <button type="submit"> <FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+                    {/* input = onChange = befüllen useState / Btn = onClick => arrowFunction mit fech */}
                 </div>
 
             </section>
