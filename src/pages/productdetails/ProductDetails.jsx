@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import ArticleItem from '../../components/article/articleItem/ArticleItem'
+import WunschButton from "../../components/buttons/wishButton/WunschButton"
 
 const ProductDetails = () => {
 
@@ -46,6 +47,7 @@ const ProductDetails = () => {
             <Navbar />
             <section className={`${style.detailssec1} ${style.dflex}`}>
                 <img className={style.imgdetails} src={detailedArticle.img ? detailedArticle.img : 'Kein Bild '} alt="" />
+
                 <article className={style.productInfo}>
                     <h2>{detailedArticle.title}</h2>
                     <p className={style.price}>{`${detailedArticle.price} EUR`}</p>
@@ -61,6 +63,7 @@ const ProductDetails = () => {
                             <p className={style.pTag}>{detailedArticle.amount ? detailedArticle.amount : '1'}</p>
                         </div>
                     </div>
+                    <WunschButton />
                     <h3>Produktbeschreibung</h3>
                     <p className={style.productdescription}>{detailedArticle.description ? detailedArticle.description : 'Manchmal sagt ein Bild mehr aus, als 1000 worte'}</p>
                 </article>

@@ -9,9 +9,10 @@
     }
 
     .imgdetails {
-        max-width: 600px;
-        max-height: 500px;
+        width: 550px;
+        height: 550px;
         margin-right: 25px;
+        object-fit: cover;
     }
 
     .productInfo {

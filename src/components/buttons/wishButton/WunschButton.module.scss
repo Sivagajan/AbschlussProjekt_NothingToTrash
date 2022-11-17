@@ -2,7 +2,12 @@
 .wunschBtn{
     border: none;
     color: #272D4E;
-    padding: 10px 50px;
+    padding: 10px 20px;
     background-color: #F5F5F5;
+    margin: 10px 0;
+    width: 200px;
     box-shadow: rgba(0, 0, 0, 0.623) 0px 1px 2px;
+    span{
+        padding-right: 10px;
+    }
 }

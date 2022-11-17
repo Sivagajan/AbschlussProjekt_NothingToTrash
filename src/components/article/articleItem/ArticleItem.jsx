@@ -21,13 +21,16 @@ const ArticleItem = (props) => {
 
     return(
         <article className={style.articleItem}>
+
             <div className={style.articlePic}>
                 <img className={style.displayImg} src={article.img} alt="displayImg" />
+                
             </div>
+
             <div className={style.articlDescription}>
-                <h4>{!article.category ? 'Kein Preis':`${article.price} EUR`}</h4>
-                <h3>{!article.title ? 'Kein Titel':article.title}</h3>
-                <h5>{!article.description ? 'Keine Beschreibung' : article.description}</h5>
+                <h4 className={style.headlineH4}>{!article.category ? 'Kein Preis':`${article.price} EUR`}</h4>
+                <h3 className={style.headlineH3}>{!article.title ? 'Kein Titel':article.title}</h3>
+                <h5 className={style.headlineH5}>{!article.description ? 'Keine Beschreibung' : article.description}</h5>
 
                 <div className={style.articleDetails}>
                     <div>
