@@ -12,16 +12,16 @@ const UpdateArticleButton = (props) => {
 
     console.log('UAB',article)
 
-    const updateArticle = async (props) => {
+    const updateArticle = async () => {
 
-        console.log(props)
+        console.log('uA',article)
 
         const response = await fetch('http://localhost:9090/article/update', {
-            method:'POST',
+            method:'PUT',
             headers :{
                 'content-type' : 'application/json',
                 Authentication : 'Bearer ' + localStorage.getItem('token')},
-            body: JSON.stringify(article,props)
+            body: JSON.stringify(article)
         })
 
 
@@ -35,7 +35,7 @@ const UpdateArticleButton = (props) => {
     return(
         <motion.button 
         className={style.registerBtnreverse} 
-        onClick={''}
+        onClick={updateArticle}
         whileTap={{ scale: 0.95 }}>Speichern</motion.button>
     )
 }

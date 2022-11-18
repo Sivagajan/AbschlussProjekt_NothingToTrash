@@ -8,10 +8,7 @@ import style from "./ProductPlacement.module.scss"
 
 const ProductPlacement = () => {
 
-    const [userID, setUserID] = useState('')
-
-    useEffect(() => {
-
+        
         const checkToken = async () => {
             const response = await fetch('http://localhost:9090/api/verify', {
                 headers: {
@@ -19,14 +16,15 @@ const ProductPlacement = () => {
                 }
             })
             const data = await response.json()
-            console.log('addArticle', data.result.user)
-
+            console.log('addArticle', data)
+            
             setUserID(data.result.user)
-
+            console.log('wir checken den token')
         }
-        checkToken()
-    }, [])
 
+        checkToken()
+    
+    const [userID, setUserID] = useState('')
     const [classiefieds, setClassifieds] = useState('')
     const [category, setCategory] = useState('')
     const [delivery, setDelivery] = useState(false)
