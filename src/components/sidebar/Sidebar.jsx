@@ -21,7 +21,7 @@ const Sidebar = () => {
             <div className={style.sidebar}>
 
                 <article className={style.categories}>
-                    <h3>Kategorien</h3>
+                    <h3 className={style.sideBarHeadline}>Kategorien</h3>
                     <div className={style.category}>
                         <div>
                             <p>Möbel</p>
@@ -38,7 +38,7 @@ const Sidebar = () => {
                     </div>
                 </article>
                 <article>
-                    <h3>Marken</h3>
+                    <h3 className={style.sideBarHeadline}>Marken</h3>
                     <div className={style.brands}>
 
                         <input type="checkbox" name="brand1" id="" /> <label className={style.labelBrand}>Marke1</label>
@@ -50,7 +50,7 @@ const Sidebar = () => {
                     </div>
                 </article>
                 <article>
-                    <h3>Bewertung</h3>
+                    <h3 className={style.sideBarHeadline}>Bewertung</h3>
                     <div className={style.div_ratings}>
                         <input type="checkbox" name="star5" id="" />
                         <label className={style.labelStar}>
@@ -86,7 +86,7 @@ const Sidebar = () => {
                 </article>
 
                 <article className={style.articleSlider}>
-                    <h3>Preis</h3>
+                    <h3 className={style.sideBarHeadline}>Preis</h3>
                     <div className={style.slider}>
                         <Slider min={0} max={350} onChange={(setMin, setMax) => console.log(`min = ${min}, max = ${max}`)} />
                     </div>

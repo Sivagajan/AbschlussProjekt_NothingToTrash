@@ -54,7 +54,7 @@ const UserResgister = () => {
                     <div className={`${style.potato} ${style.avatar}`}>
                         <img src="./img/potato 1.svg" alt="face" />
                     </div>
-                    <div className={`${style.faceF} ${style.avatarTwo}`}>
+                    <div className={`${style.faceF} ${style}`}>
                         <img src="./img/Stefan.svg" alt="face" />
                     </div>
                     <div className={style.faceE}>
