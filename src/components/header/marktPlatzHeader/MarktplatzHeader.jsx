@@ -4,8 +4,35 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 const MarktplatzHeader = (props) => {
+
+    const [article, setArticle] = useState([])
+
+    const inputSearch = () => {
+
+        const fetchData = async () => {
+
+            const response = await fetch(`http://localhost:9090/article/`,{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            }
+
+        })
+
+            if(response.status === 200){
+                const data = await response.json()
+                console.log(data)
+                setArticle(data)
+            }
+        }
+
+        fetchData()
+
+    }
+
     return (
         <header className={style.marktPlatzHeader}>
 
@@ -22,8 +49,8 @@ const MarktplatzHeader = (props) => {
             <section className={style.inputField}>
 
                 <div className={style.searhField}> 
-                    <input type="search" placeholder='Suche nach Produkt, Kategorie...'/>
-                    <button type="submit"> <FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+                    <input type="search" onChange={(e) => setArticle(e.target.value)} placeholder='Suche nach Produkt, Kategorie...'/>
+                    <button type="submit" onClick={inputSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
                     {/* input = onChange = befüllen useState / Btn = onClick => arrowFunction mit fech */}
                 </div>
 

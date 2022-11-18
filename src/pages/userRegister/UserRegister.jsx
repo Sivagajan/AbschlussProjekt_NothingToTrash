@@ -49,22 +49,22 @@ const UserResgister = () => {
                 <article className={style.registerFaces}>
                     
                     <div className={style.faceB}>
-                        <img src="./img/Group1b.svg" alt="face" />
+                        <img src="./img/Gerrit2.svg" alt="face" />
                     </div>
-                    <div className={`${style.faceC} ${style.avatar}`}>
+                    <div className={`${style.potato} ${style.avatar}`}>
                         <img src="./img/potato 1.svg" alt="face" />
                     </div>
-                    <div className={`${style.faceF} ${style.avatarTwo}`}>
-                        <img src="./img/Group1f.svg" alt="face" />
+                    <div className={`${style.faceF} ${style}`}>
+                        <img src="./img/Stefan.svg" alt="face" />
                     </div>
                     <div className={style.faceE}>
-                        <img src="./img/Group1e.svg" alt="face" />
+                        <img src="./img/Siva2.svg" alt="face" />
                     </div>
                     <div className={style.faceD}>
-                        <img src="./img/Group1d.svg" alt="face" />
+                        <img src="./img/Magnuspool.svg" alt="face" />
                     </div>
-                    <div className={`${style.faceA} ${style.avatarTwo}`}>
-                        <img src="./img/Group1a.svg" alt="face" />
+                    <div className={style.faceA}>
+                        <img src="./img/Christian.svg" alt="face" />
                     </div>
                     <div className={style.dottsRed}>
                         <img src="./img/DottsRed.svg" alt="dotts" />

@@ -44,7 +44,7 @@
             z-index: -1;
         }
 
-        .faceC {
+        .potato {
             position: absolute;
             bottom: 165px;
             left: 564px;
@@ -53,7 +53,7 @@
 
         .faceF {
             position: absolute;
-            bottom: -8px;
+            bottom: -70px;
             right: 287px;
             z-index: -1;
         }
@@ -156,14 +156,6 @@
     animation: float 6s ease-in-out infinite;
 }
 
-.avatarTwo {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    transform: translatey(0px);
-    animation: floatTwo 8s ease-in-out infinite;
-}
-
 
 @keyframes float {
     0% {
@@ -179,16 +171,3 @@
     }
 }
 
-@keyframes floatTwo {
-    0% {
-        transform: translatey(0px);
-    }
-
-    50% {
-        transform: translatey(-20px);
-    }
-
-    100% {
-        transform: translatey(0px);
-    }
-}
