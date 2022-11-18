@@ -2,11 +2,12 @@ import Navbar from "../../components/navbar/Navbar"
 import Footer from "../../components/footer/Footer"
 import style from './ProductDetails.module.scss'
 import { motion } from 'framer-motion'
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState, useRef, useLayoutEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import ArticleItem from '../../components/article/articleItem/ArticleItem'
 import UpdateArticleButton from "../../components/buttons/updateArticleButton/UpdateArticleButton"
 import WunschButton from "../../components/buttons/wishButton/WunschButton"
+import { counter } from "@fortawesome/fontawesome-svg-core"
 
 
 const ProductDetails = () => {
@@ -102,6 +103,12 @@ const ProductDetails = () => {
         setdetailedArticle(prev => { return{ ...prev, title: title}})
     }
 
+    const count = useRef(0)
+
+    useEffect(() => {
+        counter.current = count.current +1
+
+    })
     console.log(detailedArticle.title)
 
     return (
@@ -125,7 +132,12 @@ const ProductDetails = () => {
                             <p className={style.pTag}>Anzahl</p>
                         </div>
                         <div className={style.zustandmarke}>
-                            <p contentEditable={edit} on={(e)=>{setdetailedArticle( prev => { return {...prev, category: e.target.innerText}})}} className={style.pTag}>{detailedArticle.category ? detailedArticle.category : ' bitte vorher erfragen'}</p>
+
+
+                            <p contentEditable={edit} onInput={(e)=>{setdetailedArticle( prev => { return {...prev, category: e.target.innerText}})}} className={style.pTag}>{detailedArticle.category ? detailedArticle.category : ' bitte vorher erfragen'}</p>
+
+
+
                             <p contentEditable={edit} onInput={(e) =>{setdetailedArticle(prev => { return{ ...prev,delivery: e.target.innerText}})}} className={style.pTag}>{detailedArticle.delivery ? detailedArticle.delivery : ' bitte vorher erfragen'}</p>
                             <p contentEditable={edit} onInput={(e)=>{setdetailedArticle(prev => { return{ ...prev, amount:e.target.innerText}})}} className={style.pTag}>{detailedArticle.amount ? detailedArticle.amount : '1'}</p>
                         </div>
