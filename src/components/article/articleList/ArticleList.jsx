@@ -4,9 +4,11 @@ import ArticleItem from '../articleItem/ArticleItem';
 import style from './ArticleList.module.scss'
 uuidV4();
 
-const ArticelList = () => {
+const ArticelList = (props) => {
+    const article = props.article
+    
 
-    const [article, setArticle] = useState([])
+    /* const [article, setArticle] = useState([])
 
     useEffect(()=> {
 
@@ -22,7 +24,7 @@ const ArticelList = () => {
         }
 
         fetchData()
-    },[])
+    },[]) */
 
     return(
         <section className={style.articleList}>

@@ -49,22 +49,22 @@ const UserResgister = () => {
                 <article className={style.registerFaces}>
                     
                     <div className={style.faceB}>
-                        <img src="./img/Gerrit2.svg" alt="face" />
+                        <img src="./img/Gerrit.png" alt="face" />
                     </div>
                     <div className={`${style.potato} ${style.avatar}`}>
-                        <img src="./img/potato 1.svg" alt="face" />
+                        <img src="./img/potato.png" alt="face" />
                     </div>
                     <div className={`${style.faceF} ${style}`}>
-                        <img src="./img/Stefan.svg" alt="face" />
+                        <img src="./img/Stefan.png" alt="face" />
                     </div>
                     <div className={style.faceE}>
-                        <img src="./img/Siva2.svg" alt="face" />
+                        <img src="./img/Siva.png" alt="face" />
                     </div>
                     <div className={style.faceD}>
-                        <img src="./img/Magnuspool.svg" alt="face" />
+                        <img src="./img/Magda.png" alt="face" />
                     </div>
                     <div className={style.faceA}>
-                        <img src="./img/Christian.svg" alt="face" />
+                        <img src="./img/Christian.png" alt="face" />
                     </div>
                     <div className={style.dottsRed}>
                         <img src="./img/DottsRed.svg" alt="dotts" />

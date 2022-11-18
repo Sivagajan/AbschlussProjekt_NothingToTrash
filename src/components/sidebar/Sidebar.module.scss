@@ -11,7 +11,7 @@
 
         .sideBarHeadline {
             font-size: 17px;
-            margin-top: 10px;
+            margin: 15px 0;
         }
 
         .categories {
@@ -27,12 +27,13 @@
             display: grid;
             justify-items: start;
             grid-template-columns: repeat(2, 1fr);
+            .labelBrand {
+                justify-items: stretch;
+                font-size: 14px;
+                margin: 5px 0;
+            }
         }
 
-        .labelBrand {
-            justify-items: stretch;
-            font-size: 14px;
-        }
 
         .div_ratings {
             width: 150px;
@@ -60,6 +61,7 @@
             justify-content: start;
             height: 20px;
             justify-items: stretch;
+            margin: 5px 0;
         }
     }
 

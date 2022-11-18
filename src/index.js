@@ -23,6 +23,7 @@ root.render(
             <Route path='/productplacement' element={< ProductPlacement />} />
             <Route path='/productdetails/:id' element={< ProductDetails />} />
         </Route>
+        <Route path='/market/:search' element={< Marketplace />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
