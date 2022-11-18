@@ -8,29 +8,30 @@ import { useState } from 'react'
 
 const MarktplatzHeader = (props) => {
 
-    const [article, setArticle] = useState([])
+    const [search, setSearch] = useState([])
+    const [inputField , setInputField] = useState('')
 
     const inputSearch = () => {
 
         const fetchData = async () => {
 
-            const response = await fetch(`http://localhost:9090/article/`,{
+            const response = await fetch(`http://localhost:9090/article/search/`,{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
-            }
+            },
+            body: JSON.stringify({inputField})
 
         })
 
             if(response.status === 200){
                 const data = await response.json()
                 console.log(data)
-                setArticle(data)
+                setSearch(data)
             }
         }
 
         fetchData()
-
     }
 
     return (
@@ -46,24 +47,21 @@ const MarktplatzHeader = (props) => {
                 </p>
             </section>
 
-            <section className={style.inputField}>
+            {/* <section className={style.inputField}>
 
                 <div className={style.searhField}> 
-                    <input type="search" onChange={(e) => setArticle(e.target.value)} placeholder='Suche nach Produkt, Kategorie...'/>
+                    <input type="search" onChange={(e) => setInputField(e.target.value)} placeholder='Suche nach Produkt, Kategorie...'/>
                     <button type="submit" onClick={inputSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
-                    {/* input = onChange = befüllen useState / Btn = onClick => arrowFunction mit fech */}
                 </div>
 
-            </section>
+            </section> */}
 
-            <Link to='/productplacement'>
+           {/*  <Link to='/productplacement'>
             <motion.button className={style.submitProductBtn} 
                 whileTap={{scale: 0.95}}
             > Produkt einstellen </motion.button>
-            </Link>
+            </Link> */}
             
-
-
         </header>
     )
 }

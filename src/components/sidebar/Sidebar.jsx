@@ -39,6 +39,7 @@ const Sidebar = () => {
                 </article>
                 <article>
                     <h3 className={style.sideBarHeadline}>Marken</h3>
+
                     <div className={style.brands}>
 
                         <input type="checkbox" name="brand1" id="" /> <label className={style.labelBrand}>Marke1</label>
@@ -51,6 +52,7 @@ const Sidebar = () => {
                 </article>
                 <article>
                     <h3 className={style.sideBarHeadline}>Bewertung</h3>
+                    
                     <div className={style.div_ratings}>
                         <input type="checkbox" name="star5" id="" />
                         <label className={style.labelStar}>
