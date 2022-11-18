@@ -8,13 +8,22 @@ const UpdateArticleButton = (props) => {
 
     const nav = useNavigate()
 
-    const article = props.article
-
-    console.log('UAB',article)
-
     const updateArticle = async () => {
 
-        console.log('uA',article)
+        const referenced = props.article
+
+        const article = {
+                _id : referenced.params,
+                user : referenced.userID,
+                title : referenced.titleRef.current.innerText,
+                price : referenced.priceRef.current.innerText,
+                category : referenced.categoryRef.current.innerText,
+                dalivery : referenced.deliveryRef.current.innerText,
+                amount : referenced.amountRef.current.innerText,
+                description : referenced.descriptionRef.innerText
+        }
+
+        console.log('UA', article)
 
         const response = await fetch('http://localhost:9090/article/update', {
             method:'PUT',
@@ -23,7 +32,6 @@ const UpdateArticleButton = (props) => {
                 Authentication : 'Bearer ' + localStorage.getItem('token')},
             body: JSON.stringify(article)
         })
-
 
         const data = await response.json()
 

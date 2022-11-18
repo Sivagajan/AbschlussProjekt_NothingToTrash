@@ -20,8 +20,6 @@ const ProductDetails = () => {
     const [newbase64, setNewBase64] = useState('')
     const params = useParams()
 
-    const [title,setTitle] = useState('')
-
     const handleReaderLoaded = (event) => {
 
         setNewBase64(event.target.result) 
@@ -96,20 +94,16 @@ const ProductDetails = () => {
         setdetailedArticle(cache)
     }
 
-    console.log(title)
 
-    const newTitle = (e) => {
-        setTitle(e)
-        setdetailedArticle(prev => { return{ ...prev, title: title}})
-    }
 //--------------------------------------------------anfang versuchsfeld
-    const count = useRef(0)
+    const titleRef = useRef()
+    const priceRef = useRef()
+    const categoryRef = useRef()
+    const deliveryRef = useRef()
+    const amountRef = useRef()
+    const descriptionRef = useRef()
 
-    useEffect(() => {
-        counter.current = count.current +1
 
-    })
-//--------------------------------------------------ende Versuchsfeld
     console.log(detailedArticle.title)
 
     return (
@@ -124,55 +118,81 @@ const ProductDetails = () => {
                     onChange={(e) => newPic(e.target.files[0])}/>:""}
 
                 <article className={style.productInfo}>
-                    <h2 contentEditable={edit} onInput={(e) => {newTitle(e.target.innerText)}}>{detailedArticle.title}</h2>
-                    <p contentEditable={edit} onInput={(e) => {setdetailedArticle(prev => { return{ ...prev, price: e.target.innerText}})}} className={style.price}>{`${detailedArticle.price} EUR`}</p>
+
+                    <h2 contentEditable={edit} 
+                            ref={titleRef}>{detailedArticle.title}
+                    </h2>
+
+                    <p contentEditable={edit} 
+                            ref={priceRef} 
+                            className={style.price}>
+                                {edit === true ? detailedArticle.price:
+                                `${detailedArticle.price} EUR`}
+                    </p>
+
                     <div className={`${style.paddingbottom1} ${style.dflex}`}>
+                        
                         <div className={style.zustandmarke}>
                             <p className={style.pTag}>Kategorie</p>
                             <p className={style.pTag}>Lieferung</p>
                             <p className={style.pTag}>Anzahl</p>
                         </div>
+                        
                         <div className={style.zustandmarke}>
 
-{/* ------------------------------------------- */}
-
                             <p  contentEditable={edit} 
-                                onInput={(e)=>{setdetailedArticle( prev => { 
-                                    return {...prev, category: e.target.innerText}})}} 
-                                className={style.pTag}> {detailedArticle.category ? detailedArticle.category : ' bitte vorher erfragen'} </p>
+                                    ref={categoryRef}
+                                    className={style.pTag}> {detailedArticle.category ? detailedArticle.category : ' bitte vorher erfragen'} </p>
 
+                            <p contentEditable={edit}  
+                                    ref={deliveryRef}
+                                    className={style.pTag}>{detailedArticle.delivery ? detailedArticle.delivery : ' bitte vorher erfragen'}</p>
 
-{/* ------------------------------------------- */}
-                            <p contentEditable={edit} onInput={(e) =>{setdetailedArticle(prev => { return{ ...prev,delivery: e.target.innerText}})}} className={style.pTag}>{detailedArticle.delivery ? detailedArticle.delivery : ' bitte vorher erfragen'}</p>
-                            <p contentEditable={edit} onInput={(e)=>{setdetailedArticle(prev => { return{ ...prev, amount:e.target.innerText}})}} className={style.pTag}>{detailedArticle.amount ? detailedArticle.amount : '1'}</p>
+                            <p contentEditable={edit}  
+                                    ref={amountRef}
+                                    className={style.pTag}>{detailedArticle.amount ? detailedArticle.amount : '1'}</p>
                         </div>
                     </div>
-                    <WunschButton />
-                    <h3>Produktbeschreibung</h3>
-                    <p contentEditable={edit} onInput={(e) => {setdetailedArticle(prev => { return{ ...prev, description: e.target.innerText}})}} className={style.productdescription}>{detailedArticle.description ? detailedArticle.description : 'kein Bild'}</p>
-                </article>
 
-                <p contentEditable={edit}>hallo</p>
+                    <WunschButton />
+
+                    <h3>Produktbeschreibung</h3>
+
+                    <p contentEditable={edit}  
+                            ref={descriptionRef}
+                            className={style.productdescription}>{detailedArticle.description ? detailedArticle.description : 'kein Bild'}
+                    </p>
+                </article>
             </section>
 
             {userID === detailedArticle.user ? <div className={style.btnbottom}>
 
-            {edit === false ?<motion.button 
-                className={style.registerBtnreverse} 
-                onClick={letsEdit}
-                whileTap={{ scale: 0.95 }}>Bearbeiten</motion.button>
-                : <UpdateArticleButton article = {detailedArticle} params={params}/>
-            }
-            
-            {edit === true ? <motion.button 
-                    className={style.registerBtn} 
-                    onClick={abort}
-                    whileTap={{ scale: 0.95 }}>Abbrechen</motion.button>:""}
+                {edit === false ?<motion.button 
+                    className={style.registerBtnreverse} 
+                    onClick={letsEdit}
+                    whileTap={{ scale: 0.95 }}>Bearbeiten</motion.button>
+                    : <UpdateArticleButton 
+                        article={{
+                            params,
+                            userID,
+                            titleRef,
+                            priceRef,
+                            categoryRef,
+                            deliveryRef,
+                            amountRef,
+                            descriptionRef}}/>
+                }
                 
-                <motion.button 
-                    className={style.registerBtn} 
-                    onClick={""}
-                    whileTap={{ scale: 0.95 }}>Verkauft</motion.button>
+                {edit === true ? <motion.button 
+                        className={style.registerBtn} 
+                        onClick={abort}
+                        whileTap={{ scale: 0.95 }}>Abbrechen</motion.button>
+                :""}
+                    
+                    <motion.button 
+                        className={style.registerBtn} 
+                        onClick={""}
+                        whileTap={{ scale: 0.95 }}>Verkauft</motion.button>
             </div>:""}
 
             <div className={style.footerbottom}><Footer /></div>
