@@ -13,21 +13,21 @@ const Marketplace = () => {
 
     const [fix, setFix] = useState(false)
     function setFixedSidebar() {
-        if (window.scrollY >= 630) {
+        if (window.scrollY >= 670) {
             setFix(true)
         } else {
             setFix(false)
         }
     }
 
-    
-    useEffect(()=> {
+
+    useEffect(() => {
 
         const fetchData = async () => {
 
             const response = await fetch(`http://localhost:9090/article/`)
 
-            if(response.status === 200){
+            if (response.status === 200) {
                 const data = await response.json()
                 console.log(data)
                 setArticle(data)
@@ -35,7 +35,7 @@ const Marketplace = () => {
         }
 
         fetchData()
-    },[])
+    }, [])
 
     window.addEventListener("scroll", setFixedSidebar)
 
@@ -52,10 +52,10 @@ const Marketplace = () => {
             <div className={style.dflex}>
 
                 <div className={style.search_submit_container}>
-                    <SearchBar setArticle={setArticle}/>
-                    <SubmitProductButton/>
+                    <SearchBar setArticle={setArticle} />
+                    <SubmitProductButton />
                 </div>
-                
+
                 <div className={fix ? `${style.sidebar} ${style.fixed}` : `${style.sidebar}`}>< Sidebar /></div>
                 < ArticelList article={article} />
             </div>
