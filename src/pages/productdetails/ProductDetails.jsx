@@ -3,8 +3,7 @@ import Footer from "../../components/footer/Footer"
 import style from './ProductDetails.module.scss'
 import { motion } from 'framer-motion'
 import { useEffect, useState, useRef, useLayoutEffect } from "react"
-import { useNavigate, useParams } from "react-router-dom"
-import ArticleItem from '../../components/article/articleItem/ArticleItem'
+import { useParams } from "react-router-dom"
 import UpdateArticleButton from "../../components/buttons/updateArticleButton/UpdateArticleButton"
 import WunschButton from "../../components/buttons/wishButton/WunschButton"
 import { counter } from "@fortawesome/fontawesome-svg-core"

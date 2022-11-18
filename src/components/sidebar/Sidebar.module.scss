@@ -4,10 +4,8 @@
     margin-left: 5vw;
 
     .sidebar {
-        width: 250px;
         height: 100vh;
         position: absolute;
-
 
         .sideBarHeadline {
             font-size: 17px;
@@ -34,7 +32,6 @@
                 margin: 5px 0;
             }
         }
-
 
         .div_ratings {
             width: 150px;
@@ -75,10 +72,8 @@
             border: solid 1px #7854F7;
             padding: 10px 30px;
             background-color: #fff;
-            font-family: Robot700;
-
             &:hover {
-                box-shadow: rgb(215, 220, 224) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+                box-shadow: rgba(0, 0, 0, 0.623) 0px 1px 2px;
             }
         }
 

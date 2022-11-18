@@ -36,7 +36,6 @@ const MarktplatzHeader = (props) => {
 
     return (
         <header className={style.marktPlatzHeader}>
-
             <section className={style.marktPlatzHeaderSection}>
                 <h1 className={style.marktPlatzHeaderHeadline}>
                     Hilf mit die Umwelt zu schützen</h1>
@@ -46,22 +45,6 @@ const MarktplatzHeader = (props) => {
                 Delfine verfangen sich in alten Fischernetzen. Hilf mit Müll zu reduzieren und trashnothing.
                 </p>
             </section>
-
-            {/* <section className={style.inputField}>
-
-                <div className={style.searhField}> 
-                    <input type="search" onChange={(e) => setInputField(e.target.value)} placeholder='Suche nach Produkt, Kategorie...'/>
-                    <button type="submit" onClick={inputSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
-                </div>
-
-            </section> */}
-
-           {/*  <Link to='/productplacement'>
-            <motion.button className={style.submitProductBtn} 
-                whileTap={{scale: 0.95}}
-            > Produkt einstellen </motion.button>
-            </Link> */}
-            
         </header>
     )
 }

@@ -3,8 +3,6 @@ import { faRss } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagramSquare, faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons"
 
-
-
 const Footer = () => {
     return (
         <footer>
@@ -16,9 +14,8 @@ const Footer = () => {
             </div>
             <div className={style.footerdiv2}>
                 <p className={style.fontSize}>COPYRIGHT nothingtotrash 2021 － </p>
-                <a className={style.fontSize} href="#"><span>TERMS & CONDITIONS</span></a>
-                <a className={style.fontSize} href="#"><span> PRIVACY POLICY</span></a>
-            
+                <a className={style.fontSize} href="#"><span className={style.span}>TERMS & CONDITIONS</span></a>
+                <a className={style.fontSize} href="#"><span className={style.span}> PRIVACY POLICY</span></a>
             </div>
         </footer >
     )
