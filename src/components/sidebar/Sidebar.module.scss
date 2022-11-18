@@ -27,6 +27,7 @@
             display: grid;
             justify-items: start;
             grid-template-columns: repeat(2, 1fr);
+
             .labelBrand {
                 justify-items: stretch;
                 font-size: 14px;
@@ -53,7 +54,7 @@
         }
 
         .articleSlider {
-            height: 200px;
+            height: 150px;
         }
 
         .labelStar {
@@ -70,7 +71,6 @@
 
         .resetBtn {
             border: none;
-            margin: 0 px;
             color: #7854F7;
             border: solid 1px #7854F7;
             padding: 10px 30px;
