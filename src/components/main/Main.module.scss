@@ -1,5 +1,5 @@
 main {
-    width: 100vw;
+
 
     .section1main {
         margin-left: 150px;
@@ -41,6 +41,7 @@ main {
     .mainImgContainer {
         position: relative;
         padding-bottom: 50px;
+
         .middlepicture {
             max-width: 410px;
             position: absolute;
@@ -106,9 +107,10 @@ p {
 .section2main {
     margin-top: 150px;
     background-image: url(../../../public/img/purplebg.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 850px;
+    width: 100%;
 
     .section2article1 {
 
@@ -164,7 +166,8 @@ p {
 
             .mainH3 {
                 color: white;
-                line-height: 16px;
+                font-size: 25px;
+                line-height: 30px;
             }
 
             p {
@@ -231,7 +234,8 @@ p {
 
             .mainH3 {
                 color: white;
-                line-height: 16px;
+                font-size: 25px;
+                line-height: 30px;
             }
 
             p {
@@ -271,7 +275,7 @@ p {
     .mainImgContainer {
         position: relative;
 
-        .imgStyle{
+        .imgStyle {
             position: absolute;
         }
 

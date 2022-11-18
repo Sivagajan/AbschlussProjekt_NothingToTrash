@@ -1,10 +1,11 @@
 .purplenbarbg {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(../../../public/img/purplebar.png);
     background-repeat: none;
+    background-size: cover;
     height: 150px;
 
     p {
