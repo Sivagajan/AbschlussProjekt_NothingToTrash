@@ -102,13 +102,14 @@ const ProductDetails = () => {
         setTitle(e)
         setdetailedArticle(prev => { return{ ...prev, title: title}})
     }
-
+//--------------------------------------------------anfang versuchsfeld
     const count = useRef(0)
 
     useEffect(() => {
         counter.current = count.current +1
 
     })
+//--------------------------------------------------ende Versuchsfeld
     console.log(detailedArticle.title)
 
     return (
@@ -133,11 +134,15 @@ const ProductDetails = () => {
                         </div>
                         <div className={style.zustandmarke}>
 
+{/* ------------------------------------------- */}
 
-                            <p contentEditable={edit} onInput={(e)=>{setdetailedArticle( prev => { return {...prev, category: e.target.innerText}})}} className={style.pTag}>{detailedArticle.category ? detailedArticle.category : ' bitte vorher erfragen'}</p>
+                            <p  contentEditable={edit} 
+                                onInput={(e)=>{setdetailedArticle( prev => { 
+                                    return {...prev, category: e.target.innerText}})}} 
+                                className={style.pTag}> {detailedArticle.category ? detailedArticle.category : ' bitte vorher erfragen'} </p>
 
 
-
+{/* ------------------------------------------- */}
                             <p contentEditable={edit} onInput={(e) =>{setdetailedArticle(prev => { return{ ...prev,delivery: e.target.innerText}})}} className={style.pTag}>{detailedArticle.delivery ? detailedArticle.delivery : ' bitte vorher erfragen'}</p>
                             <p contentEditable={edit} onInput={(e)=>{setdetailedArticle(prev => { return{ ...prev, amount:e.target.innerText}})}} className={style.pTag}>{detailedArticle.amount ? detailedArticle.amount : '1'}</p>
                         </div>
