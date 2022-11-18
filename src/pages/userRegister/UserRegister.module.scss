@@ -1,11 +1,10 @@
 .height1 {
     height: 100vh;
 
-    h1 {
+    .hedalineStyle {
         align-items: center;
         display: flex;
         justify-content: center;
-        font-family: Robot700;
         font-size: 2rem;
         line-height: 42px;
     }
@@ -37,7 +36,7 @@
     .registerFaces {
         position: relative;
 
-        .faceB {
+        .gerrit {
             position: absolute;
             bottom: 113px;
             right: 113px;
@@ -51,28 +50,28 @@
             z-index: -1;
         }
 
-        .faceF {
+        .stefan {
             position: absolute;
             bottom: -70px;
             right: 287px;
             z-index: -1;
         }
 
-        .faceE {
+        .siva {
             position: absolute;
             bottom: -75px;
             left: 670px;
             z-index: -1;
         }
 
-        .faceD {
+        .magda {
             position: absolute;
             top: 135px;
             right: 150px;
             z-index: -1;
         }
 
-        .faceA {
+        .chris {
             position: absolute;
             top: 165px;
             left: 600px;

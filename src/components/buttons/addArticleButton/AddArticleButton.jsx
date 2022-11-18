@@ -1,8 +1,6 @@
 import style from './AddArticleButton.module.scss'
 import {motion} from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-
 
 const AddArticleButton = (props) => {
 

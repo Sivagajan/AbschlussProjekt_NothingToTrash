@@ -10,7 +10,6 @@ const Navbar = () => {
     
     const [open, setOpen] = useState(false)
     const [key, setKey] = useState(false)
-    
 
     const openForm = () => {
         setOpen(!open)

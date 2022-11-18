@@ -1,6 +1,4 @@
 main {
-
-
     .section1main {
         margin-left: 150px;
         margin-right: 150px;
@@ -59,7 +57,7 @@ main {
         position: relative;
         padding-bottom: 50px;
 
-        img {
+        .imgStyle {
             max-width: 410px;
             position: absolute;
             left: -40px;
@@ -96,10 +94,6 @@ main {
     font-size: 25px;
     padding-top: 10px;
     padding-bottom: 5px;
-}
-
-p {
-    line-height: 25px;
 }
 
 /*---------- SECTION 2 FROM MAIN ---------*/
@@ -169,14 +163,13 @@ p {
                 font-size: 25px;
                 line-height: 30px;
             }
-
-            p {
-                color: white;
-                padding-top: 10px;
-                padding-bottom: 20px;
-            }
         }
+    }
 
+    .pTag {
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 20px;
     }
 
     .section2article2 {
@@ -238,11 +231,6 @@ p {
                 line-height: 30px;
             }
 
-            p {
-                color: white;
-                padding-top: 10px;
-                padding-bottom: 20px;
-            }
         }
 
     }
@@ -260,7 +248,7 @@ p {
         margin-bottom: 20px;
     }
 
-    .mainPTag {
+    .section3PTag {
         width: 500px;
         margin: 0 auto;
         color: #7854F7;
@@ -268,8 +256,6 @@ p {
 
     .gruppenfoto {
         width: 990px;
-
-
     }
 
     .mainImgContainer {

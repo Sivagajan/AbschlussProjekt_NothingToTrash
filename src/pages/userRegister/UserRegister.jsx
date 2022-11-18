@@ -39,8 +39,9 @@ const UserResgister = () => {
             <Navbar />
 
             <div className={style.headlineDiv}>
-                <h1 className={style.headlineOne}>Registriere dich</h1>
-                <h1 className={style.headlineTwo}>& nimm Teil</h1>
+
+                <h1 className={`${style.headlineOne} ${style.hedalineStyle}`}>Registriere dich</h1>
+                <h1 className={`${style.headlineTwo} ${style.hedalineStyle}`}>& nimm Teil</h1>
             </div>
 
 
@@ -54,16 +55,16 @@ const UserResgister = () => {
                     <div className={`${style.potato} ${style.avatar}`}>
                         <img src="./img/potato.png" alt="face" />
                     </div>
-                    <div className={`${style.faceF} ${style}`}>
+                    <div className={`${style.stefan} ${style}`}>
                         <img src="./img/Stefan.png" alt="face" />
                     </div>
-                    <div className={style.faceE}>
+                    <div className={style.siva}>
                         <img src="./img/Siva.png" alt="face" />
                     </div>
-                    <div className={style.faceD}>
+                    <div className={style.magda}>
                         <img src="./img/Magda.png" alt="face" />
                     </div>
-                    <div className={style.faceA}>
+                    <div className={style.chris}>
                         <img src="./img/Christian.png" alt="face" />
                     </div>
                     <div className={style.dottsRed}>
@@ -76,12 +77,11 @@ const UserResgister = () => {
                 </article>
 
                 <article className={style.registerForm}>
-                    <h1>Mit Namen Registrieren</h1>
+                    <h1 className={style.headlineThree}>Mit Namen Registrieren</h1>
 
                     <input value={username} onChange={(e) => { setUsername(e.target.value) }} type="text" placeholder='Username' />
 
                     <input value={password} onChange={(e) => { setPassword(e.target.value) }} type="password" placeholder='Passwort' />
-                    {/* <span>icon here</span> */}
 
                     <motion.button className={style.registerBtn} onClick={register}
                         whileTap={{ scale: 0.95 }}>Account erstellen</motion.button>
