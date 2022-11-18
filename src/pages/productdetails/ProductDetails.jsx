@@ -2,44 +2,47 @@ import Navbar from "../../components/navbar/Navbar"
 import Footer from "../../components/footer/Footer"
 import style from './ProductDetails.module.scss'
 import { motion } from 'framer-motion'
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import ArticleItem from '../../components/article/articleItem/ArticleItem'
 import UpdateArticleButton from "../../components/buttons/updateArticleButton/UpdateArticleButton"
 import WunschButton from "../../components/buttons/wishButton/WunschButton"
+
 
 const ProductDetails = () => {
     
     const [detailedArticle, setdetailedArticle] = useState([])
     const [cache, setCache] = useState([])
     const [userID, setUserID] =useState('')
-    const params = useParams()
     const [edit,setEdit] = useState(false)
     const [newfile, setFile] = useState(null)
     const [newbase64, setNewBase64] = useState('')
+    const params = useParams()
+
+    const [title,setTitle] = useState('')
 
     const handleReaderLoaded = (event) => {
 
         setNewBase64(event.target.result) 
-        detailedArticle.img = newbase64
+
+        setdetailedArticle(prev => { return { ...prev, img: event.target.result}})
     }
 
-        const checkToken = async () => {
-            const response = await fetch('http://localhost:9090/api/verify', {
-                headers: {
-                    Authentication: 'Bearer ' + localStorage.getItem('token')
-                }
-            })
-            const data = await response.json()
-            console.log('addArticle', data.result.user)
+    const checkToken = async () => {
+        const response = await fetch('http://localhost:9090/api/verify', {
+            headers: {
+                Authentication: 'Bearer ' + localStorage.getItem('token')
+            }
+        })
+        const data = await response.json()
+        console.log('addArticle', data.result.user)
 
-            setUserID(data.result.user)
+        setUserID(data.result.user)
 
-            console.log(userID)
+        console.log(userID)
 
-        }
-        
-
+    }
+    checkToken()
 
     useEffect(() => {
         if (newfile) {
@@ -57,11 +60,12 @@ const ProductDetails = () => {
 
     const newPic = (e) => {
         setFile(e)
-        setdetailedArticle(prev => { return { ...prev, img:newbase64}})
     }
 
     useEffect(() => {  // daten holen
 
+
+        console.log('im fetch')
         const fetchdata = async () => {
             
             const result = await fetch('http://localhost:9090/article/article', {
@@ -78,6 +82,8 @@ const ProductDetails = () => {
                 const data = await result.json()
                 setdetailedArticle(data)
                 setCache(data)
+
+                console.log('cache', cache)
             }
             
         }
@@ -89,8 +95,14 @@ const ProductDetails = () => {
         setdetailedArticle(cache)
     }
 
-    console.log(detailedArticle)
+    console.log(title)
 
+    const newTitle = (e) => {
+        setTitle(e)
+        setdetailedArticle(prev => { return{ ...prev, title: title}})
+    }
+
+    console.log(detailedArticle.title)
 
     return (
 
@@ -104,7 +116,7 @@ const ProductDetails = () => {
                     onChange={(e) => newPic(e.target.files[0])}/>:""}
 
                 <article className={style.productInfo}>
-                    <h2 contentEditable={edit} onInput={(e) => {setdetailedArticle(prev => { return{ ...prev, title: e.target.innerText}})}}>{detailedArticle.title}</h2>
+                    <h2 contentEditable={edit} onInput={(e) => {newTitle(e.target.innerText)}}>{detailedArticle.title}</h2>
                     <p contentEditable={edit} onInput={(e) => {setdetailedArticle(prev => { return{ ...prev, price: e.target.innerText}})}} className={style.price}>{`${detailedArticle.price} EUR`}</p>
                     <div className={`${style.paddingbottom1} ${style.dflex}`}>
                         <div className={style.zustandmarke}>
@@ -113,7 +125,7 @@ const ProductDetails = () => {
                             <p className={style.pTag}>Anzahl</p>
                         </div>
                         <div className={style.zustandmarke}>
-                            <p contentEditable={edit} onInput={(e)=>{setdetailedArticle( prev => { return {...prev, category: e.target.innerText}})}} className={style.pTag}>{detailedArticle.category ? detailedArticle.category : ' bitte vorher erfragen'}</p>
+                            <p contentEditable={edit} on={(e)=>{setdetailedArticle( prev => { return {...prev, category: e.target.innerText}})}} className={style.pTag}>{detailedArticle.category ? detailedArticle.category : ' bitte vorher erfragen'}</p>
                             <p contentEditable={edit} onInput={(e) =>{setdetailedArticle(prev => { return{ ...prev,delivery: e.target.innerText}})}} className={style.pTag}>{detailedArticle.delivery ? detailedArticle.delivery : ' bitte vorher erfragen'}</p>
                             <p contentEditable={edit} onInput={(e)=>{setdetailedArticle(prev => { return{ ...prev, amount:e.target.innerText}})}} className={style.pTag}>{detailedArticle.amount ? detailedArticle.amount : '1'}</p>
                         </div>
@@ -122,6 +134,8 @@ const ProductDetails = () => {
                     <h3>Produktbeschreibung</h3>
                     <p contentEditable={edit} onInput={(e) => {setdetailedArticle(prev => { return{ ...prev, description: e.target.innerText}})}} className={style.productdescription}>{detailedArticle.description ? detailedArticle.description : 'kein Bild'}</p>
                 </article>
+
+                <p contentEditable={edit}>hallo</p>
             </section>
 
             {userID === detailedArticle.user ? <div className={style.btnbottom}>
