@@ -2,11 +2,10 @@ import Navbar from "../../components/navbar/Navbar"
 import Footer from "../../components/footer/Footer"
 import style from './ProductDetails.module.scss'
 import { motion } from 'framer-motion'
-import { useEffect, useState, useRef, useLayoutEffect } from "react"
+import { useEffect, useState, useRef } from "react"
 import { useParams } from "react-router-dom"
 import UpdateArticleButton from "../../components/buttons/updateArticleButton/UpdateArticleButton"
 import WunschButton from "../../components/buttons/wishButton/WunschButton"
-import { counter } from "@fortawesome/fontawesome-svg-core"
 
 
 const ProductDetails = () => {
@@ -19,11 +18,14 @@ const ProductDetails = () => {
     const [newbase64, setNewBase64] = useState('')
     const params = useParams()
 
+    const img = detailedArticle.img
+
     const handleReaderLoaded = (event) => {
 
         setNewBase64(event.target.result) 
 
-        setdetailedArticle(prev => { return { ...prev, img: event.target.result}})
+        setdetailedArticle(prev => { return { ...prev, img: newbase64}})
+
     }
 
     const checkToken = async () => {
@@ -62,7 +64,6 @@ const ProductDetails = () => {
 
     useEffect(() => {  // daten holen
 
-
         console.log('im fetch')
         const fetchdata = async () => {
             
@@ -92,7 +93,6 @@ const ProductDetails = () => {
         letsEdit()
         setdetailedArticle(cache)
     }
-
 
 //--------------------------------------------------anfang versuchsfeld
     const titleRef = useRef()
@@ -159,7 +159,7 @@ const ProductDetails = () => {
 
                     <p contentEditable={edit}  
                             ref={descriptionRef}
-                            className={style.productdescription}>{detailedArticle.description ? detailedArticle.description : 'kein Bild'}
+                            className={style.productdescription}>{detailedArticle.description ? detailedArticle.description : 'Keine beschreibung'}
                     </p>
                 </article>
             </section>
@@ -175,11 +175,13 @@ const ProductDetails = () => {
                             params,
                             userID,
                             titleRef,
+                            img,
                             priceRef,
                             categoryRef,
                             deliveryRef,
-                            amountRef,
-                            descriptionRef}}/>
+                            descriptionRef,
+                            amountRef
+                        }}/>
                 }
                 
                 {edit === true ? <motion.button 
