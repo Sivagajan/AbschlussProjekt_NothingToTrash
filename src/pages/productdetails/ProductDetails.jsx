@@ -19,11 +19,18 @@ const ProductDetails = () => {
     const [newbase64, setNewBase64] = useState('')
     const params = useParams()
 
+    console.log('FIERSERREWSDCVBHGFD',detailedArticle)
+
+    const img = detailedArticle.img
+
     const handleReaderLoaded = (event) => {
 
         setNewBase64(event.target.result) 
 
         setdetailedArticle(prev => { return { ...prev, img: event.target.result}})
+
+        console.log('IMGGGGGG',img)
+
     }
 
     const checkToken = async () => {
@@ -93,7 +100,6 @@ const ProductDetails = () => {
         setdetailedArticle(cache)
     }
 
-
 //--------------------------------------------------anfang versuchsfeld
     const titleRef = useRef()
     const priceRef = useRef()
@@ -159,7 +165,7 @@ const ProductDetails = () => {
 
                     <p contentEditable={edit}  
                             ref={descriptionRef}
-                            className={style.productdescription}>{detailedArticle.description ? detailedArticle.description : 'kein Bild'}
+                            className={style.productdescription}>{detailedArticle.description ? detailedArticle.description : 'Keine beschreibung'}
                     </p>
                 </article>
             </section>
@@ -175,11 +181,13 @@ const ProductDetails = () => {
                             params,
                             userID,
                             titleRef,
+                            img,
                             priceRef,
                             categoryRef,
                             deliveryRef,
-                            amountRef,
-                            descriptionRef}}/>
+                            descriptionRef,
+                            amountRef
+                        }}/>
                 }
                 
                 {edit === true ? <motion.button 

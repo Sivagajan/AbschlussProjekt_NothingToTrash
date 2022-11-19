@@ -10,15 +10,18 @@ const UpdateArticleButton = (props) => {
 
         const referenced = props.article
 
+        console.log('REEEEEFFFFFF',referenced)
+
         const article = {
                 _id : referenced.params,
                 user : referenced.userID,
+                img : referenced.img,
                 title : referenced.titleRef.current.innerText,
                 price : referenced.priceRef.current.innerText,
                 category : referenced.categoryRef.current.innerText,
-                dalivery : referenced.deliveryRef.current.innerText,
-                amount : referenced.amountRef.current.innerText,
-                description : referenced.descriptionRef.innerText
+                delivery : referenced.deliveryRef.current.innerText,
+                description : referenced.descriptionRef.current.innerText,
+                amount : referenced.amountRef.current.innerText
         }
 
         console.log('UA', article)
