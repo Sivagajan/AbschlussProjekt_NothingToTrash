@@ -2,11 +2,10 @@ import Navbar from "../../components/navbar/Navbar"
 import Footer from "../../components/footer/Footer"
 import style from './ProductDetails.module.scss'
 import { motion } from 'framer-motion'
-import { useEffect, useState, useRef, useLayoutEffect } from "react"
+import { useEffect, useState, useRef } from "react"
 import { useParams } from "react-router-dom"
 import UpdateArticleButton from "../../components/buttons/updateArticleButton/UpdateArticleButton"
 import WunschButton from "../../components/buttons/wishButton/WunschButton"
-import { counter } from "@fortawesome/fontawesome-svg-core"
 
 
 const ProductDetails = () => {
@@ -19,17 +18,13 @@ const ProductDetails = () => {
     const [newbase64, setNewBase64] = useState('')
     const params = useParams()
 
-    console.log('FIERSERREWSDCVBHGFD',detailedArticle)
-
     const img = detailedArticle.img
 
     const handleReaderLoaded = (event) => {
 
         setNewBase64(event.target.result) 
 
-        setdetailedArticle(prev => { return { ...prev, img: event.target.result}})
-
-        console.log('IMGGGGGG',img)
+        setdetailedArticle(prev => { return { ...prev, img: newbase64}})
 
     }
 

@@ -10,8 +10,6 @@ const UpdateArticleButton = (props) => {
 
         const referenced = props.article
 
-        console.log('REEEEEFFFFFF',referenced)
-
         const article = {
                 _id : referenced.params,
                 user : referenced.userID,
@@ -36,7 +34,7 @@ const UpdateArticleButton = (props) => {
 
         const data = await response.json()
 
-        console.log(data)
+        console.log(data.state)
 
         nav('/market')
     }
