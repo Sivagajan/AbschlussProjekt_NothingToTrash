@@ -7,14 +7,14 @@ import { motion } from 'framer-motion'
 
 const Sidebar = () => {
 
-    const [countFurniture, setCountFurniture] = useState(50)
+   /*  const [countFurniture, setCountFurniture] = useState(50)
     const [countBooks, setCountBooks] = useState(40)
     const [countElectronics, setCountElectronics] = useState(30)
     const [countClothes, setCountClothes] = useState(20)
     const [min, setMin] = useState(0)
     const [max, setMax] = useState(200)
 
-
+ */
 
     return (
         <section className={style.sidebarWrap} id={style.sticky1}>

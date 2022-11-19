@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
 import AddArticleButton from "../../components/buttons/addArticleButton/AddArticleButton"
 import Navbar from "../../components/navbar/Navbar"
 import Footer from "../../components/footer/Footer"
@@ -190,7 +189,7 @@ const ProductPlacement = () => {
                     <p className={style.width200}>Bilder:</p>
                     <div>
                         <div id={style.displayimage}>
-                            <img className={style.image} src={`${base64}`} /> </div>
+                            <img className={style.image} src={`${base64}`} alt="bild vom artikel"/> </div>
                         <input
                             type="file" id="image-input"
                             accept="image/jpeg, image/png, image/jpg"
