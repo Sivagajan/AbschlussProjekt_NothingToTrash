@@ -27,7 +27,9 @@ const ProductDetails = () => {
 
         setNewBase64(event.target.result) 
 
-        setdetailedArticle(prev => { return { ...prev, img: newbase64}})
+        console.log(newbase64)
+
+        setdetailedArticle(prev => { return { ...prev, img: event.target.result}})
 
     }
 
