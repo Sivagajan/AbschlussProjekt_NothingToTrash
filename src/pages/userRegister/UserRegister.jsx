@@ -19,7 +19,7 @@ const UserResgister = () => {
             password: password
         }
 
-        const result = await fetch(`${BACKEND}user/register`, {
+        const result = await fetch(`${BACKEND}/user/register`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

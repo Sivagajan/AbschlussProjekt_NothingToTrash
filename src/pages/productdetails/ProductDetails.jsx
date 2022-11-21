@@ -32,7 +32,7 @@ const ProductDetails = () => {
     }
 
     const checkToken = async () => {
-        const response = await fetch(`${BACKEND}api/verify`, {
+        const response = await fetch(`${BACKEND}/api/verify`, {
             headers: {
                 Authentication: 'Bearer ' + localStorage.getItem('token')
             }
@@ -44,7 +44,7 @@ const ProductDetails = () => {
 
         console.log(userID)
 
-        if(!userID){
+        if(data.state === false){
             nav('/market')
         }
 
@@ -76,7 +76,7 @@ const ProductDetails = () => {
         console.log('im fetch')
         const fetchdata = async () => {
             
-            const result = await fetch(`${BACKEND}article/article`, {
+            const result = await fetch(`${BACKEND}/article/article`, {
                 method : 'POST',
                 headers:{
                     'content-type' : 'application/json',

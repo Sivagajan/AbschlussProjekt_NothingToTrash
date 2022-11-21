@@ -15,7 +15,7 @@ const Userlogin = (props) => {
 
         console.log(username, password)
 
-        const result = await fetch(`${BACKEND}user/login`, {
+        const result = await fetch(`${BACKEND}/user/login`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
