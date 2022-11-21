@@ -7,9 +7,10 @@ import style from "./ProductPlacement.module.scss"
 
 const ProductPlacement = () => {
 
-        
+    const BACKEND = process.env.REACT_APP_BACKEND_ADRESS
+
         const checkToken = async () => {
-            const response = await fetch('http://localhost:9090/api/verify', {
+            const response = await fetch(`${BACKEND}api/verify`, {
                 headers: {
                     Authentication: 'Bearer ' + localStorage.getItem('token')
                 }

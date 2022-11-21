@@ -8,11 +8,14 @@ const Userlogin = (props) => {
     const [password, setPassword] = useState('')
     const nav = useNavigate()
 
+    const BACKEND = process.env.REACT_APP_BACKEND_ADRESS
+
+
     const login = async () => {
 
         console.log(username, password)
 
-        const result = await fetch('http://localhost:9090/user/login', {
+        const result = await fetch(`${BACKEND}user/login`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

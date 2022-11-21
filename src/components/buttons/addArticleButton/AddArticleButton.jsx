@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom'
 const AddArticleButton = (props) => {
 
     const nav = useNavigate()
+    const BACKEND = process.env.REACT_APP_BACKEND_ADRESS
+
 
     const article = props.article
 
@@ -14,7 +16,7 @@ const AddArticleButton = (props) => {
 
         console.log(props)
 
-        const response = await fetch('http://localhost:9090/article/add', {
+        const response = await fetch(`${BACKEND}article/add`, {
             method:'POST',
             headers :{
                 'content-type' : 'application/json',

@@ -11,13 +11,15 @@ const UserResgister = () => {
     const [password, setPassword] = useState('')
     const nav = useNavigate()
 
+    const BACKEND = process.env.REACT_APP_BACKEND_ADRESS
+
     const register = async () => {
         const user = {
             username: username,
             password: password
         }
 
-        const result = await fetch('http://localhost:9090/user/register', {
+        const result = await fetch(`${BACKEND}user/register`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
