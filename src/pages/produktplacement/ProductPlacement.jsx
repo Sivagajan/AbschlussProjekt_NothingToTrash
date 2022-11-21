@@ -3,9 +3,12 @@ import AddArticleButton from "../../components/buttons/addArticleButton/AddArtic
 import Navbar from "../../components/navbar/Navbar"
 import Footer from "../../components/footer/Footer"
 import style from "./ProductPlacement.module.scss"
+import { useNavigate } from "react-router-dom"
 
 
 const ProductPlacement = () => {
+
+    const nav = useNavigate()
 
     const BACKEND = process.env.REACT_APP_BACKEND_ADRESS
 
