@@ -52,6 +52,8 @@ const ProductDetails = () => {
             reader.readAsDataURL(newfile)
             console.log(newfile)
         }
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [newfile])
 
     const letsEdit = () => {
@@ -88,6 +90,7 @@ const ProductDetails = () => {
             
         }
         fetchdata()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     
     const abort = () => {

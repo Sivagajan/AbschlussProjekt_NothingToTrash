@@ -4,7 +4,7 @@ import style from '../marktPlatzHeader/MarktplatzHeader.module.scss'
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom' */
-import { useState } from 'react'
+/* import { useState } from 'react' */
 
 const MarktplatzHeader = (props) => {
 

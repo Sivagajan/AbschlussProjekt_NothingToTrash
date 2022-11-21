@@ -13,8 +13,8 @@ const Sidebar = () => {
     const [countClothes, setCountClothes] = useState(20)
     
     */
-const [max, setMax] = useState(200)
-const [min, setMin] = useState(0)
+const [max, setMax] = useState('')
+const [min, setMin] = useState('')
 
     return (
         <section className={style.sidebarWrap} id={style.sticky1}>
