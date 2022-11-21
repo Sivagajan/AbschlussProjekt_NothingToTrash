@@ -44,10 +44,6 @@ const ProductDetails = () => {
 
         console.log(userID)
 
-        if(!userID){
-            nav('/market')
-        }
-
     }
     checkToken()
 
