@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom'
 
 const StartButton = () => {
 
-    const [open, setOpen] = useState(false)
     const nav = useNavigate()
 
     const check = () => {
