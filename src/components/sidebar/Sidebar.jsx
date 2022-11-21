@@ -13,6 +13,8 @@ const Sidebar = () => {
     const [countClothes, setCountClothes] = useState(20)
     
     */
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
 const [max, setMax] = useState('')
 const [min, setMin] = useState('')
 
