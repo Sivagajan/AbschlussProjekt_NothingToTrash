@@ -43,11 +43,7 @@
 
             &:hover {
                 cursor: pointer;
-            }
-
-            &:focus {
                 box-shadow: 0 0 3px rgba(120, 84, 247, 0.5);
-                outline: none;
             }
         }
     }

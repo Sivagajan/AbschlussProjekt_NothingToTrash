@@ -6,6 +6,10 @@ uuidV4();
 const ArticelList = (props) => {
     const article = props.article
     
+
+    // slice(0).reserve().
+    
+    console.log(article)
     return(
         <section className={style.articleList}>
             {article.map(( article, key) => <ArticleItem key={key} article={article}/>)}
