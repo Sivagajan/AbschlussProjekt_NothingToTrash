@@ -122,6 +122,7 @@ const ProductDetails = () => {
         < div className={style.backgroundblue}>  {/* Userabfrage mit token */}
             <Navbar />
             <section className={`${style.detailssec1} ${style.dflex}`}>
+                
                 <article className={style.c}>
                     <img className={style.imgdetails} src={detailedArticle.img ? detailedArticle.img : 'Kein Bild '} alt="" />
                     {edit === true ?<input
