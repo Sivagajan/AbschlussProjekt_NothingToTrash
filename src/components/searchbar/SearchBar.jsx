@@ -7,12 +7,13 @@ import { useState } from 'react'
 
 const SearchBar = (props) => {
 
-    const [search, setSearch] = useState([])
+    //const [search, setSearch] = useState([])
     const [inputValue , setInputValue] = useState('')
 
     const params = useParams()
     const nav = useNavigate()
 
+    console.log(params)
 
     const onSearch = (props) => {
 
