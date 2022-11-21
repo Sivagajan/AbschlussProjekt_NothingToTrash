@@ -66,7 +66,6 @@ const ProductDetails = () => {
 
     useEffect(() => {  // daten holen
 
-
         console.log('im fetch')
         const fetchdata = async () => {
             
