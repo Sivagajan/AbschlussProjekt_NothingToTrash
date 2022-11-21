@@ -8,32 +8,6 @@ import { Link } from 'react-router-dom' */
 
 const MarktplatzHeader = (props) => {
 
-/*     const [search, setSearch] = useState([])
-    const [inputField , setInputField] = useState('')
-
-    const inputSearch = () => {
-
-        const fetchData = async () => {
-
-            const response = await fetch(`http://localhost:9090/article/search/`,{
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify({inputField})
-
-        })
-
-            if(response.status === 200){
-                const data = await response.json()
-                console.log(data)
-                setSearch(data)
-            }
-        }
-
-        fetchData()
-    } */
-
     return (
         <header className={style.marktPlatzHeader}>
             <section className={style.marktPlatzHeaderSection}>

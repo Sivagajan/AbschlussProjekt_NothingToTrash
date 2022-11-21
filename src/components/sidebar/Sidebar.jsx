@@ -7,13 +7,6 @@ import { motion } from 'framer-motion'
 
 const Sidebar = () => {
 
-   /*  const [countFurniture, setCountFurniture] = useState(50)
-    const [countBooks, setCountBooks] = useState(40)
-    const [countElectronics, setCountElectronics] = useState(30)
-    const [countClothes, setCountClothes] = useState(20)
-    
-    */
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
 const [max, setMax] = useState('')
 const [min, setMin] = useState('')
