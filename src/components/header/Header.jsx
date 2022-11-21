@@ -4,9 +4,11 @@ import Navbar from '../navbar/Navbar'
 
 
 const Header = (props) => {
+    
     return (
         <header className={style.header}>
-            <Navbar />
+
+            <Navbar/>
             <section className={style.headersection}>
                 <img className={style.headerImg} src="./img/headerpicture.png" alt="cartoon men on field" />
 
@@ -18,7 +20,7 @@ const Header = (props) => {
                 <p className={style.paddingbottom}>Delfine verfangen sich in alten Fischernetzen. Hilf mit Müll zu reduzieren und trashnothing.
                 </p>
 
-                <StartButton />
+                <StartButton/>
 
             </section>
             <h2 className={style.H2}>Lebe eCommerce mal anders </h2>

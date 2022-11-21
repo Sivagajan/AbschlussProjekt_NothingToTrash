@@ -5,8 +5,7 @@ import { useState, useEffect } from 'react'
 import Userlogin from '../../pages/userlogin/UserLogin'
 
 
-
-const Navbar = () => {
+const Navbar = (props) => {
     
     const [open, setOpen] = useState(false)
     const [key, setKey] = useState(false)
@@ -50,7 +49,8 @@ const Navbar = () => {
                     whileTap={{scale: 0.95}}
                     onClick={openForm}
                     >Log In</motion.a>}
-                    <RegisterButton/>
+
+                    {key === true ? '': <RegisterButton/>}
                 </div>
             </div>
         </nav>
