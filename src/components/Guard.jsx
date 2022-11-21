@@ -5,9 +5,11 @@ import { Outlet, useNavigate } from "react-router-dom"
 const Guard = () => {
     const nav = useNavigate()
 
+    const BACKEND = process.env.REACT_APP_BACKEND_APP
+
     useEffect(() => {
         const checkToken = async () => {
-            const response = await fetch('http://localhost:9090/api/verify', {
+            const response = await fetch(`${BACKEND}api/verify`, {
                 headers: {
                     Authentication: 'Bearer ' + localStorage.getItem('token')
                 }
@@ -22,7 +24,7 @@ const Guard = () => {
         }
         checkToken()
 
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     return(
