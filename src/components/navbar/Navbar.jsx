@@ -17,8 +17,8 @@ const Navbar = () => {
 
     useEffect(() => {
         const loginKey = localStorage.getItem('token')
-
         console.log(loginKey)
+        
         if(loginKey){
             setKey(true)
         }

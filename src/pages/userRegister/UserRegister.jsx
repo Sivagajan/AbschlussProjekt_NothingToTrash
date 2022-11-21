@@ -48,14 +48,14 @@ const UserResgister = () => {
             <section className={style.registerSection}>
 
                 <article className={style.registerFaces}>
-                    
-                    <div className={style.faceB}>
+
+                    <div className={style.gerrit}>
                         <img src="./img/Gerrit.png" alt="face" />
                     </div>
                     <div className={`${style.potato} ${style.avatar}`}>
                         <img src="./img/potato.png" alt="face" />
                     </div>
-                    <div className={`${style.stefan} ${style}`}>
+                    <div className={style.stefan}>
                         <img src="./img/Stefan.png" alt="face" />
                     </div>
                     <div className={style.siva}>
@@ -88,7 +88,7 @@ const UserResgister = () => {
 
                 </article>
             </section>
-        </div>
+        </div >
     )
 }
 

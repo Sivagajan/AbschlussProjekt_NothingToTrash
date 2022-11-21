@@ -1,4 +1,4 @@
-import { useEffect} from "react"
+import { useEffect } from "react"
 import { Outlet, useNavigate } from "react-router-dom"
 
 
@@ -21,6 +21,8 @@ const Guard = () => {
             }
         }
         checkToken()
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     return(
