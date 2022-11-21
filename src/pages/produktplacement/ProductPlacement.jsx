@@ -20,6 +20,10 @@ const ProductPlacement = () => {
             
             setUserID(data.result.user)
             console.log('wir checken den token')
+
+            if(data.state === false){
+                nav('/market')
+            }
         }
 
         checkToken()
