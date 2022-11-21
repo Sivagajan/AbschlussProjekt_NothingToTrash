@@ -3,7 +3,7 @@ import Footer from "../../components/footer/Footer"
 import style from './ProductDetails.module.scss'
 import { motion } from 'framer-motion'
 import { useEffect, useState, useRef } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import UpdateArticleButton from "../../components/buttons/updateArticleButton/UpdateArticleButton"
 import WunschButton from "../../components/buttons/wishButton/WunschButton"
 
@@ -19,7 +19,7 @@ const ProductDetails = () => {
     const [newfile, setFile] = useState(null)
     const [newbase64, setNewBase64] = useState('')
     const params = useParams()
-    const nav = useNavigate
+    const nav = useNavigate()
 
     const img = detailedArticle.img
 
@@ -43,6 +43,10 @@ const ProductDetails = () => {
         setUserID(data.result.user)
 
         console.log(userID)
+
+        if(!userID){
+            nav('/market')
+        }
 
     }
     checkToken()
