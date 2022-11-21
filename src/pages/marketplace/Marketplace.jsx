@@ -27,7 +27,7 @@ const Marketplace = () => {
 
         const fetchData = async () => {
 
-            const response = await fetch(`${BACKEND}article`)
+            const response = await fetch(`${BACKEND}/`)
 
             if (response.status === 200) {
                 const data = await response.json()
