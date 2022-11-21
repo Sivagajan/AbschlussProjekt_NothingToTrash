@@ -21,7 +21,7 @@ const SearchBar = (props) => {
 
         const fetchData = async () => {
 
-            const response = await fetch(`${BACKEND}article/search`,{
+            const response = await fetch(`${BACKEND}/article/search`,{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

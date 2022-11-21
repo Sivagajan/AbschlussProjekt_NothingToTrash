@@ -26,7 +26,7 @@ const UpdateArticleButton = (props) => {
 
         console.log('UA', article)
 
-        const response = await fetch(`${BACKEND}article/update`, {
+        const response = await fetch(`${BACKEND}/article/update`, {
             method:'PUT',
             headers :{
                 'content-type' : 'application/json',

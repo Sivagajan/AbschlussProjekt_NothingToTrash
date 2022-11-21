@@ -16,7 +16,7 @@ const AddArticleButton = (props) => {
 
         console.log(props)
 
-        const response = await fetch(`${BACKEND}article/add`, {
+        const response = await fetch(`${BACKEND}/article/add`, {
             method:'POST',
             headers :{
                 'content-type' : 'application/json',
