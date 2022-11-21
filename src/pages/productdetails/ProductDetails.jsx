@@ -122,11 +122,14 @@ const ProductDetails = () => {
         < div className={style.backgroundblue}>  {/* Userabfrage mit token */}
             <Navbar />
             <section className={`${style.detailssec1} ${style.dflex}`}>
-                <img className={style.imgdetails} src={detailedArticle.img ? detailedArticle.img : 'Kein Bild '} alt="" />
-                {edit === true ?<input
-                    type="file" id="image-input"
-                    accept="image/jpeg, image/png, image/jpg"
-                    onChange={(e) => newPic(e.target.files[0])}/>:""}
+                <article className={style.c}>
+                    <img className={style.imgdetails} src={detailedArticle.img ? detailedArticle.img : 'Kein Bild '} alt="" />
+                    {edit === true ?<input
+                        type="file" id="image-input"
+                        accept="image/jpeg, image/png, image/jpg"
+                        onChange={(e) => newPic(e.target.files[0])}/>:""}
+
+                </article>
 
                 <article className={style.productInfo}>
 
