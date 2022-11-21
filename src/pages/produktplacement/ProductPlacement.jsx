@@ -19,14 +19,15 @@ const ProductPlacement = () => {
                 }
             })
             const data = await response.json()
-            console.log('addArticle', data)
+            if(data.state === false){
+                nav('/market')
+            }
+            console.log('addArticle', data.state)
             
             setUserID(data.result.user)
             console.log('wir checken den token')
 
-            if(data.state === false){
-                nav('/market')
-            }
+           
         }
 
         checkToken()
