@@ -9,6 +9,8 @@ import WunschButton from "../../components/buttons/wishButton/WunschButton"
 
 
 const ProductDetails = () => {
+
+    const BACKEND = process.env.REACT_APP_BACKEND_ADRESS
     
     const [detailedArticle, setdetailedArticle] = useState([])
     const [cache, setCache] = useState([])
@@ -29,7 +31,7 @@ const ProductDetails = () => {
     }
 
     const checkToken = async () => {
-        const response = await fetch('http://localhost:9090/api/verify', {
+        const response = await fetch(`${BACKEND}api/verify`, {
             headers: {
                 Authentication: 'Bearer ' + localStorage.getItem('token')
             }
@@ -69,7 +71,7 @@ const ProductDetails = () => {
         console.log('im fetch')
         const fetchdata = async () => {
             
-            const result = await fetch('http://localhost:9090/article/article', {
+            const result = await fetch(`${BACKEND}article/article`, {
                 method : 'POST',
                 headers:{
                     'content-type' : 'application/json',

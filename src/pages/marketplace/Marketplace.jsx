@@ -10,6 +10,8 @@ import SubmitProductButton from "../../components/buttons/submitProductBtn/Submi
 const Marketplace = () => {
 
     const [article, setArticle] = useState([])
+    const BACKEND = process.env.REACT_APP_BACKEND_ADRESS
+
 
     const [fix, setFix] = useState(false)
     function setFixedSidebar() {
@@ -25,7 +27,7 @@ const Marketplace = () => {
 
         const fetchData = async () => {
 
-            const response = await fetch(`http://localhost:9090/article/`)
+            const response = await fetch(`${BACKEND}article/`)
 
             if (response.status === 200) {
                 const data = await response.json()

@@ -9,6 +9,8 @@ const SearchBar = (props) => {
 
     //const [search, setSearch] = useState([])
     const [inputValue , setInputValue] = useState('')
+    const BACKEND = process.env.REACT_APP_BACKEND_ADRESS
+
 
     const params = useParams()
     const nav = useNavigate()
@@ -19,7 +21,7 @@ const SearchBar = (props) => {
 
         const fetchData = async () => {
 
-            const response = await fetch(`http://localhost:9090/article/search`,{
+            const response = await fetch(`${BACKEND}article/search`,{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom'
 const UpdateArticleButton = (props) => {
 
     const nav = useNavigate()
+    const BACKEND = process.env.REACT_APP_BACKEND_ADRESS
+
 
     const updateArticle = async () => {
 
@@ -24,7 +26,7 @@ const UpdateArticleButton = (props) => {
 
         console.log('UA', article)
 
-        const response = await fetch('http://localhost:9090/article/update', {
+        const response = await fetch(`${BACKEND}article/update`, {
             method:'PUT',
             headers :{
                 'content-type' : 'application/json',
